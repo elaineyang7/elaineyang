@@ -14,6 +14,11 @@ body, div, form, input, select, textarea, label, p {
       line-height: 22px;
 }
 
+body a{
+	color: inherit; /* 移除超連結顏色 */
+    text-decoration: none;  /* 移除超連結底線 */
+}
+
 .colums {
     overflow: auto;
 	margin: 20px;
