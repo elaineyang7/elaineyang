@@ -5,50 +5,55 @@ html, body{
 }
 
 body, div, form, input, select, textarea, label, p { 
-      padding: 0;
-      margin: 0;
-      outline: none;
-      font-family: 'Arial', 'Microsoft JhengHei', sans-serif;
-      font-size: 14px;
-      color: #666;
-      line-height: 22px;
+	padding: 0;
+	margin: 0;
+     	outline: none;
+     	font-family: 'Arial', 'Microsoft JhengHei', sans-serif;
+      	font-size: 14px;
+     	color: #666;
+     	line-height: 22px;
 }
 
-body a{
-    color: inherit; /* 移除超連結顏色 */
-    text-decoration: none;  /* 移除超連結底線 */
+#Body a{
+	color: inherit; /* 移除超連結顏色 */
+	text-decoration: none;  /* 移除超連結底線 */
+}
+
+#Header a{
+	color: inherit; /* 移除超連結顏色 */
+	text-decoration: none;  /* 移除超連結底線 */
 }
 
 .colums {
-    overflow: auto;
+	overflow: auto;
 	margin: 20px;
 	padding: 10px;
 	display: flex;
 }
 
 .colums div {
-    width: 40%;
+   	width: 40%;
 }
 
 #Header {
-    background-color: #f8e8df;
-    text-align: center;
-    padding: 20px;
+	background-color: #f8e8df;
+	text-align: center;
+	padding: 20px;
 }
 
 #Sidebar {
-    line-height: 30px;
-    height: 300px;
-    width: 30%;
-    float: left;
-    padding: 20px;
-    text-align: center; 
+	line-height: 30px;
+	height: 300px;
+	width: 30%;	
+	float: left;
+	padding: 20px;
+	text-align: center; 
 }
 
 #Body {
-    width: 60%;
-    float: left;
-    padding: 20px; 
+	width: 60%;
+	float: left;
+	padding: 20px; 
 }
 
 figure{
@@ -59,8 +64,8 @@ figure{
 
 #Footer {
 	width: 1280px;
-    background-color: #f8e8df;
-    clear: both;
-    text-align: center;
-    padding: 20px; 
+	background-color: #f8e8df;
+	clear: both;
+	text-align: center;
+	padding: 20px; 
 }
