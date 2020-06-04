@@ -15,7 +15,7 @@ body, div, form, input, select, textarea, label, p {
 }
 
 body a{
-	color: inherit; /* 移除超連結顏色 */
+    color: inherit; /* 移除超連結顏色 */
     text-decoration: none;  /* 移除超連結底線 */
 }
 
