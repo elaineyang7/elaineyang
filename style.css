@@ -1,33 +1,27 @@
 html, body{
 	min-height: 100%;
-	width: 1280px;
+	/*width: 1280px;*/
 	margin: 0 auto;
 }
 
-body, div, form, input, select, textarea, label, p { 
-      padding: 0;
-      margin: 0;
-      outline: none;
-      font-family: 'Arial', 'Microsoft JhengHei', sans-serif;
-      font-size: 14px;
-      color: #666;
-      line-height: 22px;
+body, div, form, input, select, textarea, label, p {
+	padding: 0;
+	margin: 0;
+	outline: none;
+	font-family: 'Arial', 'Microsoft JhengHei', sans-serif;
+	font-size: 14px;
+	color: #666;
+	line-height: 22px;
 }
 
-body a{
+#Body a{
 	color: inherit; /* 移除超連結顏色 */
-    text-decoration: none;  /* 移除超連結底線 */
+	text-decoration: none;  /* 移除超連結底線 */
 }
 
-.colums {
-    overflow: auto;
-	margin: 20px;
-	padding: 10px;
-	display: flex;
-}
-
-.colums div {
-    width: 40%;
+#Header a{
+	color: inherit; /* 移除超連結顏色 */
+	text-decoration: none;  /* 移除超連結底線 */
 }
 
 #Header {
@@ -42,25 +36,48 @@ body a{
     width: 30%;
     float: left;
     padding: 20px;
-    text-align: center; 
+    text-align: center;
 }
 
 #Body {
     width: 60%;
     float: left;
-    padding: 20px; 
+    padding: 20px;
+}
+
+#Footer {
+	/*width: 1280px;*/
+    background-color: #f8e8df;
+    clear: both;
+    text-align: center;
+    padding: 20px;
+}
+
+.colums {
+	overflow: auto;
+	margin: 20px;
+	padding: 10px;
+	display: flex;
+}
+
+.colums div {
+    width: 40%;
+}
+
+.colums .container {
+  width: 650px;
+  margin: 0 auto;
+  padding: 0 10px;
+  text-align: center;
+}
+
+.container #fg{
+	position: relative;
+	float:left;
+	margin: 10px;
+	text-align: center;
 }
 
 figure{
 	text-align: center;
-}
-
-
-
-#Footer {
-	width: 1280px;
-    background-color: #f8e8df;
-    clear: both;
-    text-align: center;
-    padding: 20px; 
 }
