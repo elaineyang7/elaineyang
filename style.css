@@ -31,13 +31,19 @@ section{
 }
 
 /* Navbar */
-.open-buttom{
+.open-button{
   font-size: 30px;
   cursor: pointer;
   position: fixed;
   right: 10px;
   top: 10px;
+  color: #818181;
 }
+
+.open-button:hover{
+  color: #e6b295;
+}
+
 .sidenav {
   height: 100%;
   width: 0;
