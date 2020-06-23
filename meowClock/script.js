@@ -94,7 +94,7 @@ function updateClock(){
   } else if (time == dinnertime){
     image = "images/dinner.jpg";
     messageText = "Bring me food!";
-  } else if (time < noon){
+  } else if (time > wakeuptime && time < noon){
     image = "images/morning.jpg";
     messageText = "Good morning!";
   } else if (time > noon && time < evening){
