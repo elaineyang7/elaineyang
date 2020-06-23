@@ -14,8 +14,9 @@
   <div id="mySidenav" class="sidenav">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     <a href="#header">Home</a>
-    <a href="#python">Python</a>
-    <a href="#java">Java</a>
+    <a href="#web">Web Projects</a>
+    <a href="#python">Python Projects</a>
+    <a href="#java">Java Projects</a>
     <a href="#app">Mobile App</a>
     <a href="#numerical">Numerical Analysis</a>
   </div>
@@ -48,11 +49,70 @@
   </div>
 
   <div id="main">
+
+    <!--Web Projects-->
+    <section id="web">
+      <div class="colums">
+        <div class="sidebar">
+          <h2>Web Projects</h2>
+        </div>
+        <div class="body">
+
+          <div class="card-main">
+            <ul class="cards">
+              <li class="cards-item">
+                <div class="card">
+                  <div class="card-image">
+                    <a href="vegetarian_in_the_bay_area/index.html"><img src="images/vegetarian.jpg"></a>
+                  </div>
+                  <div class="card-content">
+                    <a href="vegetarian_in_the_bay_area/index.html"><h3 class="card-title">Vegetarian<br> in the Bay Area</a></h3>
+                    <hr>
+                    <p class="card-text">This is the first version of the website, including HTML5 forms, using JavaScript to control video and audio, using JavaScript to do simple animations on the canvas, and applying the Geolocation API.</p>
+                  </div>
+                </div>
+              </li>
+
+              <li class="cards-item">
+                <div class="card">
+                  <div class="card-image">
+                    <a href="meowClock/index.html"><img src="images/meow_clock.jpg"></a>
+                  </div>
+                  <div class="card-content">
+                    <a href="meowClock/index.html"><h3 class="card-title">Lolcat Clock</h3></a><br>
+                    <hr>
+                    <p class="card-text">JavaScript web app with interactive clocks that changes the cat’s image and message according to the events set by the user during the day and by clicking the Party Time button.</p>
+                  </div>
+                </div>
+              </li>
+
+              <li class="cards-item">
+                <div class="card">
+                  <div class="card-image">
+                    <a href="todo_list/index.html"><img src="images/todo.jpg"></a>
+                  </div>
+                  <div class="card-content">
+                    <a href="todo_list/index.html"><h3 class="card-title">To-Do List</h3></a><br>
+                    <hr>
+                    <p class="card-text">Using JavaScript to build a simply To-Do List App that lets users add, remove, and mark complete items.</p>
+                  </div>
+                </div>
+              </li>
+
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <hr>
+
     <!--Python Projects-->
     <section id="python">
       <div class="colums">
         <div class="sidebar">
-          <h2>Python Project</h2>
+          <h2>Python Projects</h2>
         </div>
         <div class="body">
           <h3><a href="https://github.com/elaineyang7/python_folium_webmap">Web-Mapping App on the Browser</a></h3>
@@ -63,13 +123,13 @@
           <p>The first map is to visualize volcano and population data. THe locations of the volcanoes are marked, their colors set according to the elevation. Used GeoJSON to passed to the map as an overlay, and multiple layers can be visualized on the
               same map.</p>
           <figure>
-            <img src="images/volcanoes.jpg" width="70%">
+            <a href="mapping/Map1.html"><img src="images/volcanoes.jpg" width="70%"></a>
             <figcaption></figcaption>
           </figure>
           <br>
           <p>The second map shows the location of my favorite restaurants in the Bay Area. Passed description HTML code of each restaurant in a popup message.</p>
           <figure>
-            <img src="images/favorite_restaurant.jpg" width="70%">
+            <a href="mapping/restaurant.html"><img src="images/favorite_restaurant.jpg" width="70%"></a>
             <figcaption></figcaption>
           </figure>
           <br><br>
@@ -116,7 +176,7 @@
     <section id="java">
       <div class="colums">
         <div class="sidebar">
-          <h2>Java Project</h2>
+          <h2>Java Projects</h2>
         </div>
         <div class="body">
           <h3>Online Shopping Application</h3>

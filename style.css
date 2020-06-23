@@ -117,6 +117,82 @@ section{
   padding: 20px;
 }*/
 
+/* grid cards*/
+/* Design */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.card-main{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card-image img{
+  max-width: 100%;
+  vertical-align: middle;
+  border: 1px solid #eee;
+  border-radius: 10px;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cards-item {
+  display: flex;
+  padding: 1rem;
+}
+
+@media (min-width: 40rem) {
+  .cards-item {
+    width: 50%;
+  }
+}
+
+@media (min-width: 56rem) {
+  .cards-item {
+    width: 33.3333%;
+  }
+}
+
+.card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 15px;
+}
+
+.card-content {
+  padding: 1rem;
+}
+
+.card-title {
+  color: #666;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  margin: 0px;
+  text-align: center;
+}
+
+.card-text {
+  color: #666;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+  font-weight: 400;
+}
+
+
 .colums {
   overflow: auto;
   margin: 20px;
@@ -125,15 +201,15 @@ section{
 }
 
 .colums .body {
-  width: 70%;
+  width: 80%;
 }
 
 .colums .sidebar {
-  width: 40%;
+  width: 30%;
 }
 
 .colums .container {
-  width: 650px;
+  width: 700px;
   margin: 0 auto;
   padding: 0 10px;
   text-align: center;

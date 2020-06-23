@@ -1,0 +1,29 @@
+#map{
+  margin: 0 auto;
+  width: 600px;
+  height: 600px;
+  border: 1px solid black;
+  display: flex;
+}
+
+
+/* button */
+.btn-block {
+    margin-top: 10px;
+    text-align: center;
+}
+
+#button {
+    width: 150px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background:  #3b8686;
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+}
+
+#button:hover {
+    background:  #669999;
+}

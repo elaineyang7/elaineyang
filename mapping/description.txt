@@ -1,0 +1,2 @@
+Create a web-mapping app on the browser
+A web map visualizing volcanoes and population data

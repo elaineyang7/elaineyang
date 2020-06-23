@@ -1,0 +1,80 @@
+body {
+	background-color: white;
+	font-family: 'Arial', 'Microsoft JhengHei', sans-serif;
+	padding: 0 20px;
+}
+
+.navigation ul {
+	margin: 40px auto;
+	text-align: center;
+	padding: 0 20px;
+}
+
+.navigation li {
+	color: #79bd9a;
+	font-family: 'Oswald', sans-serif;
+	font-size: 16px;
+	font-weight: 300;
+	text-transform: uppercase;
+	display: inline-block;
+	width: 150px;
+}
+
+.navigation a {
+    color: inherit; /* 移除超連結顏色 */
+    text-decoration: none;  /* 移除超連結底線 */
+}
+
+.navigation li:hover {
+	color: #3b8686;
+}
+
+#banner {
+	background-image: url("images/banner_1.jpg");
+	background-size: cover;
+	background-position: bottom center;
+	height: 500px;
+	width: 100%;
+}
+
+#banner .content header h1{
+	border: 3px solid white;
+	color: #3b8686;
+	text-align:center;
+	background-color: #FFF;
+	opacity: .8;
+	position: relative;
+	top: 100px;
+	width: 500px;
+	margin: 0 auto;
+}
+
+h2{
+	color: #555555
+}
+
+img {
+    width: 350px;
+}
+
+figcaption {
+    width: 350px;
+    color: #79bd9a;
+    font-family: smaller 'Arial' sans-serif;
+    padding: 3px;
+    text-align: center;
+}
+
+figcaption a {
+    color: inherit; /* 移除超連結顏色 */
+    text-decoration: none;  /* 移除超連結底線 */
+}
+
+footer{
+	border: 3px solid #a8dba8;
+	color: #3b8686;
+	background-color: #a8dba8;
+	margin: 40px auto;
+	text-align:center;
+	padding: 20px 0;
+}
