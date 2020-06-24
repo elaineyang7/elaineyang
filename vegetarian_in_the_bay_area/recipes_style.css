@@ -1,0 +1,68 @@
+/* Banner */
+#banner-recipe {
+	background-image: url("images/recipe.jpg");
+	background-size: cover;
+	background-position: bottom center;
+	height: 300px;
+	width: 100%;
+}
+
+#banner-recipe .content header h1{
+	border: 3px solid white;
+	color: #3b8686;
+	text-align: center;
+	background-color: #fff;
+	opacity: .8;
+	position: relative;
+	top: 100px;
+	width: 500px;
+	margin: 0 auto;
+}
+
+/* Recipe */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 80%;
+  max-width: 1000px;
+  margin: 20px auto;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+}
+
+.element {
+  width: 40%;
+  height: 600px;
+  float: left;
+  background-image: url("images/dumpling.jpg");
+  background-size: cover;
+  background-position: -100px 0;
+  background-repeat: no-repeat;
+  -webkit-clip-path: ellipse(90% 70% at 0% 50%);
+  clip-path: ellipse(90% 70% at 0% 50%);
+  -webkit-shape-outside: ellipse(90% 70% at 0% 50%);
+  shape-outside: ellipse(90% 70% at 0% 50%);
+  -webkit-shape-margin: 2em;
+  shape-margin: 2em;
+}
+
+p, h1, h3 {
+  padding: 1em 0;
+}
+
+p {
+  margin-right: 4em;
+}
+
+ul {
+  list-style: circle;
+}
+
+.clear {
+  clear: both;
+}

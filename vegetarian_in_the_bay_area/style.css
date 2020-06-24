@@ -2,8 +2,10 @@ body {
 	background-color: white;
 	font-family: 'Arial', 'Microsoft JhengHei', sans-serif;
 	padding: 0 20px;
+	color: #666;
 }
 
+/* Navigation */
 .navigation ul {
 	margin: 40px auto;
 	text-align: center;
@@ -21,14 +23,15 @@ body {
 }
 
 .navigation a {
-    color: inherit; /* 移除超連結顏色 */
-    text-decoration: none;  /* 移除超連結底線 */
+	color: inherit; /* 移除超連結顏色 */
+	text-decoration: none;  /* 移除超連結底線 */
 }
 
 .navigation li:hover {
 	color: #3b8686;
 }
 
+/* Banner */
 #banner {
 	background-image: url("images/banner_1.jpg");
 	background-size: cover;
@@ -40,34 +43,65 @@ body {
 #banner .content header h1{
 	border: 3px solid white;
 	color: #3b8686;
-	text-align:center;
-	background-color: #FFF;
+	text-align: center;
+	background-color: #fff;
 	opacity: .8;
 	position: relative;
 	top: 100px;
 	width: 500px;
+	height: 100px;
 	margin: 0 auto;
+	padding-top: 30px;
+}
+
+main{
+	width: 80%;
+	margin: 0 auto;
+	padding: 10px;
 }
 
 h2{
 	color: #555555
 }
 
-img {
-    width: 350px;
+/* Recipe Card */
+*, *:before, *:after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
-figcaption {
-    width: 350px;
-    color: #79bd9a;
-    font-family: smaller 'Arial' sans-serif;
-    padding: 3px;
-    text-align: center;
+.recipe-card {
+	width: 350px;
+	box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.27);
+	border-radius: 15px;
+	overflow: hidden;
+	padding: 10px;
+	margin: 100px auto;
 }
 
-figcaption a {
-    color: inherit; /* 移除超連結顏色 */
-    text-decoration: none;  /* 移除超連結底線 */
+.recipe-card-image {
+	max-height: 250px;
+	overflow: hidden;
+	margin: -10px -10px 15px -10px;
+}
+
+.recipe-card-image img {
+	max-width: 100%;
+	margin-top: -15%;
+}
+
+.recipe-card-title {
+	font-size: 18px;
+	margin-bottom: 25px;
+	color: #79bd9a;
+	text-align: center;
+	padding-top: 10px;
+}
+
+.recipe-card-title a{
+	color: inherit; /* 移除超連結顏色 */
+	text-decoration: none;  /* 移除超連結底線 */
 }
 
 footer{

@@ -3,49 +3,21 @@
 	<head>
 		<meta charset="utf-8" />
 		<link rel="stylesheet" href="form_style.css">
+		<link rel="stylesheet" type="text/css" href="style.css">
 		<meta name="description" content="This is a Restaurant Dishes Recommended Form including restaurant information and personal information. Please fill this out for me!">
 		<title>Restaurant Dishes Recommended Form</title>
 	</head>
+
 	<body>
 		<nav class="navigation">
 			<ul>
 				<li><a href="index.html">Home</a></li>
-  			<li><a href="#">Recipes</a></li>
-  			<li><a href="restaurant_form.html">Restaurant</a></li>
-  			<li><a href="#">Being Vegetarian</a></li>
-  			<li><a href="#">About</a></li>
+				<li><a href="recipes.html">Recipes</a></li>
+				<li><a href="restaurant_form.html">Restaurant</a></li>
+				<!--<li><a href="#">Being Vegetarian</a></li>
+				<li><a href="#">About</a></li>-->
 			</ul>
 		</nav>
-
-		<!--video and audio-->
-		<div class="video">
-			<video width="320" height="240" controls loop muted autoplay poster="Video-Audio-Resource-Files/rose-poster.jpg">
-				<source src="Video-Audio-Resource-Files/RoseWall.mp4" type="video/mp4">
-            	<source src="Video-Audio-Resource-Files/RoseWall.ogv" type="video/ogg">
-            	<source src="Video-Audio-Resource-Files/RoseWall.webm" type="video/webm">
-
-            	<object width="320" height="240" type="application/x-shockwave-flash" data="fallback.swf">
-            	<param name="movie" value="fallback.swf"/>
-            	<param name="flashvars" value="autostart=true&file=video.flv">
-            	</object>
-			</video>
-
-        	<audio id="cabrobro" controls loop autoplay>
-            	<source src="Video-Audio-Resource-Files/Cabrobro.mp3" type="audio/mp3">
-            	<source src="Video-Audio-Resource-Files/Cabrobro.aac" type="audio/aac">
-            	<source src="Video-Audio-Resource-Files/Cabrobro.ogg" type="audio/ogg">
-            	<source src="Video-Audio-Resource-Files/Cabrobro.opus" type="audio/opus">
-            		Your browser does not support the audio element.
-			</audio>
-
-        	<!-- this is control with JS code -->
-        	<div>
-				<button onclick="document.getElementById('cabrobro').play()">Play the Audio</button>
-            	<button onclick="document.getElementById('cabrobro').pause()">Pause the Audio</button>
-            	<button onclick="document.getElementById('cabrobro').volume+=0.1">Increase Volume</button>
-            	<button onclick="document.getElementById('cabrobro').volume-=0.1">Decrease Volume</button>
-        	</div>
-        </div>
 
 		<div class="testbox">
 			<form action="submission.html" method="POST">
@@ -60,6 +32,7 @@
 						<label for="restaurant_name">Restaurant Name<span>*</span></label>
 						<input id="restaurant_name" type="text" name="restaurant_name" placeholder="Joyheart Cafe" autofocus required>
 					</div>
+
 					<div class="item">
 						<label for="city">City<span>*</span></label>
 						<select id="city" name="city" required>
@@ -77,120 +50,109 @@
 							<option value="other">Other</option>
 						</select>
 					</div>
+
 					<div class="item">
 						<label for="restaurant_address">Restaurant Address</label>
 						<input id="restaurant_address" name="restaurant_address" placeholder="1344 Ridder Park Dr, San Jose">
 					</div>
+
 					<div class="item">
 						<label for="restaurant_phone">Restaurant Phone</label>
 						<input id="restaurant_phone" name="restaurant_phone" placeholder="1-222-222-2222" title="Your Phone Number is one number, a dash, then three numbers, a dash, then three numbers, a dash, then four numbers"
-                    pattern="[1]{1}-[0-9]{3}-[0-9]{3}-[0-9]{4}">
+						pattern="[1]{1}-[0-9]{3}-[0-9]{3}-[0-9]{4}">
 					</div>
+
 					<label for="link">Yelp Link / Google Maps Link</label>
 					<input type="url" id="link" name="link">
-
 				</div>
 
-        		<div class="checkbox">
-          			<div class="item">
-        				<p>Type of Cuisine<span>*</span></p>
-        				<small>Please include the following in your application.</small>
-        			</div>
-          			<div class="checkbox-item">
-            			<label><input type="checkbox" name="type" value="chinese"> <span>Chinese</span></label>
-            			<label><input type="checkbox" name="type" value="western"> <span>Western</span></label>
-            			<label><input type="checkbox" name="type" value="japanese"> <span>Japanese</span></label>
-            			<label><input type="checkbox" name="type" value="vietnamese"> <span>Vietnamese</span></label>
-            			<label><input type="checkbox" name="type" value="korean"> <span>Korean</span></label>
-            			<label><input type="checkbox" name="type" value="thai"> <span>Thai</span></label>
-            			<label><input type="checkbox" name="type" value="indian"> <span>Indian</span></label>
-            			<label><input type="checkbox" name="type" value="mexican"> <span>Mexican</span></label>
-            			<label><input type="checkbox" name="type" value="middle-eastern"> <span>Middle-Eastern</span></label>
-          			</div>
-        		</div>
-
-        		<div class="colums">
+				<div class="checkbox">
 					<div class="item">
-          				<label for="dish1">Recommended Dish 1<span>*</span></label>
-          				<textarea id="dish1" rows="3" required></textarea>
-          			</div>
-          			<div class="item">
-          				<label for="photo1">Upload photo of the dish:</label>
-          				<input type="file" name="photo1" id="photo1" multiple>
-        			</div>
-        		</div>
+						<p>Type of Cuisine<span>*</span></p>
+						<small>Please include the following in your application.</small>
+					</div>
+					<div class="checkbox-item">
+						<label><input type="checkbox" name="type" value="chinese"> <span>Chinese</span></label>
+						<label><input type="checkbox" name="type" value="western"> <span>Western</span></label>
+						<label><input type="checkbox" name="type" value="japanese"> <span>Japanese</span></label>
+						<label><input type="checkbox" name="type" value="vietnamese"> <span>Vietnamese</span></label>
+						<label><input type="checkbox" name="type" value="korean"> <span>Korean</span></label>
+						<label><input type="checkbox" name="type" value="thai"> <span>Thai</span></label>
+						<label><input type="checkbox" name="type" value="indian"> <span>Indian</span></label>
+						<label><input type="checkbox" name="type" value="mexican"> <span>Mexican</span></label>
+						<label><input type="checkbox" name="type" value="middle-eastern"> <span>Middle-Eastern</span></label>
+					</div>
+				</div>
 
-        		<div class="colums">
+				<div class="colums">
 					<div class="item">
-          				<label for="dish2">Recommended Dish 2</label>
-          				<textarea id="dish2" rows="3"></textarea>
-          			</div>
-          			<div class="item">
-          				<label for="photo2">Upload photo of the dish:</label>
-          				<input type="file" name="photo2" id="photo2" multiple>
-        			</div>
-        		</div>
-
-        		<div class="colums">
+						<label for="dish1">Recommended Dish 1<span>*</span></label>
+						<textarea id="dish1" rows="3" required></textarea>
+					</div>
 					<div class="item">
-          				<label for="dish3">Recommended Dish 3</label>
-          				<textarea id="dish3" rows="3"></textarea>
-          			</div>
-          			<div class="item">
-          				<label for="photo3">Upload photo of the dish:</label>
-          				<input type="file" name="photo3" id="photo3" multiple>
-        			</div>
-        		</div>
+						<label for="photo1">Upload photo of the dish:</label>
+						<input type="file" name="photo1" id="photo1" multiple>
+					</div>
+				</div>
 
-        		<div class="colums">
-        			<div class="item">
-        				<label for="name">Name</label>
-        				<p></p>
-        				<small>Please tell us your name.</small>
+				<div class="colums">
+					<div class="item">
+						<label for="dish2">Recommended Dish 2</label>
+						<textarea id="dish2" rows="3"></textarea>
+					</div>
+					<div class="item">
+						<label for="photo2">Upload photo of the dish:</label>
+						<input type="file" name="photo2" id="photo2" multiple>
+					</div>
+				</div>
+
+				<div class="colums">
+					<div class="item">
+						<label for="dish3">Recommended Dish 3</label>
+						<textarea id="dish3" rows="3"></textarea>
+					</div>
+					<div class="item">
+						<label for="photo3">Upload photo of the dish:</label>
+						<input type="file" name="photo3" id="photo3" multiple>
+					</div>
+				</div>
+
+				<div class="colums">
+					<div class="item">
+						<label for="name">Name</label>
+						<p></p>
+						<small>Please tell us your name.</small>
 						<input id="name" name="name" autocomplete="name">
-        			</div>
-        			<div class="item">
-        				<label for="email">Email</label>
-        				<p></p>
-        				<small>Let us easily contact you.</small>
-						<input id="email" name="email" placeholder="abc123@gmail.com">
-        			</div>
-        			<div class="item">
-                    	<label for="visit">The date that you visit the restaurant.</label>
-                    	<input type="date" id="visit" name="visit" >
 					</div>
 					<div class="item">
-                    	<label for="favcolor">Choose your favourite color</label>
-                    	<input type="color" id="favcolor" name="favcolor">
+						<label for="email">Email</label>
+						<p></p>
+						<small>Let us easily contact you.</small>
+						<input id="email" name="email" placeholder="abc123@gmail.com">
 					</div>
-        		</div>
+				</div>
 
-        		<div class="question">
-        			<div class="question-item">
-        				<label>Do you want to show dishes recommended by you on the web?<span>*</span></label>
-        			</div>
-        			<div class="question-answer">
-        				<input type="radio" value="none" id="radio_3" name="co-investigator" required/>
-          				<label for="radio_3" class="radio"><span>Yes</span></label>
-          				<input type="radio" value="none" id="radio_4" name="co-investigator" required/>
-          				<label for="radio_4" class="radio"><span>No</span></label>
-        			</div>
-        		</div>
+				<div class="question">
+					<div class="question-item">
+						<label>Do you want to show dishes recommended by you on the web?<span>*</span></label>
+					</div>
+					<div class="question-answer">
+						<input type="radio" value="none" id="radio_3" name="co-investigator" required/>
+						<label for="radio_3" class="radio"><span>Yes</span></label>
+						<input type="radio" value="none" id="radio_4" name="co-investigator" required/>
+						<label for="radio_4" class="radio"><span>No</span></label>
+					</div>
+				</div>
 
 				<div class="btn-block">
-          			<button type="submit">Submit</button>
-        		</div>
+					<button type="submit">Submit</button>
+				</div>
 
 			</form>
 		</div>
 
 		<footer>
-  			<address>
-  				<time datetime="2020-05">Last Modified: May 2020</time>
-  				<br>
-  				For more details, contact <a href="mailto:elaineyyang7@gmail.com">Elaine Yang</a>.
-			</address>
-			<p><small>© copyright 2020</small></p>
+			Vegetarian In The Bay Area
 		</footer>
 
 	</body>
