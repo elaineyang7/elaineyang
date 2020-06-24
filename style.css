@@ -233,23 +233,23 @@ figure {
 
 /* button */
 .btn-block {
-	margin-top: 10px;
+  margin-top: 10px;
   margin-bottom: 20px;
-	text-align: center;
+  text-align: center;
 }
 
 button {
-	width: 150px;
-	padding: 5px;
-	border: none;
-	border-radius: 5px;
-	background: #e6b295;
-	font-size: 20px;
-	color: #666;
-	cursor: pointer;
+  width: 150px;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  background: #e6b295;
+  font-size: 20px;
+  color: #666;
+  cursor: pointer;
 }
 
 button:hover {
-	background: #f8e8df;
+  background: #f8e8df;
   color: #e6b295;
 }
