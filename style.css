@@ -30,12 +30,16 @@ section{
   text-decoration: none;
 }
 
+#header a:hover {
+  text-decoration:underline;
+}
+
 /* Navbar */
 .open-button{
   font-size: 30px;
   cursor: pointer;
   position: fixed;
-  right: 10px;
+  left: 10px;
   top: 10px;
   color: #818181;
 }
@@ -50,10 +54,10 @@ section{
   position: fixed;
   z-index: 1;
   top: 0;
-  right: 0;
+  left: 0;
   background-color: #f8e8df;
   overflow-x: hidden;
-  transition: 0.5s;
+  transition: 0.3s;
   padding-top: 60px;
 }
 
@@ -75,7 +79,6 @@ section{
   top: 0;
   right: 10px;
   font-size: 36px;
-  margin-left: 50px;
 }
 
 #main {
@@ -107,15 +110,6 @@ section{
   color: inherit;
   text-decoration: none;
 }
-
-/*
-#footer {
-  width: 1280px;
-  background-color: #f8e8df;
-  clear: both;
-  text-align: center;
-  padding: 20px;
-}*/
 
 /* grid cards*/
 /* Design */
@@ -232,9 +226,30 @@ section{
   float: left;
 }
 
-
 figure {
   text-align: center;
   overflow: auto;
 }
 
+/* button */
+.btn-block {
+	margin-top: 10px;
+  margin-bottom: 20px;
+	text-align: center;
+}
+
+button {
+	width: 150px;
+	padding: 5px;
+	border: none;
+	border-radius: 5px;
+	background: #e6b295;
+	font-size: 20px;
+	color: #666;
+	cursor: pointer;
+}
+
+button:hover {
+	background: #f8e8df;
+  color: #e6b295;
+}

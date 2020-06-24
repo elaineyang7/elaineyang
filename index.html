@@ -25,12 +25,12 @@
   <script>
   function openNav() {
     document.getElementById("mySidenav").style.width = "250px";
-    document.getElementById("main").style.marginRight = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
   }
 
   function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
-    document.getElementById("main").style.marginRight= "0";
+    document.getElementById("main").style.marginLeft= "0";
   }
   </script>
 
@@ -62,40 +62,46 @@
             <ul class="cards">
               <li class="cards-item">
                 <div class="card">
+                  <a href="vegetarian_in_the_bay_area/index.html" target="_blank">
                   <div class="card-image">
-                    <a href="vegetarian_in_the_bay_area/index.html"><img src="images/vegetarian.jpg"></a>
+                    <img src="images/vegetarian.jpg">
                   </div>
                   <div class="card-content">
-                    <a href="vegetarian_in_the_bay_area/index.html"><h3 class="card-title">Vegetarian<br> in the Bay Area</a></h3>
+                    <h3 class="card-title">Vegetarian<br> in the Bay Area</h3>
                     <hr>
                     <p class="card-text">I'm currently working on a website, sharing vegetarian recipes, vegetarian dishes of the restaurants in the Bay Area, and information for vegetarians.</p>
                   </div>
+                  </a>
                 </div>
               </li>
 
               <li class="cards-item">
                 <div class="card">
+                  <a href="meowClock/index.html" target="_blank">
                   <div class="card-image">
-                    <a href="meowClock/index.html"><img src="images/meow_clock.jpg"></a>
+                    <img src="images/meow_clock.jpg">
                   </div>
                   <div class="card-content">
-                    <a href="meowClock/index.html"><h3 class="card-title">Lolcat Clock</h3></a><br>
+                    <h3 class="card-title">Meow Meow Clock</h3><br>
                     <hr>
                     <p class="card-text">JavaScript web app with interactive clocks that changes the cat’s image and message according to the events set by the user during the day and by clicking the Party Time button.</p>
                   </div>
+                  </a>
                 </div>
               </li>
 
               <li class="cards-item">
                 <div class="card">
+                  <a href="todo_list/index.html" target="_blank">
                   <div class="card-image">
-                    <a href="todo_list/index.html"><img src="images/todo.jpg"></a>
+                    <img src="images/todo.jpg">
                   </div>
                   <div class="card-content">
-                    <a href="todo_list/index.html"><h3 class="card-title">To-Do List</h3></a><br>
+                    <h3 class="card-title">To-Do List</h3><br>
                     <hr>
                     <p class="card-text">Using JavaScript to build a simply To-Do List App that lets users add, remove, and mark complete items.</p>
                   </div>
+                  </a>
                 </div>
               </li>
 
@@ -120,18 +126,26 @@
           <br>
           <p>Created two Leaflet web maps using Python with the Folium and Pandas libraries. The Folium is able to generate HTML, Javascript and CSS and these three render the map on the browser.</p>
           <br>
-          <p>The first map is to visualize volcano and population data. THe locations of the volcanoes are marked, their colors set according to the elevation. Used GeoJSON to passed to the map as an overlay, and multiple layers can be visualized on the
+          <p>Map of the Volcano and Population:</p>
+          <p>This map is to visualize volcano and population data of the United States. The locations of the volcanoes are marked, their colors set according to the elevation. Used GeoJSON to passed to the map as an overlay, and multiple layers can be visualized on the
               same map.</p>
           <figure>
             <a href="mapping/Map1.html"><img src="images/volcanoes.jpg" width="70%"></a>
             <figcaption></figcaption>
           </figure>
+          <div class="btn-block">
+  					<a href="mapping/Map1.html"><button type="submit">Try Me!</button></a>
+  				</div>
           <br>
-          <p>The second map shows the location of my favorite restaurants in the Bay Area. Passed description HTML code of each restaurant in a popup message.</p>
+          <p>My Favorite Restaurant:</p>
+          <p>Shows the location of my favorite restaurants in the Bay Area. Passed description HTML code of each restaurant in a popup message.</p>
           <figure>
             <a href="mapping/restaurant.html"><img src="images/favorite_restaurant.jpg" width="70%"></a>
             <figcaption></figcaption>
           </figure>
+          <div class="btn-block">
+  					<a href="mapping/restaurant.html"><button type="submit">Try Me!</button></a>
+  				</div>
           <br><br>
 
           <h3><a href="https://github.com/elaineyang7/Handwritten_Numbers_Recognition">Handwritten Numbers Recognition</a></h3>

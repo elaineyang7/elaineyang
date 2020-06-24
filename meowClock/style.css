@@ -4,7 +4,6 @@ body{
   color: #666;
   margin: 0px;
   padding: 0px;
-  text-transform: uppercase;
 }
 
 .page{
@@ -18,17 +17,20 @@ body{
 header{
   font-size: 26px;
   line-height: 48px;
+  text-transform: uppercase;
 }
 
 h1{
   font-family: 'Fascinate Inline', cursive;
   color: #e6b295;
+  text-transform: uppercase;
 }
 
 h2{
   font-size: 26px;
   font-family: "Lucida Console", Courier, monospace;
   line-height: 30px;
+  text-transform: uppercase;
 }
 
 h2 #clock{
@@ -37,16 +39,30 @@ h2 #clock{
   padding: 5px 0px;
 }
 
+p{
+  font-size: 14px;
+  font-family: "Lucida Console", Monaco, monospace;
+  border: 3px solid #f5cfce;
+  border-radius: 10px;
+  width: 330px;
+  margin: 0 auto;
+}
+
+h6{
+  font-size: 16px;
+  font-family: "Lucida Console", Monaco, monospace;
+}
+
 .setTime{
-  width: 45%;
+  width: 35%;
   text-align: left;
   margin: 0 auto;
+  padding: 10px;
 }
 
 h4{
   font-family: "Lucida Console", Courier, monospace;
-  font-size: 20px;
-
+  font-size: 18px;
 }
 
 #lolcatImage {
@@ -68,13 +84,12 @@ blockquote:before { content: '"'; }
 blockquote:after { content: '"'; }
 
 #wakeUpTimeSelector, #lunchTimeSelector, #breakTimeSelector, #dinnerTimeSelector{
-  width: 150px;
+  width: 130px;
   font-family: 'Lato', sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   border: 1px solid #e6b295;
   border-radius: 5px;
   padding: 10px 5px;
-  margin-top: 5px;
   float: right;
   color: #666;
 }
@@ -82,6 +97,21 @@ blockquote:after { content: '"'; }
 #partyTimeButton{
   background-color: #e6b295;
   width: 300px;
+  font-family: 'Lato', sans-serif;
+  font-size: 18px;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 0;
+}
+
+#partyTimeButton:hover, #wakeUpTimeButton:hover, #lunchTimeButton:hover, #breakTimeButton:hover, #dinnerTimeButton:hover{
+  border: 3px solid #fff;
+}
+
+#wakeUpTimeButton, #lunchTimeButton, #breakTimeButton, #dinnerTimeButton{
+  background-color: #e6b295;
+  width: 150px;
   font-family: 'Lato', sans-serif;
   font-size: 18px;
   color: #fff;
