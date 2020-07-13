@@ -141,16 +141,16 @@ section{
 
 .cards-item {
   display: flex;
-  padding: 1rem;
+  padding: 16px;
 }
 
-@media (min-width: 40rem) {
+@media (min-width: 640px) {
   .cards-item {
     width: 50%;
   }
 }
 
-@media (min-width: 56rem) {
+@media (min-width: 850px) {
   .cards-item {
     width: 33.3333%;
   }
@@ -167,7 +167,7 @@ section{
 }
 
 .card-content {
-  padding: 1rem;
+  padding: 16px;
 }
 
 .card-title {
@@ -180,9 +180,9 @@ section{
 
 .card-text {
   color: #666;
-  font-size: 0.875rem;
+  font-size: 14px;
   line-height: 1.5;
-  margin-bottom: 1.25rem;
+  margin-bottom: 20px;
   font-weight: 400;
 }
 
@@ -239,17 +239,16 @@ figure {
 }
 
 button {
-  width: 150px;
-  padding: 5px;
-  border: none;
-  border-radius: 5px;
-  background: #e6b295;
-  font-size: 20px;
-  color: #666;
-  cursor: pointer;
+	width: 150px;
+	padding: 5px;
+	border: none;
+	border-radius: 5px;
+	background: #f8e8df;
+	font-size: 20px;
+	color: #666;
+	cursor: pointer;
 }
 
 button:hover {
-  background: #f8e8df;
-  color: #e6b295;
+	background: #faddcd;
 }
