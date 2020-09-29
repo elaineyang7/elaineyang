@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initail-scale=1.0">
+    <title>Creative Contact Form UI | HTML CSS</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://smtpjs.com/v3/smtp.js">
+</script>
+  </head>
+
+  <body>
+    <section class="contact">
+      <div class="container">
+        <div class="contactForm">
+          <h2>Contact</h2>
+          <p>Fill out our form below or send us an email.</p>
+          <form>
+            <div class="inputBox">
+              <label for="companyname">Company name</label>
+              <input type="text" id="companyname" name="companyname" >
+            </div>
+            <div class="inputBox">
+              <label for="yourname">Your name</label>
+              <input type="text" id="yourname" name="yourname" required>
+            </div>
+            <div class="inputBox">
+              <label for="email">Email address</label>
+              <input type="text" id="email" name="email" required>
+            </div>
+            <div class="inputBox">
+              <label for="project">Tell us about your project</label>
+              <textarea id="project" name="project" required></textarea>
+            </div>
+            <input type="submit" class="btn" value="SUBMIT" onclick="sendMAil()">
+            <script>
+              function sendMail() {
+               let fields = {
+                companyname: document.querySelector("#companyname").value,
+                yourname: document.querySelector("#yourname").value,
+                email: document.querySelector("#email").value,
+                project: document.querySelector("#project").value,
+               };
+               let body = 'companyname: ' + fields.companyname + '<br>'
+                          + 'project：' + fields.project + '<br>';
+               Email.send({
+                SecureToken: "03469e1f-cd49-480c-9d75-1084f568a4c2",
+                To: 'joyfulelaine7@gmail.com',
+                From: "joyfulelaine7@gmail.com",
+                Subject: "contact me",
+                Body: body,
+               }).then(
+                message => alert(message)
+               );
+              }
+            </script>
+          </form>
+        </div>
+        <div class="contactInfo">
+          <div class="contactBox">
+            <div class="text">
+              <p>Email</p>
+              <span>RLD@RussellLeong.com</span>
+            </div>
+            <div class="text">
+              <p>Phone</p>
+              <span>+1 (650) 207 9979</span>
+            </div>
+            <div class="text">
+              <p>Social Media</p>
+              <div class="sci">
+                <ul>
+                  <li>
+                    <div class="tooltip">
+                      <img src="twitter.png">
+                      <span class="tooltiptext">See, this is not a Twitter bird. We'll open Twitter soon!</span>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="tooltip">
+                      <img src="facebook.png">
+                      <span class="tooltiptext">It's a fish rather than the Facebook's F. We'll on Facebook soon!</span>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="tooltip">
+                      <img src="instagram.png">
+                      <span class="tooltiptext">It's a TV rather than Instagram's Camera. We'll not on Instagram yet!</span>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="tooltip">
+                      <a href="#"><img src="linkedin.png"></a>
+                      <span class="tooltiptext exitLinkedIn">Click and see my LinkedIn profile!</span>
+                    </div>
+                  </li>
+
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
