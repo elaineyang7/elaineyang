@@ -10,6 +10,7 @@ $(document).ready(function() {
     var project = $('.project').val()
     var statusElm = $('.status')
 
+/*
     statusElm.empty()
 
     if(companyName.length >= 2) {
@@ -38,74 +39,20 @@ $(document).ready(function() {
     } else {
       event.preventDefault()
       statusElm.append("<div>project Not Valid</div>")
-    }
+    }*/
+
+    if !name.value or !email.value or !message.value
+      alertify.error 'Please check your entries'
+      return false
+    else
+      $.ajax
+        method: 'POST'
+        url: '//formspree.io/joyfulelaine7@gmail.com'
+        data: $('form').serialize()
+        datatype: 'json'
+      e.preventDefault()
+      $(this).get(0).reset()
+      alertify.success 'Message sent'
 
   })
 })
-
-
-//const btn = document.getElementById('button');
-
-//var templateParams = {
-//    companyName: document.getElementById("companyname").value,
-//    yourName: document.getElementById("yourname").value,
-//    email: document.getElementById("email").value,
-//    project: document.getElementById("project").value
-//
-//const service_id = "gmail";
-//const template_id = "template_3mos6ub";
-//const userID = "user_ZSYMwrYIJHJF1Mi1yX8F7"
-
-//emailjs.send(service_id, template_id, templateParams, userID)
-//    .then(function(response) {
-//       console.log('SUCCESS!', response.status, response.text);
-//    }, function(error) {
-//       console.log('FAILED...', error);
-//    });
-/*
-
-
-const btn = document.getElementById('button');
-
-document.getElementById('form')
-  .addEventListener('submit', function(event) {
-    event.preventDefault();
-
-    btn.value = 'Sending...';
-
-    const serviceID = 'gmail';
-    const templateID = 'template_3mos6ub';
-
-    emailjs.sendForm(serviceID, templateID, this)
-      .then(() => {
-        btn.value = 'SUBMIT';
-        alert('Sent!');
-      }, (err) => {
-        btn.value = 'SUBMIT';
-        alert(JSON.stringify(err));
-      });
-  });
-*/
-
-/*
-function <strong>fxnForEmailSending</strong>() {
-
-
-  var companyName = document.getElementById("companyname").value;
-  var yourName = document.getElementById("yourname").value;
-  var email = document.getElementById("email").value;
-  var project = document.getElementById("project").value;
-
-  var service_id = ‘gmail';
-  var template_id = template_3mos6ub';
-
-  var templateParams = {
-    companyName: document.getElementById("companyname").value,
-    yourName: document.getElementById("yourname").value,
-    email: document.getElementById("email").value,
-    project: document.getElementById("project").value
-  };
-
-  emailjs.send(service_id, template_id, templateParams); <strong>// name and email will be sent as template parameter.</strong>
-
-}*/
