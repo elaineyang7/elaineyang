@@ -41,18 +41,18 @@ $(document).ready(function() {
       statusElm.append("<div>project Not Valid</div>")
     }*/
 
-    if !name.value or !email.value or !message.value
+    if (!name.value or !email.value or !message.value) {
       alertify.error 'Please check your entries'
       return false
-    else
+    } else {
       $.ajax
         method: 'POST'
         url: '//formspree.io/joyfulelaine7@gmail.com'
         data: $('form').serialize()
         datatype: 'json'
-      e.preventDefault()
+      event.preventDefault()
       $(this).get(0).reset()
       alertify.success 'Message sent'
-
+    }
   })
 })
