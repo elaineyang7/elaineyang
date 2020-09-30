@@ -1,41 +1,4 @@
 $(document).ready(function() {
-
-	$('#someForm').on('submit', function(e) {
-		e.preventDefault();
-
-    var companyName = $('.companyname').val();
-    var yourName = $('.yourname').val();
-    var email = $('.email').val();
-    var project = $('.project').val();
-
-		//pretend we don't need validation
-
-		//send to formspree
-		$.ajax({
-			url : 'https://formspree.io/joyfulelaine7@gmail.com',
-			method : 'POST',
-			data : {
-				CompanyName : companyName,
-				Name : yourName,
-				Email : email,
-				Project : project,
-				_subject : companyName + "'s Project",
-			},
-			dataType : "json",
-			success : function() {
-				console.log('success');
-				$('#formBlock').hide();
-				$('#thankyouBlock').show();
-			}
-
-		});
-
-	});
-
-});
-
-
-/*$(document).ready(function() {
   $('.submit').click(function (event) {
     console.log('Click')
 
@@ -77,4 +40,3 @@ $(document).ready(function() {
 
   })
 })
-*/
