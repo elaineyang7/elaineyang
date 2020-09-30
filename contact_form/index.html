@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initail-scale=1.0">
+    <meta name="viewport">
     <title>Creative Contact Form UI | HTML CSS</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://smtpjs.com/v3/smtp.js">
-</script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+    <script src="./script.js"></script>
   </head>
 
   <body>
@@ -15,46 +15,26 @@
         <div class="contactForm">
           <h2>Contact</h2>
           <p>Fill out our form below or send us an email.</p>
-          <form>
+          <form id="form" action="https://formspree.io/joyfulelaine7@gmail.com" method="POST">
             <div class="inputBox">
-              <label for="companyname">Company name</label>
-              <input type="text" id="companyname" name="companyname" >
+              <label for="companyname">companyname</label>
+              <input type="text" name="companyname" class="companyname" id="companyname">
             </div>
             <div class="inputBox">
-              <label for="yourname">Your name</label>
-              <input type="text" id="yourname" name="yourname" required>
+              <label for="yourname">yourname</label>
+              <input type="text" name="yourname" class="yourname" id="yourname">
             </div>
             <div class="inputBox">
-              <label for="email">Email address</label>
-              <input type="text" id="email" name="email" required>
+              <label for="email">email</label>
+              <input type="text" name="email" class="email" id="email">
             </div>
             <div class="inputBox">
-              <label for="project">Tell us about your project</label>
-              <textarea id="project" name="project" required></textarea>
+              <label for="project">project</label>
+              <textarea type="text" name="project" class="project" id="project"></textarea>
             </div>
-            <input type="submit" class="btn" value="SUBMIT" onclick="sendMAil()">
-            <script>
-              function sendMail() {
-               let fields = {
-                companyname: document.querySelector("#companyname").value,
-                yourname: document.querySelector("#yourname").value,
-                email: document.querySelector("#email").value,
-                project: document.querySelector("#project").value,
-               };
-               let body = 'companyname: ' + fields.companyname + '<br>'
-                          + 'project：' + fields.project + '<br>';
-               Email.send({
-                SecureToken: "03469e1f-cd49-480c-9d75-1084f568a4c2",
-                To: 'joyfulelaine7@gmail.com',
-                From: "joyfulelaine7@gmail.com",
-                Subject: "contact me",
-                Body: body,
-               }).then(
-                message => alert(message)
-               );
-              }
-            </script>
+            <button type="submit" class="submit" id="button">SUBMIT</button>
           </form>
+
         </div>
         <div class="contactInfo">
           <div class="contactBox">
