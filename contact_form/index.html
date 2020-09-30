@@ -12,10 +12,10 @@
   <body>
     <section class="contact">
       <div class="container">
-        <div class="contactForm">
+        <div class="contactForm" id="formBlock">
           <h2>Contact</h2>
           <p>Fill out our form below or send us an email.</p>
-          <form id="form" action="https://formspree.io/joyfulelaine7@gmail.com" method="POST">
+          <form id="form"> <!-- action="https://formspree.io/joyfulelaine7@gmail.com" method="POST">-->
             <div class="inputBox">
               <label for="companyname">companyname</label>
               <input type="text" name="companyname" class="companyname" id="companyname">
@@ -36,6 +36,11 @@
           </form>
 
         </div>
+        <div id="thankyouBlock" style="display:none">
+      		<p>
+      			Thank you for filling out the form. I care a lot about it.
+      		</p>
+      	</div>
         <div class="contactInfo">
           <div class="contactBox">
             <div class="text">
