@@ -1,4 +1,4 @@
-# Elaine Yang Portfolio Website
+# Personal Portfolio Website
 This is my portfolio website, showing my recent work.
 
 ## Technologies
