@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #222;
+  font-family: 'Varela Round', sans-serif;
+  box-sizing: border-box;
+}
+
+.container {
+  position: relative;
+  width: 1000px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 20px;
+}
+
+.card {
+  position: relative;
+  height: 250px;
+  background-color: #fff;
+  display: flex;
+  width: 45%;
+  margin: 30px 0;
+}
+
+.imgBox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #333;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: 0.5s ease-in-out;
+}
+
+.imgBox img {
+  transition: 0.5s ease-in-out;
+  margin: 0 auto;
+}
+
+.card:hover .imgBox {
+  width: 150px;
+  height: 150px;
+  left: -75px;
+  top: calc(50% - 75px);
+  transition: 0.5s ease-in-out;
+  background-color: #ff0057;
+}
+
+.card:hover .imgBox img {
+  max-width: 75px;
+}
+
+.imgBox:after {
+  content: attr(data-text);
+  position: absolute;
+  top: 25%;
+  left: 0;
+  width: 100%;
+  height: 10%;
+  text-align: center;
+  font-size: 6em;
+  color: rgba(255, 255, 255, .05);
+  font-weight: 700;
+}
+
+.content {
+  position: absolute;
+  right: 0;
+  width: calc(100% - 100px);
+  height: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.content h3 {
+  margin-bottom: 5px;
+  font-size: 24px;
+}
+
+.content a {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 5px 10px;
+  background-color: #333;
+  text-decoration: none;
+  color: #fff;
+}
+
+@media (max-width: 992px) {
+  .container {
+    width: 80%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 300px;
+    flex-direction: column;
+    height: auto;
+  }
+
+  .card {
+    width: 300px;
+    flex-direction: column;
+    height: auto;
+  }
+
+  .imgBox {
+    position: relative;
+  }
+
+  .imgBox,
+  .card:hover .imgBox {
+    width: 300px;
+    height: 250px;
+    left: 0;
+  }
+
+  .card .imgBox img,
+  .card:hover .imgBox img {
+    max-width: 100px;
+  }
+
+  .content {
+    position: relative;
+    width: 100%;
+  }
+}
