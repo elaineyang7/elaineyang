@@ -85,7 +85,7 @@ h1 {
 }
 
 .content h2 {
-  font-size: 20px;
+  font-size: 18px;
   text-align: center;
   margin: 0;
   padding: 0;
@@ -132,7 +132,7 @@ h1 {
 }
 
 .card:hover .content h2 {
-  font-size: 24px;
+  font-size: 22px;
 }
 
 .card:hover .content p {
