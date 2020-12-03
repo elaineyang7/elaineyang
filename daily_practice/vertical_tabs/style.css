@@ -1,0 +1,184 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Open Sans",sans-serif;
+  color: #333;
+  background-color: #FFFEFA;
+}
+
+h2 {
+  color: #333;
+  font-size: 40px;
+  text-align: center;
+  margin-top: 50px;
+}
+
+h3 {
+  color: #4F5441;
+  font-size: 28px;
+  margin-bottom: 12px;
+  font-family: "Roboto",sans-serif;
+  font-weight: 400;
+  letter-spacing: 3px;
+}
+
+h4 {
+  font-size: 16px;
+  padding: 6px 0;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+p {
+  font-weight: 400;
+  letter-spacing: 3px;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  padding-left: 30px;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.underline {
+  width: 80px;
+  height: 4px;
+  background: #F3D982;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 64px;
+}
+
+.tab-container {
+  position: relative;
+  margin: 0 auto;
+  width: 80vw;
+  min-height: 800px;
+}
+
+/* Style the tab */
+.tab {
+  float: left;
+  width: 250px;
+  height: 800px;
+  margin-right: 25px;
+}
+
+/* Style the buttons inside the tab */
+.job-btn {
+  width: 100%;
+  display: block;
+  background-color: #FFFEFA;
+  color: black;
+  padding: 10px;
+  margin: 15px;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.job-btn:hover {
+  color: #F3D982;
+  border-left: 4px solid #F3D982;
+}
+
+/* Create an active/current "tab button" class */
+.tab .job-btn.active {
+  /*border-left: 3px solid #02B1BD;*/
+  box-shadow: -2px 0 #F3D982;
+}
+
+.content {
+  position: absolute;
+  top: 0;
+  left: 250px;
+  width: calc(80vw - 250px);
+  height: 800px;
+  overflow: hidden;
+}
+
+/* Style the tab content */
+.tabcontent {
+  float: left;
+  padding: 0px 12px;
+  width: 85%;
+  height: 800px;
+  margin-top: 20px;
+}
+
+.tabcontent p {
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+}
+
+.tabcontent ul li:before {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-size: 10px;
+  background-image: url("listimg.png");
+  background-repeat: no-repeat;
+  margin-right: 20px;
+  margin-left: -30px;
+}
+
+.skill-btn {
+  padding: 5px 8px;
+  background-color: #F3D982;
+  border-style: none;
+  border-radius: 5px;
+  margin: 10px;
+}
+
+
+@media (max-width: 986px) {
+  .tab-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .tab {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .job-btn {
+    width: 200px;
+    margin: 0 10px;
+    text-align: center;
+  }
+
+  .tab  .job-btn.active {
+    box-shadow: 0 2px #F3D982;
+  }
+
+  .job-btn:hover {
+    border: none;
+    box-shadow: 0 2px #F3D982;
+  }
+
+  .content {
+    position: relative;
+    left: 0;
+    width: 100%;
+  }
+}
