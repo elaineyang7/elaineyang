@@ -1,0 +1,228 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #FFFEFA;
+  color: #333;
+}
+
+h2 {
+  width: 100%;
+  color: #333;
+  font-size: 40px;
+  text-align: center;
+  margin-top: 50px;
+  letter-spacing: 3px;
+}
+
+h3 {
+  color: #4F5441;
+  font-size: 28px;
+  margin-bottom: 12px;
+  font-family: "Roboto",sans-serif;
+  font-weight: 400;
+  letter-spacing: 3px;
+}
+
+p {
+  font-weight: 400;
+  letter-spacing: 3px;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+.underline {
+  width: 80px;
+  height: 4px;
+  background: #F3D982;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 64px;
+  display: block;
+}
+
+.container {
+  position: relative;
+  width: 1000px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 100px 0;
+}
+
+.card:nth-child(odd) {
+  flex-direction: row;
+}
+
+.card:nth-child(even) {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+.imgBox {
+  position: relative;
+  width: 500px;
+  height: 400px;
+  left: 25px;
+  background-color: #FFFEFA;
+  border-radius: 10px;
+  z-index: -1;
+}
+
+.card:nth-child(even) .imgBox {
+  left: -25px;
+}
+
+.imgBox img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.contentBox {
+  position: relative;
+  right: 25px;
+  width: 500px;
+  min-height: 400px;
+  background-color: #A7DAC9;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 60px 20px 100px;
+}
+
+.card:nth-child(even) .contentBox {
+  right: -25px;
+  padding: 20px 100px 20px 60px;
+}
+
+.contentBox:before {
+  content: '';
+  position: absolute;
+  top: -50px;
+  bottom: -50px;
+  left: 0;
+  right: 0;
+  background-color: #A7DAC9;
+  border-radius: 10px;
+  z-index: -1;
+}
+
+.skill-btn {
+  padding: 5px 8px;
+  background-color: #F3D982;
+  border-style: none;
+  border-radius: 5px;
+  margin: 10px 5px;
+}
+
+.view {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0;
+  transition: 0.5s;
+}
+
+.viewMore {
+  display: inline-block;
+  padding: 10px;
+  border: 2px solid #F3D982;
+  border-radius: 10px;
+}
+
+.viewMore:hover {
+  background-color: #F3D982;
+  color: #FFF;
+}
+
+.github {
+  position: absolute;
+  right: 100px;
+  padding: 10px;
+}
+
+.github i {
+  font-size: 24px;
+}
+
+.github:hover {
+  color: #F3D982;
+}
+
+@media (max-width: 1000px) {
+  .card-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card {
+    flex-direction: column;
+    max-width: 350px;
+    margin: 50px;
+  }
+
+  .card:nth-child(odd) {
+    flex-direction: column;
+  }
+
+  .imgBox {
+    width: 100%;
+    height: 350px;
+    left: 0;
+  }
+
+  .contentBox {
+    width: 100%;
+    height: auto;
+    right: 0;
+    padding: 30px;
+    text-align: center;
+  }
+
+  .contentBox:before {
+    top: 0;
+    bottom: 0;
+  }
+
+  .card:nth-child(even) .imgBox {
+    left: 0;
+  }
+
+  .card:nth-child(even) .contentBox {
+    right: 0;
+    padding: 30px;
+  }
+
+  .github {
+    right: 70px;
+  }
+}
