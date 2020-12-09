@@ -1,0 +1,249 @@
+.section {
+  padding: 80px 0;
+}
+
+.section-title {
+  margin-bottom: 64px;
+  text-align: center;
+}
+
+.underline {
+  width: 80px;
+  height: 4px;
+  margin-bottom: 20px;
+  background: var(--aux-color);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.project-container {
+  width: 95%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.project {
+  display: grid;
+  margin-bottom: 64px;
+  align-items: center;
+}
+
+.project:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transform: scale(1.02);
+}
+
+.project-imgBox {
+  position: relative;
+  overflow: hidden;
+  height: 550px;
+  border-top-left-radius: var(--radius);
+  border-top-right-radius: var(--radius);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.project-imgBox img {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 0 0;
+}
+
+
+.project-content {
+  background: #FFFFFF;/*var(--sec-color);*/
+  padding: 16px 32px;
+  border-bottom-left-radius: var(--radius);
+  border-bottom-right-radius: var(--radius);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  word-spacing: 3px;
+}
+
+.project-num {
+  display: inline-block;
+  font-size: 20px;
+  color: var(--aux-color);
+  margin-bottom: 12px;
+}
+
+.project-desc {
+  margin-bottom: 5px;
+}
+
+.skills {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.skill-btn {
+  padding: 8px 10px;
+  background-color: var(--aux-color);
+  border-style: none;
+  border-radius: var(--radius);
+  margin: 10px 5px;
+}
+
+.view {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0;
+  transition: 0.5s;
+}
+
+.viewMore {
+  display: inline-block;
+  padding: 10px;
+  border: 2px solid var(--aux-color);
+  border-radius: 10px;
+}
+
+.viewMore:hover {
+  background-color: var(--aux-color);
+  color: #FFFFFF;
+}
+
+.github {
+  position: relative;
+  right: -10px;
+  padding: 10px;
+}
+
+.github i {
+  font-size: 24px;
+}
+
+.github:hover {
+  color: var(--aux-color);
+}
+
+.projects-sm {
+  width: 90vw;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(350px,1fr));
+  -webkit-column-gap: 32px;
+  column-gap: 32px;
+  padding: 0;
+}
+
+.project-sm {
+  display: block;
+  margin-bottom: 32px;
+  background: var(--sec-color);
+  border-radius: var(--radius);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s linear;
+}
+
+.project-sm:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transform: scale(1.02);
+}
+
+.project-sm article {
+  height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+.project-sm-imgBox {
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+  border-top-left-radius: var(--radius);
+  border-top-right-radius: var(--radius);
+  border: 1px solid #D6D6D6;
+}
+
+.project-sm-imgBox img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 0 0;
+  transition-delay: 500ms;
+}
+
+.project-sm-content {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  padding: 32px;
+}
+
+.skill-btn-sm {
+  padding: 5px 8px;
+  background-color: var(--aux-color);
+  border-style: none;
+  border-radius: var(--radius);
+  margin: 8px 3px;
+}
+
+.viewMore-sm {
+  padding: 8px;
+  border: 2px solid var(--aux-color);
+  border-radius: 10px;
+}
+
+@media (max-width: 992px){
+  .project_imgBox {
+    height: 480px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .project {
+    grid-template-columns: repeat(12,1fr);
+  }
+
+  .project:hover {
+    box-shadow: none;
+    transform: none;
+  }
+
+  .project-imgBox {
+    grid-row: 1/1;
+    grid-column: 1/span 8;
+    border: 1px solid #D6D6D6;
+    border-radius: var(--radius);
+  }
+
+  .project:nth-child(2n) .project-imgBox{
+    grid-row: 1/1;
+    grid-column: 5/-1;
+    border: 1px solid #D6D6D6;
+  }
+
+  .project-content {
+    grid-row: 1/1;
+    grid-column: 7/12;
+    border-radius: var(--radius);
+  }
+
+  .project:nth-child(2n) .project-content{
+    grid-column: 2/span 5;
+    grid-row: 1/1;
+    text-align: left;
+  }
+
+  .project-content:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transform: scale(1.02);
+  }
+
+  .project-sm {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    column-gap: 32px;
+  }
+
+}
