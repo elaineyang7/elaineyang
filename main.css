@@ -1,0 +1,172 @@
+/*********************/
+/* Variables         */
+/*********************/
+
+:root {
+  /* color */
+  /* floral white - background */
+  --main-color: #FFFEFA;
+  /* jungle green - box, card */
+  --sec-color: #bbdadb;/*#b5dae1;A7DAC9;*/
+  /* buff - highlight, button */
+  --aux-color: #ecc33a;/*#F3D982;/*#ecc43e;*/
+  /* night rider - paragraphs */
+  --p-color: #333333;
+  /* lunar green - headings */
+  --heading-color: #4F5441;
+
+  /* fonts */
+  --main-font: "Roboto", sans-serif;
+  --sec-font: "Open Sans", sans-serif;
+  --spacing: 3px;
+
+  /* width */
+  --max-width: 1170px;
+  --fixed-width: 700px;
+
+  /* height */
+  --nav-height: 60px;
+  --main-height: calc(100vh - 60px);
+
+  --radius: 5px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--main-color);
+  font-family: var(--sec-font);
+  color: var(--p-color);
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: var(--spacing);
+  text-transform: capitalize;
+  line-height: 1.25;
+  margin-bottom: 12px;
+  font-family: var(--main-font);
+  color: var(--heading-color);
+}
+
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 36px;
+  text-align: center;
+  padding-top: 60px;
+}
+
+h3 {
+  font-size: 28px;
+  font-weight: 400;
+}
+
+h4 {
+  font-size: 16px;
+  padding: 6px 0;
+  font-weight: 600;
+}
+
+p {
+  font-family: var(--sec-font);
+  font-weight: 400;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--p-color);
+  outline: none;
+  behavior:expression(this.onFocus=this.blur()); /* for IE */
+}
+
+section {
+  display: block;
+}
+
+button {
+  outline:none;
+}
+
+.section-title {
+  width: 100%;
+  margin-bottom: 64px;
+}
+
+.underline {
+  width: 80px;
+  height: 4px;
+  background: var(--aux-color);
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+}
+
+.skills {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.skill-btn {
+  padding: 8px 10px;
+  background-color: var(--aux-color);
+  border-style: none;
+  border-radius: var(--radius);
+  margin: 10px 5px;
+}
+
+.view {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0;
+  transition: 0.5s;
+}
+
+.viewMore {
+  display: inline-block;
+  padding: 10px;
+  border: 2px solid var(--aux-color);
+  border-radius: 10px;
+}
+
+.viewMore:hover {
+  background-color: var(--aux-color);
+  color: #FFFFFF;
+}
+
+.github {
+  position: relative;
+  right: -10px;
+  padding: 10px;
+}
+
+.github i {
+  font-size: 24px;
+}
+
+.github:hover {
+  color: var(--aux-color);
+}

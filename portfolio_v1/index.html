@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="lamb.ico" />
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta name="description" content="This is Elaine Yang's projects page.'">
+  <title>Elaine Yang</title>
+</head>
+
+<body>
+
+  <!--Navbar-->
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="#header">Home</a>
+    <a href="#web">Web Projects</a>
+    <a href="#python">Python Projects</a>
+    <a href="#java">Java Projects</a>
+    <a href="#app">Mobile App</a>
+    <a href="#numerical">Numerical Analysis</a>
+  </div>
+  <span class="open-button" onclick="openNav()">&#8801; </span>
+
+  <script>
+  function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+  }
+
+  function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+  }
+  </script>
+
+
+  <!--Header with name and resume, email, github-->
+  <div id="header">
+    <h1>Elaine Yang</h1>
+    <p>
+      <i class="fa fa-file-text-o"></i>
+      <strong><a href="Elaine-Yang-Resume.pdf" download>Resume</a></strong> &nbsp;&nbsp;
+      <i class="fa fa-envelope-o"></i>
+      <strong>Email: </strong>elaineyyang7@gmail.com &nbsp;&nbsp;
+      <i class="fa fa-github"></i>
+      <strong>Github: </strong><a href="https://github.com/elaineyang7">elaineyang7</a>
+    </p>
+  </div>
+
+  <div id="main">
+
+    <!--Web Projects-->
+    <section id="web">
+      <div class="colums">
+        <div class="sidebar">
+          <h2>Web Projects</h2>
+        </div>
+        <div class="body">
+
+          <div class="card-main">
+            <ul class="cards">
+
+              <li class="cards-item">
+                <div class="card">
+                  <a href="https://elaine-microblog.herokuapp.com/" target="_blank">
+                  <div class="card-image">
+                    <img src="images/microblog.jpg">
+                  </div>
+                  <div class="card-content">
+                    <h3 class="card-title">Microblogging</h3>
+                    <hr>
+                    <p class="card-text">A small social microblogging web application created by Python/Flask framework and SQLAlchemy to establish the backend and using Bootstrap to build the frontend. Based on Miguel Grinberg flask tutorial. Users are allow to sign up, log in with Google or Facebook account.</p>
+                  </div>
+                  </a>
+                </div>
+              </li>
+
+              <li class="cards-item">
+                <div class="card">
+                  <a href="https://elaine-portfolio-web.herokuapp.com/" target="_blank">
+                  <div class="card-image">
+                    <img src="images/portfolio_flask.jpg">
+                  </div>
+                  <div class="card-content">
+                    <h3 class="card-title">Portfolio Web App with Flask</h3>
+                    <hr>
+                    <p class="card-text">Developed a personal portfolio web app using Python and the Flask framework along with HTML and CSS. This web app hosted on Heroku which is a cloud platform as a service (PaaS).</p>
+                  </div>
+                  </a>
+                </div>
+              </li>
+
+              <li class="cards-item">
+                <div class="card">
+                  <a href="vegetarian_in_the_bay_area/index.html" target="_blank">
+                  <div class="card-image">
+                    <img src="images/vegetarian.jpg">
+                  </div>
+                  <div class="card-content">
+                    <h3 class="card-title">Vegetarian in the Bay Area</h3>
+                    <hr>
+                    <p class="card-text">I'm currently working on a website, sharing vegetarian recipes, vegetarian dishes of the restaurants in the Bay Area, and information for vegetarians.</p>
+                  </div>
+                  </a>
+                </div>
+              </li>
+
+              <li class="cards-item">
+                <div class="card">
+                  <a href="timeline/index.html" target="_blank">
+                  <div class="card-image">
+                    <img src="images/stamps.jpg">
+                  </div>
+                  <div class="card-content">
+                    <h3 class="card-title">Handmade Rubber Stamps Timeline</h3>
+                    <hr>
+                    <p class="card-text">This vertical timeline shows some of my handmade rubber stamps. Used some CSS3 tricks and a bit of JavaScript to create some bounce animations. When the user scrolls to trigger the animation, and the new block enters the viewport.</p>
+                  </div>
+                  </a>
+                </div>
+              </li>
+
+              <li class="cards-item">
+                <div class="card">
+                  <a href="meowClock/index.html" target="_blank">
+                  <div class="card-image">
+                    <img src="images/meow_clock.jpg">
+                  </div>
+                  <div class="card-content">
+                    <h3 class="card-title">Meow Meow Clock</h3>
+                    <hr>
+                    <p class="card-text">JavaScript web app with interactive clocks that changes the cat’s image and message according to the events set by the user during the day and by clicking the Party Time button.</p>
+                  </div>
+                  </a>
+                </div>
+              </li>
+
+              <li class="cards-item">
+                <div class="card">
+                  <a href="todo_list/index.html" target="_blank">
+                  <div class="card-image">
+                    <img src="images/todo.jpg">
+                  </div>
+                  <div class="card-content">
+                    <h3 class="card-title">To-Do List</h3>
+                    <hr>
+                    <p class="card-text">Using JavaScript to build a simply To-Do List App that lets users add, remove, and mark complete items.</p>
+                  </div>
+                  </a>
+                </div>
+              </li>
+
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <hr>
+
+    <!--Python Projects-->
+    <section id="python">
+      <div class="colums">
+        <div class="sidebar">
+          <h2>Python Projects</h2>
+        </div>
+        <div class="body">
+          <h3><a href="https://github.com/elaineyang7/python_folium_webmap">Web-Mapping App on the Browser</a></h3>
+          <p>Spring 2020</p>
+          <br>
+          <p>Created two Leaflet web maps using Python with the Folium and Pandas libraries. The Folium is able to generate HTML, Javascript and CSS and these three render the map on the browser.</p>
+          <br>
+          <p>Map of the Volcano and Population:</p>
+          <p>This map is to visualize volcano and population data of the United States. The locations of the volcanoes are marked, their colors set according to the elevation. Used GeoJSON to passed to the map as an overlay, and multiple layers can be visualized on the
+              same map.</p>
+          <figure>
+            <a href="mapping/Map1.html"><img src="images/volcanoes.jpg" width="70%"></a>
+            <figcaption></figcaption>
+          </figure>
+          <div class="btn-block">
+  					<a href="mapping/Map1.html"><button type="submit">Try Me!</button></a>
+  				</div>
+          <br>
+          <p>My Favorite Restaurant:</p>
+          <p>Shows the location of my favorite restaurants in the Bay Area. Passed description HTML code of each restaurant in a popup message.</p>
+          <figure>
+            <a href="mapping/restaurant.html"><img src="images/favorite_restaurant.jpg" width="70%"></a>
+            <figcaption></figcaption>
+          </figure>
+          <div class="btn-block">
+  					<a href="mapping/restaurant.html"><button type="submit">Try Me!</button></a>
+  				</div>
+          <br><br>
+
+          <h3><a href="https://github.com/elaineyang7/Handwritten_Numbers_Recognition">Handwritten Numbers Recognition</a></h3>
+          <p>Winter 2019</p>
+          <br>
+          <p>Used machine learning algorithms and data analysis to recognize the MNIST dataset of handwritten numbers by using Python libraries such as scikit-learn, NumPy, and Pandas.</p>
+          <br>
+          <p>PCA allows to build a classifier using fewer features. PCA is essentially a method that reduces the dimension of the feature space in such a way that new variables are orthogonal to each other. PCA captures the most variance possible, this
+              makes the training accuracy attained using histogram is slightly higher than that attained using the Bayesian classifier.</p>
+          <br>
+
+          <figure>
+            <img src="images/MNIST_dataset.jpg" width="50%">
+            <figcaption>The MNIST database of handwritten digits.</figcaption>
+          </figure>
+
+          <div class="container">
+            <div class="fg">
+              <img src="images/single_digit.jpg" width="200">
+              <p>The numerical structure of a single handwritten digit image.</p>
+            </div>
+            <div class="fg">
+              <img src="images/training_dataset.jpg" width="300">
+              <p>Digits 4 and 6 from training dataset.</p>
+            </div>
+          </div>
+          <figure>
+            <img src="images/images_obtained.jpg" width="30%">
+            <figcaption>Images obtained by reconstructing a few selected samples using 2 principal components.</figcaption>
+          </figure>
+          <figure>
+            <img src="images/point_clouds.jpg" width="50%">
+            <figcaption>Point clouds for digits 4 and 6 after dimension reduction.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <hr>
+
+    <!--Java Projects-->
+    <section id="java">
+      <div class="colums">
+        <div class="sidebar">
+          <h2>Java Projects</h2>
+        </div>
+        <div class="body">
+          <h3>Online Shopping Application</h3>
+          <p>Spring 2020</p>
+          <br>
+          <p>Created a Java application that allows users to sign up, log in, view products, and order, using Java Swing GUI to create window-based applications and using text files to store users’ information and orders.</p>
+          <figure>
+            <img src="images/java_swing.jpg" width="650">
+            <figcaption></figcaption>
+          </figure>
+          <br><br>
+          <h3><a href="https://github.com/elaineyang7/Marathon_Race_Runners">Marathon Race Runner</a></h3>
+          <p>Spring 2020</p>
+          <br>
+          <p>Used Java to simulate a marathon race between participants. The racers’ information can be read from a text file or XML file or derby database. </p>
+          <br>
+          <p>Learned how to implement multi-threading in Java to improve application functionality.</p>
+          <br><br>
+
+          <h3>Bank Transaction System</h3>
+          <p>Spring 2020</p>
+          <br>
+          <p>This system provides customers to post the bank transactions in their savings and checking accounts from the comfort of their home.</p>
+          <br>
+          <p>Designed to follow OOP concepts, such as abstraction, inheritance, and polymorphism.</p>
+        </div>
+      </div>
+    </section>
+
+    <hr>
+
+    <!--App Projects-->
+    <section id="app">
+      <div class="colums">
+        <div class="sidebar">
+          <h2>Mobile App</h2>
+        </div>
+        <div class="body">
+          <h3><a href="https://github.com/elaineyang7/mobile_app">Products List</a></h3>
+          <p>Winter 2019</p>
+          <br>
+          <p>This Flutter mobile app based on the source code “We Rate Dogs example app”, allows users to add new post of products and view the products list.</p>
+          <figure>
+            <img src="images/app.jpg" width="500">
+            <figcaption></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <hr>
+
+    <!--Numerical Analsis-->
+    <section id="numerical">
+      <div class="colums">
+        <div class="sidebar">
+        <h2>Numerical Analsis</h2>
+        </div>
+        <div class="body">
+          <h3><a href="https://github.com/elaineyang7/numerical_analysis.git">Dynamical  Modelling of Extra-Solar Planetary System Kepler 16
+          </a></h3>
+          <p>Summer 2014</p>
+          <br>
+          <p>A binary star is a star system consisting of two stars orbiting around their common center of mass ,their systems are very important in astrophysics because calculations of their orbits allow the masses of their component stars to be directly
+          determined, which in turn allows other stellar parameters, such as radius and density, to be indirectly estimated.</p>
+          <br>
+          <p>Kepler-16b (formally Kepler-16 (AB)-b) is an extra-solar planet outside the Solar System. There are two stars star A and star B and a planet in the system.</p>
+          <p>Numerically solve the following system: <br><img src="images/kepler_system.jpg" width="200"></p>
+          <br>
+          <p>Used the fourth-order Runge Kutta Method, there were three cases. The first case is that when the initial velocity is small, extra-solar planets hit star. The second case is that when initial velocity is between 0.5 and 1.0, extra-solar planets
+          orbit is periodic. The third case is that when initial velocity is large, extra-solar planets orbit will migrate outward from this system.</p>
+          <br>
+          <div class="container">
+            <div class="text">
+              <p>Assume the initial velocity is 0.1,</p>
+              <p>and the time 0≦t≦0.7225</p>
+            </div>
+            <div class="fg">
+              <img src="images/fig3cj.png" width="190">
+              <p>Energy of the planet</p>
+            </div>
+            <div class="fg">
+              <img src="images/fig3xy.png" width="190">
+              <p>The orbit of the planet</p>
+            </div>
+
+            <div class="text">
+              <p>Assume the initial velocity is 0.5,</p>
+              <p>and the time 0≦t≦0.5</p>
+            </div>
+            <div class="fg">
+              <img src="images/fig2cj.png" width="190">
+              <p>Energy of the planet</p>
+            </div>
+            <div class="fg">
+              <img src="images/fig2xy.png" width="190">
+              <p>The orbit of the planet</p>
+            </div>
+
+            <div class="text">
+              <p>Assume the initial velocity is 1,</p>
+              <p>and the time 0≦t≦50</p>
+            </div>
+            <div class="fg">
+              <img src="images/fig1cj.png" width="190">
+              <p>Energy of the planet</p>
+            </div>
+            <div class="fg">
+              <img src="images/fig1xy.png" width="190">
+              <p>The orbit of the planet</p>
+            </div>
+
+            <div class="text">
+              <p>Assume the initial velocity is 2,</p>
+              <p>and the time 0≦t≦15</p>
+            </div>
+            <div class="fg">
+              <img src="images/fig4cj.png" width="190">
+              <p>Energy of the planet</p>
+            </div>
+            <div class="fg">
+              <img src="images/fig4xy.png" width="190">
+              <p>The orbit of the planet</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</body>
+</html>
