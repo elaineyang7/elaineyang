@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Sign Up Form</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="overlay-container">
+        <div class="leftBox">
+          <h3 class="title"><span>Lamb</span> Handmade</h3>
+          <h2 class="hello-title">Welcome Back!</h2>
+          <p>To Keep connected with us please login with your personal info</p>
+          <button class="button" id="signin">Sign in</button>
+        </div>
+        <div class="rightBox">
+        <h3 class="title"><span>Lamb</span> Handmade</h3>
+        <h2 class="hello-title">Hello, Friend!</h2>
+        <p>Don't have an account?</p>
+        <button class="button" id="signup">Sign UP</button>
+        </div>
+      </div>
+      <div class="upperBox">
+        <div class="signinForm">
+          <h2 class="form-title">sign in</h2>
+          <form autocomplete="off">
+            <input type="text" placeholder="username">
+            <input type="password" placeholder="password">
+            <div class="checkbox">
+              <input type="checkbox" id="remember" />
+              <label for="remember">remember me</label>
+            </div>
+            <button class="submit">sign in</button>
+          </form>
+        </div>
+        <div class="signupForm nonedisplay">
+          <h2 class="form-title">register</h2>
+          <form autocomplete="off">
+            <input type="text" placeholder="username">
+              <input type="email" placeholder="email">
+              <input type="password" placeholder="password">
+              <input type="password" placeholder="confirm password">
+              <button class="submit">create account </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

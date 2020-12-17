@@ -1,0 +1,200 @@
+.container {
+  margin: auto;
+  width: 650px;
+  height: 550px;
+  position: relative;
+}
+
+.overlay-container {
+  background-color: var(--white);
+  width: 650px;
+  height: 415px;
+  position: absolute;
+  top: 25%;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px rgba(0,0,0,.1);
+}
+
+.leftBox,
+.rightBox {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  transition: 1s all ease;
+}
+
+.leftBox {
+  top: 0;
+  left: 0;
+}
+
+.rightBox {
+  top: 0;
+  right: 0;
+}
+
+.title {
+  font-family: var(--serif);
+  color: var(--gray);
+  font-size: 1.5em;
+  line-height: 1.1em;
+  letter-spacing: 3px;
+  text-align: center;
+  font-weight: 300;
+  margin-top: 20%;
+}
+
+.hello-title {
+  margin: 30px auto 50px auto;
+}
+
+.overlay-container P {
+  width: 240px;
+  height: 100px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+button {
+  padding: 15px;
+  font-family: var(--sans-serif);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 11px;
+  border-radius: 10px;
+  margin: 0 auto;
+  outline: none;
+  display: block;
+}
+
+.button {
+  background-color: var(--white);
+  color: var(--pink);
+  border: solid 1px var(--pale);
+}
+
+.button:hover {
+  background-color: var(--pale);
+  color: var(--white);
+  transition: var(--lavender) 1s ease-out;
+}
+
+.upperBox {
+  position: absolute;
+  top: 15%;
+  left: 5%;
+  background-color: var(--pale);
+  width: 320px;
+  height: 500px;
+  border-radius: 5px;
+  box-shadow: 2px 0 10px rgba(0,0,0,.1);
+  transition: all .5s ease-in-out;
+  z-index: 2;
+}
+
+.signinForm,
+.signupForm {
+  position: relative;
+  width: 100%;
+  height: 90%;
+  top: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.nonedisplay {
+  display: none;
+}
+
+.form-title {
+  position: absolute;
+  top: 70px;
+  font-family: var(--sans-serif);
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--white);
+  font-size: 2em;
+  letter-spacing: 8px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 30px auto;
+}
+
+input {
+  width: 230px;
+  padding: 7px;
+  margin: 8px auto;
+  background-color: var(--pale);
+  color: var(--pink);
+  border: none;
+  border-bottom: 1px solid rgba(246, 246, 246, 0.5);
+}
+
+input::placeholder {
+  color: rgba(246, 246, 246, 1);
+  letter-spacing: 2px;
+  font-size: 1.3em;
+  font-weight: 100;
+}
+
+input:focus {
+  color: var(--pink);
+  outline: none;
+  border-bottom: 1.2px solid rgba(246, 246, 246, 0.7);
+  font-size: 1em;
+  transition: .8s all ease;
+}
+
+input:focus::placeholder {
+  opacity: 0;
+}
+
+label {
+  font-family: var(--sans-serif);
+  color: var(--pink);
+  font-size: 0.8em;
+  letter-spacing: 1px;
+}
+
+.checkbox {
+  display: inline;
+  white-space: nowrap;
+  position: relative;
+  top: 5px;
+  left: -62px;
+}
+
+input[type=checkbox] {
+  width: 7px;
+  height: 7px;
+  background-color: var(--pink);
+}
+
+.checkbox input[type="checkbox"]:checked + label {
+  color: var(--pink);
+  transition: .5s all ease;
+}
+
+.submit {
+  margin-top: 25px;
+  padding: 12px;
+  background-color: var(--white);
+  color: var(--pink);
+  border: solid 1px var(--pink);
+  position: absolute;
+  bottom: 65px;
+}
+
+.submit:hover {
+  background-color: var(--lavender);
+  border-color: #BEB3C6;
+  color: var(--white);
+  transition: var(--lavender) 1s ease-out;
+}

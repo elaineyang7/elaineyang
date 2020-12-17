@@ -1,0 +1,48 @@
+:root {
+  --gray: #8E9AAF;
+  --lavender: #CBC0D3;
+  --pale: #EAC7CC;
+  --white: #f6f6f6;
+  --pink: #B79499;
+
+  --sans-serif: 'Open Sans', sans-serif;
+  --serif: 'Lora', serif;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400|Lora');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--lavender);
+}
+
+h2 {
+  font-family: var(--serif);
+  color: #666;
+  font-size: 1.8em;
+  line-height: 1.1em;
+  letter-spacing: 3px;
+  text-align: center;
+  font-weight: 500;
+}
+
+p {
+  font-family: var(--sans-serif);
+  font-size: .7em;
+  letter-spacing: 2px;
+  color: var(--gray);
+  text-align: center;
+}
+
+span {
+  color: var(--pale);
+}
+
+button {
+  color: var(--pink);
+}
