@@ -156,13 +156,6 @@ input:focus::placeholder {
   opacity: 0;
 }
 
-label {
-  font-family: var(--sans-serif);
-  color: var(--pink);
-  font-size: 0.8em;
-  letter-spacing: 1px;
-}
-
 .checkbox {
   display: inline;
   white-space: nowrap;
@@ -171,9 +164,20 @@ label {
   left: -62px;
 }
 
+label {
+  font-family: var(--sans-serif);
+  color: var(--pink);
+  font-size: 0.8em;
+  letter-spacing: 1px;
+  position: relative;
+  top: 5px;
+  left: 5px;
+}
+
 input[type=checkbox] {
   width: 7px;
   height: 7px;
+  margin: 0;
   background-color: var(--pink);
 }
 
@@ -193,7 +197,7 @@ input[type=checkbox] {
 }
 
 .submit:hover {
-  background-color: var(--lavender);
+  background-color: #BEB3C6;
   border-color: #BEB3C6;
   color: var(--white);
   transition: var(--lavender) 1s ease-out;
