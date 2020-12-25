@@ -6,10 +6,10 @@
   /* color */
   /* floral white - background */
   --main-color: #FFFEFA;
-  /* jungle green - box, card */
-  --sec-color: #bbdadb;/*#b5dae1;A7DAC9;*/
-  /* buff - highlight, button */
-  --aux-color: #ecc33a;/*#F3D982;/*#ecc43e;*/
+  /* Zumthor - box, card */
+  --sec-color: #BBDADB;/*#b5dae1;A7DAC9;*/
+  /* saffron - highlight, button */
+  --aux-color: #ECC33A;/*#F3D982;/*#ecc43e;*/
   /* night rider - paragraphs */
   --p-color: #333333;
   /* lunar green - headings */
