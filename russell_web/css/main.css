@@ -1,0 +1,127 @@
+@font-face {
+  font-family: 'SFProText-Regular';
+  src:  url('../fonts/FontsFree-Net-SFProText-Regular-1.ttf') format('ttf');
+}
+
+@font-face {
+  font-family: 'SFProText-Thin';
+  src:  url('../fonts/FontsFree-Net-SFProText-Light.ttf') format('ttf');
+}
+
+@font-face {
+  font-family: 'SFProText-Bold';
+  src:  url('../fonts/FontsFree-Net-SFProText-Bold.ttf') format('ttf');
+}
+
+@font-face {
+  font-family: 'SFProText-Medium';
+  src:  url('../fonts/FontsFree-Net-SFProText-Medium.ttf') format('ttf');
+}
+
+:root {
+  
+  /**
+  * Color
+  */
+
+  --color-yellow-head: #FFC84E;
+  --color-yellow-text: #F2BB12;
+  --color-yellow-mail: #FFC512;
+  --color-yellow-about: #FBCF46;
+  --color-yellow-linkedin-icon: #ffD70f;
+  --color-yellow-overlay-menu: #FFC84E;
+
+  --color-white-01: #FFFFFF;
+  --color-white-02: #FDFDFD;
+
+  --color-black-01: #000000;
+  --color-black-02: #090909;
+  --color-black-03: #1F1F1F;
+  --color-black-04: #2A2929;
+  --color-black-05: #2A2A2A;
+  --color-black-06: #333333;
+  --color-black-07: #343434;
+  --color-black-08: #373737;
+  --color-black-09: #4c4c4c;
+  --color-black-10: #666666;
+  --color-black-11: #D8D8D8;
+
+
+  /**
+  * Font Family
+  */
+
+  --font-primary: "Arial-Black";
+  --font-secondary: "SFProText-Regular";
+  --font-span: "ArialMT";
+  --font-sfthin: "SFProText-Thin";
+  --font-sfbold: "SFProText-Bold";
+  --font-sfmedium: "SFProText-Medium";
+
+
+  /**
+  * Size
+  */
+
+  --size-russell-logo-gear: 58px; /* Sara annotation: 68px; */
+  --size-overlay-btn-position: 25px; /* Sara annotation: 48px; */
+
+  /**
+  * Width
+  */
+
+  --width-left-side-nav: 120px;
+  --width-homepage-russell-logo: 350px; /* Sara annotaion: 376px; */
+  --width-homepage-about-container: 80%; /* Sara annotation: 1000px */
+  --width-homepage-about-container-half: 40%;
+  --width-homepage-portfolio-container: 1031.7px;/* Sara annotation: 1122px */
+  --width-homepage-portfolio-img: 821.7px; /* Sara annotation: 913px; */
+  --width-homepage-mail-container: 324px; 
+  --width-homepage-mail-container-half: 162px;
+
+  /**
+  * Height 
+  */
+
+  --height-homepage-russell-logo: 90px; /* Sara annotaion: 108px; */
+  --height-nav-ul: 160px; /*Sara annotation: 271px; */
+  --height-nav-li-li: 111.6px;
+  --height-homepage-banner-section: calc(100vh - var(--height-homepage-russell-logo));/* Sara annotation: 979px; */
+  --height-homepage-about-section: 1061px;
+  --height-homepage-about-container: 666px;
+  --height-homepage-portfolio-section: 1080px;
+  --height-homepage-portfolio-container: 676.8px;
+  --height-homepage-portfolio-img: 609.12px; /* Sara annotation: 676.8px; */
+  --height-homepage-mail-section: calc(100vh - var(--height-homepage-russell-logo)); /* Sara annotation: 1148px; */
+  --height-homepage-mail-container: 182px;
+  --height-homepage-contact-section: 1800px;
+  --height-homepage-footer: 674px;
+
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  /*width: 2086px;
+  min-height: 100%;*/
+  position: relative;
+  background-color: var(--color-white-02);
+  font-family: var(--font-primary);
+  /*margin: 62px 136px 0 23px;*/
+  margin: 0;
+  padding: 0;
+  color: var(--color-white-01);
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-white-01);
+}
+
+li {
+  list-style: none;
+}
+
