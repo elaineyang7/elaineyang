@@ -1,0 +1,11 @@
+/*************************/
+/* Main                  */
+/*************************/
+
+main {
+  position: absolute;
+  width: calc(100% - var(--width-left-side-nav));
+	top: var(--height-homepage-russell-logo);
+	left: var(--width-left-side-nav);
+  overflow-y: hidden;
+}

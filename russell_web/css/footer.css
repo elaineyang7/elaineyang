@@ -1,0 +1,67 @@
+/*************************/
+/* Footer                */
+/*************************/
+footer {
+  height: var(--height-homepage-footer);
+  background-color: var(--color-black-03);
+  padding: 182px 140px 52px;
+  display: block;
+}
+
+.footer-row {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.footer-border {
+  border-bottom: 1px solid var(--color-black-08);
+}
+
+.container-link {
+  display: flex;
+  margin: 0;
+  padding-bottom: 136px;
+}
+
+footer .footer-row .container-link .links {
+  padding-right: 50px; /* Sara annotaion: 195px; */
+}
+
+footer .footer-row .container-link .links h3 {
+  font-family: var(--font-sfbold);
+  font-size: 24px;
+  letter-spacing: 0;
+  margin: 0;
+  padding-bottom: 54px;
+}
+
+footer .footer-row .container-link .links ul {
+  margin: 0;
+  padding-left: 0;
+}
+
+footer .footer-row .container-link .links ul li {
+  padding-bottom: 21px;
+}
+
+footer .footer-row .container-link .links ul li a {
+  font-family: var(--font-secondary);
+  font-size: 16px;
+  letter-spacing: 0;
+}
+
+.copyright {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.copyright p {
+  font-family: var(--font-sfthin);
+  font-size: 16px;
+  letter-spacing: 0;
+  margin-top: 41px;
+}
+

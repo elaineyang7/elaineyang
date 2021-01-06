@@ -1,0 +1,15 @@
+/* Overlay Menu Btn*/
+.overlay-menu {
+  position: absolute;
+  z-index: 999;
+  right: 0;
+}
+
+.openbtn {
+  width: 72px;
+  height: 49px;
+  cursor: pointer;
+  position: absolute;
+  top: var(--size-overlay-btn-position);
+  right: var(--size-overlay-btn-position);
+}

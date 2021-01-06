@@ -1,0 +1,78 @@
+.sci {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+
+.sci ul {
+  padding-left: 0;
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding-left: 0;
+}
+
+.sci ul li {
+  padding-right: 44px;
+  width: 32px;
+  height: 32px;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 105px;
+  background-color: var(--color-white-01);
+  color: var(--color-black-01);
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 99;
+  top: 150%;
+  left: 50%;
+  margin-left: -60px;
+  font-size: 10px;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent var(--color-white-01) transparent;
+}
+
+.tooltip .exitLinkedIn {
+  background-color: var(--color-yellow-linkedin-icon);
+  color: var(--color-black-01);
+}
+
+.tooltip .exitLinkedIn::after {
+  border-color: transparent transparent var(--color-yellow-linkedin-icon) transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+.tooltip .img-hover {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  width: 32px;
+  height: 32px;
+}
+
+.tooltip:hover .img-hover {
+  display: inline;
+}
+

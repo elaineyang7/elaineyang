@@ -1,0 +1,28 @@
+/*************************/
+/* Right Side Navigation */
+/*************************/
+
+aside {
+  width: 13px;
+  height: 480px;
+  position: fixed;
+  top: 120px;
+  right: 50px;
+  z-index: 1;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+}
+
+aside ul li {
+  height: 45px;
+  margin: 2px 0 5px 0;
+  cursor: default;
+}
+
+.active {
+  width: 3px;
+  height: 43px;
+  background-color: var(--color-black-08);
+}

@@ -1,0 +1,58 @@
+/*************************/
+/* Left Side Navigation  */
+/*************************/
+
+nav {
+  height: 100vh;
+  width: var(--width-left-side-nav);
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: var(--color-black-09);
+}
+
+.nav-left-side {
+  width: 100%;
+  height: var(--width-left-side-nav);
+  position: fixed;
+  top: 0;
+  right: 0;
+  overflow-y: hidden;
+  overflow-x: auto;
+  background: var(--color-black-09);
+  -webkit-transform-origin: left top;
+  -webkit-transform: rotate(-90deg)translateX(-100%);
+  -moz-transform-origin: left top;
+  -moz-transform: rotate(-90deg) translateX(-100%);
+  transform-origin: left top;
+  transform: rotate(-90deg) translateX(-100%);
+  z-index: -1;
+}
+
+.nav-left-side ul {
+  margin-top: 51px;
+  margin-right: 160px;
+  padding: 0;
+}
+
+.nav-left-side ul li {
+  margin-left: var(--height-nav-li-li);
+  position: relative;
+  display: inline;
+  float: right;
+  height: 100%;
+}
+
+.nav-left-side ul li a {
+  font-family: var(--font-secondary);
+  font-size: 18px;
+  color: var(--color-white-01);
+  letter-spacing: 3.02px;
+  text-transform: uppercase;
+  line-height: 21px;
+  width: 21px;
+}
+
+.nav-left-side ul li:hover a {
+  color: var(--color-yellow-head);
+}

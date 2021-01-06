@@ -1,0 +1,420 @@
+/*************************/
+/* Header                */
+/*************************/
+
+.header {
+  top: 0;
+  left: 0;
+  height: var(--height-homepage-russell-logo);
+  width: 100%;
+  max-width: 1920px;
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  overflow-x: hidden;
+  background-color: var(--color-white-01);
+  z-index: 1;
+}
+
+/* Logo */
+.gear-logo {
+  width: var(--width-left-side-nav);
+  height: var(--height-homepage-russell-logo);
+  position: relative;
+  background-color: var(--color-black-09);
+}
+
+.gear-logo img {
+  width: var(--size-gear-logo);
+  height: var(--size-gear-logo);
+  margin: 20px 28.3px 0 28.3px; /* Sara annotation:: 28px 28.3px 0 28.3px; */
+}
+
+/* Back to home */
+.go-back {
+  width: calc(100% - var(--width-left-side-nav));
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+
+.go-back a {
+  padding-top: 15px;
+}
+
+.go-back a img {
+  width: var(--size-gear-logo);
+  height: var(--size-gear-logo);
+  position: relative;
+  top: 0; /* Sara annotation: 60px; */
+  left: 44px;
+  transform: rotate(180deg);
+  border: 1px solid var(--color-black-01);
+  border-radius: 50%;
+}
+
+.go-back p {
+  font-family: var(--font-sfbold);
+  font-size: 20px;
+  color: var(--color-black-01);
+  letter-spacing: 0;
+  position: relative;
+  padding-top: 35px;
+  left: calc(44px + 20px);
+}
+
+/* Overlay Menu Btn*/
+.overlay-menu {
+  position: relative;
+  z-index: 999;
+  right: 0;
+}
+
+.openbtn {
+  width: 72px;
+  height: 49px;
+  cursor: pointer;
+  position: absolute;
+  top: var(--size-overlay-btn-position);
+  right: var(--size-overlay-btn-position);
+}
+
+/*************************/
+/* About Introduction    */
+/*************************/
+
+.about-introduction {
+  width: 100%;
+  height: 1019px;
+  position: relative;
+  background-color: var(--color-white-02);
+}
+
+.content-about-introduction {
+  width: 50%; /* Sara annotation: 909px; */
+  height: 965px;
+  position: relative;
+  top: 170px; /* Sara annotation: 272.5px; */
+  left: 188px;
+  margin-bottom: 309px;
+  color: var(--color-black-12);
+}
+
+.about-title {
+  width: 171px;
+  height: 64px;
+  background-color: var(--color-yellow-about);
+  text-align: center;
+}
+
+.about-title h1 {
+  font-size: 40px;
+  letter-spacing: 0;
+  line-height: 64px; /* Sara annotation: 96px; */
+}
+
+.content-about-introduction h2 {
+  font-size: 40px;
+  letter-spacing: 0;
+  margin-top: 56px; /* Sara annotation: 76px; */
+  margin-bottom: 32px;
+}
+
+.content-about-introduction p {
+  font-family: var(--fonr-sflight);
+  font-size: 24px;
+  letter-spacing: 0;
+}
+
+.about-egg {
+  width: 890px; /* Sara annotation: 590px; */
+  height: 596px;
+  position: absolute;
+  top: 156.5px;
+  right: -430px;
+}
+
+.about-egg img {
+  width: 100%;
+  height: 100%;
+  opacity: 0.32;
+}
+
+/*************************/
+/* About Location        */
+/*************************/
+
+.about-location {
+  position: relative;
+  height: var(--height-about-location);
+}
+
+.content-location {
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/about/location.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.content-location p {
+  width: 399px;
+  height: 42px;
+  background-color: var(--color-black-04);
+  font-family: ArialMT;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: 43px;
+  text-align: center;
+  position: relative;
+  top: 509px;
+  margin: 0 auto;
+}
+
+/*************************/
+/* About Clients         */
+/*************************/
+
+.about-clients {
+  position: relative;
+  height: var(--height-about-clients);
+  background-color: var(--color-black-14);
+}
+
+.about-section-title {
+  font-size: 40px;
+  color: var(--color-black-06);
+  letter-spacing: 0;
+  text-align: center;
+  padding-top: 180px;
+  padding-bottom: 70px;
+}
+
+.about-clients p {
+  width: 80%;/* Sara annotation: 1153px; */
+  /*height: 110px;*/
+  color: var(--color-black-06);
+  margin: 0 auto;
+  font-family: var(--fonr-sflight);
+  font-size: 26px;
+  letter-spacing: 0;
+}
+
+.about-clients p span {
+  font-family: var(--font-sfbold);
+  font-size: 26px;
+  color: var(--color-black-13);
+  letter-spacing: 0;
+  line-height: 31px;
+  position: relative;
+  z-index: 1;
+}
+
+.about-clients p span:before {
+  content: "";
+  width: 100%;
+  height: 10px;
+  position: absolute;
+  bottom: 0;
+  background-color: var(--color-yellow-about);
+  z-index: -1;
+}
+
+.about-clients-img {
+  width: 85%; /* Sara annotation: 1286px; */
+  height: auto; /* Sara annotation: 249px; */
+  position: relative;
+  margin: 0 auto;
+  margin-top: 110px;
+}
+
+.about-clients-img img {
+  width: 100%;
+  height: 100%;
+}
+
+.nonprofit {
+  height: var(--height-about-clients-nonprofit);
+  position: absolute;
+  bottom: 0;
+  background-color: var(--color-white-01);
+}
+
+.nonprofit p {
+  width: 672px;
+  height: 37px;
+  padding-top: 178px;
+  padding-bottom: 131px;
+  font-family: var(--fonr-sflight);
+  font-size: 26px;
+  color: var(--color-black-06);
+  letter-spacing: 0;
+  text-align: center;
+}
+
+.nonprofit p span {
+  font-family: var(--font-sfbold);
+  font-size: 26px;
+  color: var(--color-black-13);
+  letter-spacing: 0;
+  line-height: 31px;
+  position: relative;
+}
+
+.nonprofit p span:before {
+  content: "";
+  width: 100%;
+  height: 10px;
+  position: absolute;
+  bottom: 0;
+  background-color: var(--color-yellow-about);
+  z-index: －1;
+}
+
+.nonprofit .about-clients-img {
+  margin: 0 auto;
+}
+
+/*************************/
+/* About Others          */
+/*************************/
+
+.about-others {
+  position: relative;
+  height: 3527px;
+  background-color: var(--color-black-14); 
+}
+
+.about-others .about-section-title {
+  padding-top: 236px;
+  padding-bottom: 207px;
+}
+
+.about-others h4 {
+  font-family: var(--font-sfbold);
+  font-size: 24px;
+  letter-spacing: 0;
+}
+
+.about-others p {
+  font-family: var(--font-sfthin);
+  font-size: 24px;
+  letter-spacing: 0;
+}
+
+.about-others-media {
+  position: relative;
+  height: calc(320px + 462px); /* 1102px; */
+  display: flex;
+  flex-direction: row;
+}
+
+.about-others-media-content {
+  width: 475px;
+  height: 471px;
+  position: absolute;
+  top: 0;
+  left: 100px; /* Sara annotation: 234px; */
+}
+
+.about-others-media-content h4 {
+  color: var(--color-black-06);
+  margin-bottom: 29px;
+}
+
+.about-others-media-content p {
+  color: var(--color-black-06);
+}
+
+.about-others-media-img {
+  width: 490px; /* Sara annotation: 960px; */
+  height: 320px; /* Sara annotation: 640px; */
+  position: absolute;
+  top: 0;
+  right: 45px;
+}
+
+.about-others-media-img img {
+  width: 100%;
+  height: 100%;
+}
+
+.about-others-collection {
+  position: relative;
+  height: 717px;
+  background-color: var(--color-black-15);
+}
+
+.about-others-collection-img {
+  width: 734px; 
+  height: 954px; 
+  position: absolute;
+  top: -127px;
+  left: 161px;
+}
+
+.about-others-collection-img img {
+  width: 100%;
+  height: 100%;
+}
+
+.about-others-collection-content {
+  width: 467px;
+  position: absolute;
+  top: 268px;
+  right: 151px; /* Sara annotation: 251px; */
+}
+
+.about-others-collection-content h4 {
+  padding-bottom: 31px;
+}
+
+.about-others-collection-content p {
+  font-family: var(--fonr-sflight);
+  font-size: 20px;
+  line-height: 26px;
+}
+
+.about-others-teaching {
+  position: relative;
+}
+
+.about-others-teaching-content {
+  width: 560px;
+  position: absolute;
+  top: 494px;
+  left: 257px;
+}
+
+.about-others-teaching-content h4 {
+  padding-bottom: 23px;
+  color: var(--color-black-06);
+}
+
+.about-others-teaching-content p {
+  font-family: var(--fonr-sflight);
+  font-size: 20px;
+  line-height: 26px;
+  color: var(--color-black-06);
+}
+
+.about-others-teaching-img {
+  width: 960px;
+  height: 640px;
+  position: absolute;
+  top: 272px;
+  right: 45px;
+}
+
+.about-others-teaching-img img {
+  width: 100%;
+  height: 100%;
+}
+
+
+.about-hobby {
+  position: relative;
+  height: 1080px;
+}
