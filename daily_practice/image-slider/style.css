@@ -1,0 +1,108 @@
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+}
+
+.logo {
+  font-size: 2em;
+  color: #FFF;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.toggle {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  background-image: url(menu.png);
+  background-position: center;
+  background-repeat: no-no-repeat;
+  background-size: 30px;
+  cursor: pointer;
+}
+
+.silder {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  background-color: #000;
+}
+
+.imgBox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+  transition-delay: 0s;
+  z-index: 1;
+  clip-path: circle(0px at center);
+}
+
+input[type="radio"]:checked + .imgBox {
+  z-index: 10;
+  clip-path: circle(10000px at center);
+  transition-delay: 0.75s;
+}
+
+.imgBox img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.content {
+  position: relative;
+  text-align: center;
+  max-width: 500px;
+}
+
+.content h2 {
+  font-size: 4em;
+  line-height: 1em;
+  color: #FFF;
+}
+
+.content p {
+  font-size: 1.1em;
+  color: #FFF;
+}
+
+input[type="radio"] {
+  position: relative;
+  z-index: 1000;
+  margin: 5px;
+  margin-bottom: 40px;
+  outline: none;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 20px 40px;
+  }
+
+  .imgBox {
+    padding: 40px;
+  }
+}
