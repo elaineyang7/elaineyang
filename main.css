@@ -96,7 +96,7 @@ a {
   text-decoration: none;
   color: var(--p-color);
   outline: none;
-  behavior:expression(this.onFocus=this.blur()); /* for IE */
+  behavior: expression(this.onFocus=this.blur()); /* for IE */
 }
 
 section {
@@ -105,6 +105,10 @@ section {
 
 button {
   outline:none;
+}
+
+.hidden {
+  visibility: hidden;
 }
 
 .section-title {
