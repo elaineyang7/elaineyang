@@ -671,11 +671,6 @@
     column-gap: 20px;
   }
 
-  .project-sm {
-    grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
-    -webkit-column-gap: 20px;
-    column-gap: 20px;
-  }
 }
 
 @media screen and (min-width: 992px) {
