@@ -6,13 +6,11 @@
     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
     <title>Russell Leong Design</title>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <meta name="description" content="A design office that producess appropriate and meaningful brand identity graphics for a multitude of clients, small and large: high tech, and soft tech." />
+    <meta name="description" content="Russell Leong Design - A design office that producess appropriate and meaningful brand identity graphics for a multitude of clients, small and large: high tech, and soft tech." />
     <meta name="keywords" content="Russell Leong, Design, logo design, print, visual identity" />
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/homepage-style.css" />
     <link rel="stylesheet" href="css/layout.css" />
-    <link rel="stylesheet" href="css/overlay-menu.css" />
-    <link rel="stylesheet" href="css/social-icons.css" />
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
     <script src="js/script.js"></script>
     <script src="js/send-mail.js"></script>
@@ -26,7 +24,7 @@
       <div class="nav__left">
         <ul>
           <li><a href="about.html">About</a></li>
-          <li><a href="#">Portfolio</a></li>
+          <li><a href="logo.html">Portfolio</a></li>
           <li><a href="#">Contact</a></li>
         </ul>
       </div>
@@ -59,7 +57,7 @@
         </li>
         <li class="bar8">
           <p>footer</p>
-          </li>
+        </li>
       </ul>
     </aside>
 
@@ -76,7 +74,7 @@
     
     <main>
       <!-- Banner -->
-			<section class="banner">
+			<section class="banner" id="section1">
 				<div class="banner__container">
           <div class="banner__container-img">
             <img src="images/homepage/07ra.png" class="egg">
@@ -103,7 +101,7 @@
       </section>
       
       <!-- About -->
-      <section class="about">
+      <section class="about" id="section2">
         <div class="about__container">
           <figcaption class="about__content">
             <h2>About</h2>
@@ -117,7 +115,7 @@
       </section>
 
       <!-- Logo -->
-      <section class="logo">
+      <section class="logo" id="section3">
         <div class="portfolio__bg">
           <img src="images/homepage/text_bg.png">
         </div>
@@ -137,7 +135,7 @@
       </section>
 
       <!-- Print -->
-      <section class="print">
+      <section class="print" id="section4">
         <div class="portfolio__bg">
           <img src="images/homepage/text_bg.png">
         </div>
@@ -157,7 +155,7 @@
       </section>
 
       <!-- Visual Identity -->
-      <section class="vi">
+      <section class="vi" id="section5">
         <div class="portfolio__bg">
           <img src="images/homepage/text_bg.png">
         </div>
@@ -177,7 +175,7 @@
       </section>
 
       <!-- Mail -->
-      <section class="mail">
+      <section class="mail" id="section6">
         <div class="mail__container">
           <a href="RLD@RussellLeong.com">
             <img src="images/homepage/mail.png">
@@ -189,7 +187,7 @@
       </section>
 
       <!-- Contact Us -->
-      <section class="contact">
+      <section class="contact" id="section7">
         <div class="contact__container">
           <div class="contact__form">
             <h2>Contact</h2>
@@ -269,15 +267,15 @@
       </section>
 
       <!-- Footer -->
-  		<footer id="footer" class="footer">
+  		<footer id="section8" class="footer">
   			<div class="footer__row footer__border">
   				<div class="link__container">
   					<section class="links">
   						<h3>Russell Leong Design</h3>
   						<ul>
-  							<li><a href="#">Home</a></li>
-  							<li><a href="#">About</a></li>
-  							<li><a href="#">Portfolio</a></li>
+                			<li><a href="#section1">Home</a></li>
+  							<li><a href="about.html">About</a></li>
+  							<li><a href="logo.html">Portfolio</a></li>
   							<li><a href="#">Contact</a></li>
   						</ul>
   					</section>
@@ -333,39 +331,38 @@
 			</a>
 			<div class="overlay__content">
 				<div class="menu__item">
-					<a href="#">Home</a>
-					<a href="#">About</a>
-					<a href="#">Portfolio</a>
+					<a href="about.html">About</a>
+					<a href="logo.html">Portfolio</a>
 					<a href="#">Contact</a>
 				</div>
 				<div class="menu__contact">
           <div class="menu__contact-content">
             <p>(650) 207-9979</p>
-            <p>RLD@RussellLeong.com</p>
+            <p class="contact__content-spacing">RLD@RussellLeong.com</p>
             <div class="sci">
               <ul>
-                <li>
-                  <div class="tooltip social_media_1">
+                <li class="overlay-menu__icons">
+                  <div class="tooltip">
                     <img src="images/homepage/social_media/bottom_contact/bird.png" class="img-org">
                     <img src="images/homepage/social_media/bottom_contact/bird_hover.png" class="img-hover">
                     <span class="tooltiptext">See, this is not a Twitter bird. We'll open Twitter soon!</span>
                   </div>
                 </li>
-                <li>
+                <li class="overlay-menu__icons">
                   <div class="tooltip">
                     <img src="images/homepage/social_media/bottom_contact/facebook.png" class="img-org">
                     <img src="images/homepage/social_media/bottom_contact/facebook_hover.png" class="img-hover">
                     <span class="tooltiptext">It's a fish rather than the Facebook's F. We'll on Facebook soon!</span>
                   </div>
                 </li>
-                <li>
+                <li class="overlay-menu__icons">
                   <div class="tooltip">
                     <img src="images/homepage/social_media/bottom_contact/ins.png" class="img-org">
                     <img src="images/homepage/social_media/bottom_contact/ins_hover.png" class="img-hover">
                     <span class="tooltiptext">It's a TV rather than Instagram's Camera. We'll not on Instagram yet!</span>
                   </div>
                 </li>
-                <li>
+                <li class="overlay-menu__icons linkedin__icon">
                   <div class="tooltip">
                     <a href="#">
                       <img src="images/homepage/social_media/bottom_contact/linkedin.png" class="img-org">

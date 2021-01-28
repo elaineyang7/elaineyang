@@ -1,0 +1,123 @@
+.main__logo-page {
+  height: 100%;
+  background-color: var(--color-yellow-10);
+}
+
+.main__vi-page {
+  height: 100%;
+  background-color: var(--color-white-05);
+}
+
+.main__print-page {
+  height: 100%;
+  background-color: var(--color-black-18);
+}
+
+h1 {
+  font-size: 30px;
+  color: var(--color-black-01);
+  letter-spacing: 0;
+  line-height: 40px;
+  position: fixed;
+  padding-top: 134px;
+  padding-left: 121px;
+}
+
+.portfolio__container {
+  position: fixed;
+  top: 330px;
+  left: calc(var(--width-left-nav) + 8px);
+  display: flex;
+}
+
+.portfolio__container-logo,
+.portfolio__container-print {
+  width: 700px;
+}
+
+.portfolio__container-vi {
+  width: 1000px;
+}
+
+section {
+  height: auto;
+  display: flex;
+}
+
+.portfolio__section-logo {
+  background-color: var(--color-yellow-10);
+}
+
+.portfolio__imgBox {
+  position: relative;
+  width: 600px;
+  height: 400px;
+  margin-left: 112px;
+  background: var(--color-white-01);
+  box-shadow: 0 60px 80px 0 rgba(0,0,0,0.08);
+}
+
+.portfolio__imgBox img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: bottom bottom;
+}
+
+.portfolio__desc {
+  width: 153px;
+  height: auto;
+  margin-left: 24px;
+}
+
+.portfolio__desc h2 {
+  font-family: var(--font-sfbold);
+  font-size: 19px; /* 16px; */
+  color: var(--color-black-01);
+  letter-spacing: 0;
+  line-height: 19px;
+  padding-bottom: 17px;
+}
+
+.portfolio__desc p {
+  font-family: var(--font-secondary);
+  font-size: 16px;
+  color: var(--color-black-01);
+  letter-spacing: 0;
+  line-height: 19px;
+}
+
+.portfolio__next-page {
+  width: 300px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-left: 120px;
+  transform: translateY(25%);
+}
+
+.portfolio__next-page a {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, .6);
+  border-radius: 50%;
+}
+
+.portfolio__next-page a img {
+  width: 100%;
+  height: 100%;
+}
+
+.portfolio__next-page p {
+  font-family: var(--font-secondary);
+  font-size: 16px;
+  color: var(--color-black-01);
+  letter-spacing: 0;
+  line-height: 19px;
+  text-align: center;
+  margin-top: 20px;
+}

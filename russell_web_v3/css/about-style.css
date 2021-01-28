@@ -1,0 +1,357 @@
+/**
+/* About Introduction
+**/
+
+.about__introduction {
+  width: 100%;
+  height: 1019px;
+  position: relative;
+  background-color: var(--color-white-02);
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+}
+
+.introduction__content {
+  width: 909px;
+  height: 965px;
+  position: relative;
+  padding-top: 272.5px;
+  padding-left: 188px;
+  color: var(--color-black-12);
+}
+
+.introduction__title {
+  width: 171px;
+  height: 64px;
+  background-color: var(--color-yellow-04);
+  text-align: center;
+}
+
+.introduction__title h1 {
+  font-size: 40px;
+  letter-spacing: 0;
+  line-height: 96px;
+  color: var(--color-black-08);
+  position: relative;
+  top: -19px;
+  /*left: 18px;*/
+}
+
+.introduction__content h2 {
+  font-size: 40px;
+  letter-spacing: 0;
+  margin-top: 76px;
+  margin-bottom: 32px;
+  color: var(--color-black-08);
+  line-height: 50px;
+}
+
+.introduction__content p {
+  font-family: var(--font-sflight);
+  font-size: 24px;
+  letter-spacing: 0;
+  color: var(--color-black-08);
+}
+
+.about__egg {
+  width: 447px;
+  height: 596px;
+  position: relative;
+  padding-top: 156.5px;
+  padding-left: 256px;
+  overflow: hidden;
+}
+
+.about__egg img {
+  width: 100%;
+  height: 100%;
+  opacity: 0.32;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+/**
+/* About Location
+**/
+
+.about__location {
+  position: relative;
+  height: var(--height-about-location);
+}
+
+.location__content {
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/about/location.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.location__content p {
+  width: 399px;
+  height: 42px;
+  background-color: var(--color-black-08);
+  font-family: ArialMT;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: 43px;
+  text-align: center;
+  position: relative;
+  top: 509px;
+  margin: 0 auto;
+}
+
+/**
+/* About Clients
+**/
+
+.about__clients {
+  position: relative;
+  height: var(--height-about-clients);
+  background-color: var(--color-white-03);
+}
+
+.about__section-title {
+  font-size: 40px;
+  color: var(--color-black-10);
+  letter-spacing: 0;
+  text-align: center;
+  padding-top: 180px;
+  padding-bottom: 70px;
+}
+
+.about__clients p {
+  width: 1000px; /* Sara annotation: 1153px; */
+  height: 110px;
+  color: var(--color-black-10);
+  margin: 0 auto;
+  font-family: var(--font-sflight);
+  font-size: 26px;
+  letter-spacing: 0;
+}
+
+.about__clients p span {
+  font-family: var(--font-sfbold);
+  font-size: 26px;
+  color: var(--color-black-05);
+  letter-spacing: 0;
+  line-height: 31px;
+  position: relative;
+  z-index: 1;
+}
+
+.about__clients p span:before {
+  content: "";
+  width: 100%;
+  height: 10px;
+  position: absolute;
+  bottom: 0;
+  background-color: var(--color-yellow-04);
+  z-index: -1;
+}
+
+.client__img {
+  width: 1286px;
+  height: 249px;
+  position: relative;
+  margin: 0 auto;
+  margin-top: 110px;
+}
+
+.client__img img {
+  width: 100%;
+  height: 100%;
+}
+
+.nonprofit {
+  height: var(--height-about-clients-nonprofit);
+  position: relative;
+  top: 189px;
+  background-color: var(--color-white-01);
+}
+
+.about__clients .nonprofit p {
+  width: 672px;
+  height: 37px;
+  padding-top: 178px;
+  /*padding-bottom: 131px;*/
+}
+
+.nonprofit .clients__img {
+  width: 1547px;
+  height: 266px;
+  position: relative;
+  margin: 0 auto;
+}
+
+/**
+/* About Others
+**/
+
+.about__others {
+  position: relative;
+  height: 3527px;
+  background-color: var(--color-white-03);
+}
+
+.about__others .about__section-title {
+  padding-top: 236px;
+  padding-bottom: 218px;
+  color: #333333;
+}
+
+.about__others h4 {
+  font-family: var(--font-sfbold);
+  font-size: 24px;
+  letter-spacing: 0;
+}
+
+.about__others p {
+  font-family: var(--font-sfthin);
+  font-size: 24px;
+  letter-spacing: 0;
+}
+
+.others__media {
+  position: relative;
+  height: 1102px;
+  display: flex;
+  flex-direction: row;
+}
+
+.media__content {
+  width: 475px;
+  height: 529px;
+  position: relative;
+  padding-left: var(--width-about-media-content);
+}
+
+.media__content h4 {
+  font-family: var(--font-sfbold);
+  font-size: 24px;
+  color: var(--color-black-10);
+  letter-spacing: 0;
+  margin-bottom: 29px;
+}
+
+.media__content p {
+  font-family: var(--font-sfthin);
+  font-size: 24px;
+  color: var(--color-black-10);
+  letter-spacing: 0;
+}
+
+.media__img {
+  width: 960px;
+  height: 640px;
+  position: relative;
+  top: -10px;
+  left: 206px;
+}
+
+.media__img img {
+  width: 100%;
+  height: 100%;
+}
+
+.others__collection {
+  position: relative;
+  height: 717px;
+  background-color: var(--color-black-15);
+  display: flex;
+  flex-direction: row;
+}
+
+.collection__img {
+  width: 734px; 
+  height: 954px; 
+  position: relative;
+  top: -127px;
+  left: var(--width-about-media-collection);
+}
+
+.collection__img img {
+  width: 100%;
+  height: 100%;
+}
+
+.collection__content {
+  width: 467px;
+  position: relative;
+  top: 268px;
+  left: 287px;
+}
+
+.collection__content h4 {
+  font-family: var(--font-sfbold);
+  font-size: 24px;
+  letter-spacing: 0;
+  padding-bottom: 31px;
+}
+
+.collection__content p {
+  font-family: var(--font-sflight);
+  font-size: 20px;
+  line-height: 26px;
+  letter-spacing: 0;
+}
+
+.others__teaching {
+  position: relative;
+  height: 1217px;
+  display: flex;
+  flex-direction: row;
+}
+
+.teaching__content {
+  width: 560px;
+  position: relative;
+  padding-top: 494px;
+  padding-left: var(--width-about-media-teaching);
+}
+
+.teaching__content h4 {
+  font-family: var(--font-sfbold);
+  font-size: 24px;
+  color: var(--color-black-10);
+  letter-spacing: 0;
+  padding-bottom: 23px;
+}
+
+.teaching__content p {
+  font-family: var(--font-sflight);
+  font-size: 20px;
+  line-height: 26px;
+  color: var(--color-black-06);
+}
+
+.teaching__img {
+  width: 960px;
+  height: 640px;
+  position: relative;
+  top: 272px;
+  left: 98px;
+}
+
+.teaching__img img {
+  width: 100%;
+  height: 100%;
+}
+
+
+/** 
+* About Hobby
+**/
+
+.about__hobby {
+  position: relative;
+  width: 100%;
+  height: 1080px;
+}
+
+.about__hobby img {
+  width: 100%;
+  height: 100%;
+}

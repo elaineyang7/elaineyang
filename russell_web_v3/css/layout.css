@@ -8,18 +8,18 @@ nav {
   position: fixed;
   top: var(--height-header);
   left: 0;
-  background: var(--color-black-15);
+  background: var(--color-black-06);
 }
 
 .nav__left {
   width: 100%;
-  height: 100%;
+  height: var(--width-left-nav);
   position: fixed;
   top: var(--height-header);
   left: 0;
   overflow-y: hidden;
   overflow-x: auto;
-  background: var(--color-black-15);
+  background: var(--color-black-06);
   -webkit-transform-origin: left top;
   -webkit-transform: rotate(-90deg)translateX(-100%);
   -moz-transform-origin: left top;
@@ -96,6 +96,7 @@ aside ul li p {
 * Header
 **/
 
+/* Homepage */
 .header {
   top: 0;
   left: 0;
@@ -105,7 +106,7 @@ aside ul li p {
   display: flex;
   flex-direction: row;
   overflow-x: hidden;
-  background-color: var(--color-white-01);
+  background-color: var(--color-white-02);
   z-index: 5;
 }
 
@@ -155,6 +156,88 @@ aside ul li p {
   right: var(--size-overlay-btn-position);
 }
 
+
+/* About, Logo, VI, Print Header */
+.header__logo {
+  background-color: var(--color-yellow-10) !important;
+}
+
+.header__vi {
+  background-color: var(--color-white-05) !important;
+}
+
+.header__print {
+  background-color: var(--color-black-18) !important;
+}
+
+
+/* Logo */
+.gear-logo {
+  width: var(--width-left-side-nav);
+  height: var(--height-homepage-russell-logo);
+  position: relative;
+  background-color: var(--color-black-06);
+}
+
+.gear-logo img {
+  width: var(--size-gear-logo);
+  height: var(--size-gear-logo);
+  margin: 28px 28.3px 0 28.3px;
+}
+
+/* Back to home */
+.go-back {
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+
+.go-back a {
+  padding-top: 15px;
+}
+
+.go-back a img {
+  width: var(--size-go-back);
+  height: var(--size-go-back);
+  position: relative;
+  top: 30px;
+  left: 64px;
+  transform: rotate(180deg);
+  border: 1px solid var(--color-black-10);
+  border-radius: 50%;
+}
+
+.go-back p {
+  font-family: var(--font-sfbold);
+  font-size: 20px;
+  color: var(--color-black-01);
+  letter-spacing: 0;
+  position: relative;
+  padding-top: 60px;
+  left: 84px;
+}
+
+.portfolio__nav {
+  height: 40px;
+  position: relative;
+  top: 52.7px;
+  left: 154px;
+}
+
+.portfolio__nav a {
+  font-family: var(--font-sfbold);
+  font-size: 20px;
+  color: var(--color-black-01);
+  letter-spacing: 0;
+  line-height: 40px;
+  margin-right: 57px;
+}
+
+.current__page {
+  padding-bottom: 10px;
+  border-bottom: 4px solid var(--color-black-10);
+}
 
 /**
 * Main
