@@ -86,7 +86,7 @@
             <div class="banner__content-text">
               <p>In Russell Leong's opinion, the geometric shape of the egg is simple and plain. It can well represent his favorite motto: Less Is More.</p>
               <p>Each egg may look the same, but each has its unique gene, just like every design work has its unique meaning.</p>
-              <a href="" class="see-more"><p>see more</p></a>
+              <a href="#section2" class="see-more"><p>see more</p></a>
             </div>
           </div>
         </div>
@@ -262,6 +262,9 @@
                 </div>
               </div>
             </div>
+            <a href="#section1" class="go-top">
+              <img src="images/homepage/button.png" alt="">
+            </a>
           </div>
         </div>
       </section>
@@ -380,6 +383,20 @@
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       AOS.init();
+
+      $(document).ready(function(){
+        $("a").on('click', function(event) {
+          if (this.hash !== "") {
+            event.preventDefault();
+            var hash = this.hash;
+            $('html, body').animate({
+              scrollTop: $(hash).offset().top
+            }, 800, function(){
+              window.location.hash = hash;
+            });
+          }
+        });
+      });
     </script>
   </body>
 </html>
