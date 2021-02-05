@@ -1,26 +1,36 @@
 @font-face {
+  font-family: 'Arial-Black';
+  src:  url('../fonts/arial-black-2.ttf') format('ttf');
+}
+
+@font-face {
+  font-family: 'ArialMT';
+  src:  url('../fonts/ARIALMT.ttf') format('ttf');
+}
+
+@font-face {
   font-family: 'SFProText-Regular';
-  src:  url('../fonts/FontsFree-Net-SFProText-Regular-1.ttf') format('ttf');
+  src:  url('../fonts/SF-Pro-Text-Regular.otf') format('otf');
 }
 
 @font-face {
   font-family: 'SFProText-Thin';
-  src:  url('../fonts/sf-pro-text_thin.ttf') format('ttf');
+  src:  url('../fonts/SF-Pro-Text-Thin.otf') format('otf');
 }
 
 @font-face {
   font-family: 'SFProText-Bold';
-  src:  url('../fonts/FontsFree-Net-SFProText-Bold.ttf') format('ttf');
+  src:  url('../fonts/SF-Pro-Text-Bold.otf') format('otf');
 }
 
 @font-face {
   font-family: 'SFProText-Medium';
-  src:  url('../fonts/FontsFree-Net-SFProText-Medium.ttf') format('ttf');
+  src:  url('../fonts/SF-Pro-Text-Medium.otf') format('otf');
 }
 
 @font-face {
   font-family: 'SFProText-Light';
-  src:  url('../fonts/FontsFree-Net-SFProText-Light.ttf') format('ttf');
+  src:  url('../fonts/SF-Pro-Text-Light.otf') format('otf');
 }
 
 :root {
@@ -178,7 +188,7 @@ li {
   right: 35px;
   font-size: 70px;
   font-weight: lighter;
-  color: var(--color-black-06);
+  color: var(--color-black-10);
   z-index: 999;
 }
 
