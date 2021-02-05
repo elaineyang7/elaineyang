@@ -106,7 +106,6 @@ aside ul li p {
   display: flex;
   flex-direction: row;
   overflow-x: hidden;
-  /*background-color: var(--color-white-02);*/
   z-index: 5;
 }
 
