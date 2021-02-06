@@ -12,8 +12,10 @@
 
 .banner__container {
   position: relative;
-  width: 100%;
-  height: calc(var(--height-homepage-banner-section) - 72px);
+  width: 610px;
+  height: 500px;
+  margin: 0 auto;
+  margin-top: 182.1px;
 }
 
 .banner__container-img {
@@ -22,7 +24,6 @@
   width: 606px;
   height: 404px;
   margin: 0 auto;
-  margin-top: 182.1px;
 }
 
 .banner__container:hover .banner__container-img{
@@ -44,14 +45,13 @@
   width: 606px;
   height: 404px;
   margin: 0 auto;
-  margin-top: 182.1px;
   visibility: hidden;
 }
 
 .banner__content-text {
   color: var(--color-black-10);
   position: absolute;
-  top: 250px;
+  top: 100px; /*250px;*/
   left: calc(50% - 265px); /* (100vw - this.width)/2 */
   width: 530px;
   height: 500px;;
@@ -79,6 +79,211 @@
   letter-spacing: 2px;
 }
 
+.arrow-down {
+  display: block;
+  margin: 0 auto;
+  width: 10px;
+  height: 38px;
+  position: relative;
+  top: 80px;
+}
+
+.arrow-down:after {
+  content: '';
+  display: block;
+  margin: 0;
+  padding: 0;
+  width: 8px;
+  height: 8px;
+  border-top: 2px solid var(--color-black-10);
+  border-right: 2px solid var(--color-black-10);
+  behavior: url(-ms-transform.htc);
+  -moz-transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+
+.see-more p::before {
+  -webkit-animation: elasticus 1.2s cubic-bezier(1, 0, 0, 1) infinite;
+  /* Safari 4+ */
+  
+  -moz-animation: elasticus 1.2s cubic-bezier(1, 0, 0, 1) infinite;
+  /* Fx 5+ */
+  
+  -o-animation: elasticus 1.2s cubic-bezier(1, 0, 0, 1) infinite;
+  /* Opera 12+ */
+  
+  animation: elasticus 1.2s cubic-bezier(1, 0, 0, 1) infinite;
+  /* IE 10+, Fx 29+ */
+  
+  position: absolute;
+  top: 295px;
+  left: 50%;
+  margin-left: -1px;
+  width: 2px;
+  height: 90px;
+  background: var(--color-black-10);
+  content: ' ';
+}
+@-webkit-keyframes elasticus {
+  
+  100% {
+      -webkit-transform-origin: 0% 100%;
+      -ms-transform-origin: 0% 100%;
+      -moz-transform-origin: 0% 100%;
+      -o-transform-origin: 0% 100%;
+      transform-origin: 0% 100%;
+      -webkit-transform: scale(1, 1);
+      -ms-transform: scale(1, 1);
+      -moz-transform: scale(1, 1);
+      -o-transform: scale(1, 1);
+      transform: scale(1, 1);
+  }
+  50% {
+      -webkit-transform-origin: 0% 100%;
+      -ms-transform-origin: 0% 100%;
+      -moz-transform-origin: 0% 100%;
+      -o-transform-origin: 0% 100%;
+      transform-origin: 0% 100%;
+      -webkit-transform: scale(1, 0.5);
+      -ms-transform: scale(1, 0.5);
+      -moz-transform: scale(1, 0.5);
+      -o-transform: scale(1, 0.5);
+      transform: scale(1, 0.5);
+  }
+  0% {
+    -webkit-transform-origin: 0% 100%;
+    -ms-transform-origin: 0% 100%;
+    -moz-transform-origin: 0% 100%;
+    -o-transform-origin: 0% 100%;
+    transform-origin: 0% 100%;
+    -webkit-transform: scale(1, 0.3);
+    -ms-transform: scale(1, 0.3);
+    -moz-transform: scale(1, 0.3);
+    -o-transform: scale(1, 0.3);
+    transform: scale(1, 0.3);
+  } 
+}
+@-moz-keyframes elasticus {
+  
+  100% {
+      -webkit-transform-origin: 0% 100%;
+      -ms-transform-origin: 0% 100%;
+      -moz-transform-origin: 0% 100%;
+      -o-transform-origin: 0% 100%;
+      transform-origin: 0% 100%;
+      -webkit-transform: scale(1, 1);
+      -ms-transform: scale(1, 1);
+      -moz-transform: scale(1, 1);
+      -o-transform: scale(1, 1);
+      transform: scale(1, 1);
+  }
+  50% {
+    -webkit-transform-origin: 0% 100%;
+    -ms-transform-origin: 0% 100%;
+    -moz-transform-origin: 0% 100%;
+    -o-transform-origin: 0% 100%;
+    transform-origin: 0% 100%;
+    -webkit-transform: scale(1, 0.5);
+    -ms-transform: scale(1, 0.5);
+    -moz-transform: scale(1, 0.5);
+    -o-transform: scale(1, 0.5);
+    transform: scale(1, 0.5);
+  }
+   
+  0% {
+    -webkit-transform-origin: 0% 100%;
+    -ms-transform-origin: 0% 100%;
+    -moz-transform-origin: 0% 100%;
+    -o-transform-origin: 0% 100%;
+    transform-origin: 0% 100%;
+    -webkit-transform: scale(1, 0.3);
+    -ms-transform: scale(1, 0.3);
+    -moz-transform: scale(1, 0.3);
+    -o-transform: scale(1, 0.3);
+    transform: scale(1, 0.3);
+  } 
+}
+@-o-keyframes elasticus {
+  
+  100% {
+      -webkit-transform-origin: 0% 100%;
+      -ms-transform-origin: 0% 100%;
+      -moz-transform-origin: 0% 100%;
+      -o-transform-origin: 0% 100%;
+      transform-origin: 0% 100%;
+      -webkit-transform: scale(1, 1);
+      -ms-transform: scale(1, 1);
+      -moz-transform: scale(1, 1);
+      -o-transform: scale(1, 1);
+      transform: scale(1, 1);
+  }
+  50% {
+    -webkit-transform-origin: 0% 100%;
+    -ms-transform-origin: 0% 100%;
+    -moz-transform-origin: 0% 100%;
+    -o-transform-origin: 0% 100%;
+    transform-origin: 0% 100%;
+    -webkit-transform: scale(1, 0.5);
+    -ms-transform: scale(1, 0.5);
+    -moz-transform: scale(1, 0.5);
+    -o-transform: scale(1, 0.5);
+    transform: scale(1, 0.5);
+}
+0% {
+  -webkit-transform-origin: 0% 100%;
+  -ms-transform-origin: 0% 100%;
+  -moz-transform-origin: 0% 100%;
+  -o-transform-origin: 0% 100%;
+  transform-origin: 0% 100%;
+  -webkit-transform: scale(1, 0.3);
+  -ms-transform: scale(1, 0.3);
+  -moz-transform: scale(1, 0.3);
+  -o-transform: scale(1, 0.3);
+  transform: scale(1, 0.3);
+} 
+}
+@keyframes elasticus {
+  100% {
+      -webkit-transform-origin: 0% 100%;
+      -ms-transform-origin: 0% 100%;
+      -moz-transform-origin: 0% 100%;
+      -o-transform-origin: 0% 100%;
+      transform-origin: 0% 100%;
+      -webkit-transform: scale(1, 1);
+      -ms-transform: scale(1, 1);
+      -moz-transform: scale(1, 1);
+      -o-transform: scale(1, 1);
+      transform: scale(1, 1);
+  }
+  50% {
+    -webkit-transform-origin: 0% 100%;
+    -ms-transform-origin: 0% 100%;
+    -moz-transform-origin: 0% 100%;
+    -o-transform-origin: 0% 100%;
+    transform-origin: 0% 100%;
+    -webkit-transform: scale(1, 0.5);
+    -ms-transform: scale(1, 0.5);
+    -moz-transform: scale(1, 0.5);
+    -o-transform: scale(1, 0.5);
+    transform: scale(1, 0.5);
+}
+0% {
+  -webkit-transform-origin: 0% 100%;
+  -ms-transform-origin: 0% 100%;
+  -moz-transform-origin: 0% 100%;
+  -o-transform-origin: 0% 100%;
+  transform-origin: 0% 100%;
+  -webkit-transform: scale(1, 0.3);
+  -ms-transform: scale(1, 0.3);
+  -moz-transform: scale(1, 0.3);
+  -o-transform: scale(1, 0.3);
+  transform: scale(1, 0.3);
+} 
+}
+
 .banner__content-text span {
   display: block;
   margin: 0 auto;
@@ -87,6 +292,10 @@
 .banner__content:hover .banner__content-img-hover,
 .banner__content:hover .banner__content-text {
   visibility: visible;
+}
+
+.banner__content:hover .banner__container-img img {
+  visibility: hidden;
 }
 
 .banner__container:hover .banner__content-text {
