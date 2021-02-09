@@ -16,7 +16,7 @@
     <script src="js/script.js"></script>
   </head>
 
-  <body>
+  <body class="scroll__height-logo">
   
     <!-- Header -->
 		<header class="header header__logo">
@@ -43,7 +43,7 @@
 
     <main class="main__logo-page">
       <h1>Logotypes</h1>
-      <div class="portfolio__container portfolio__container-logo" data-0="transform:translateX(0%)" data-4000="transform:translateX(-300%)">
+      <div class="portfolio__container portfolio__container-logo" data-0="transform:translateX(0%)" data-8000="transform:translateX(-500%)">
         <section class="portfolio__section-logo">
           <div class="portfolio__imgBox">
             <img src="images/homepage/logo.png">
@@ -161,7 +161,8 @@
     </div>
     <script type="text/javascript" src="js/skrollr.js"></script>
     <script type="text/javascript">
-      skrollr.init();
+      skrollr.init({forceHeight: false});
+
     </script>
   </body>
 </html>
