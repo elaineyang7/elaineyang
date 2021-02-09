@@ -4,7 +4,7 @@
 
 .about__introduction {
   width: 100%;
-  height: 1019px;
+  height: 53.07vw; /*1019px;*/
   position: relative;
   background-color: var(--color-white-02);
   overflow: hidden;
@@ -13,11 +13,11 @@
 }
 
 .introduction__content {
-  width: 909px;
-  height: 965px;
+  width: 50.5%; /*909px;*/
+  height: 94.70%; /*965px;*/
   position: relative;
-  padding-top: 272.5px;
-  padding-left: 188px;
+  padding-top: 10.74%; /*272.5px;*/
+  padding-left: 10.44%; /*188px;*/
   color: var(--color-black-12);
 }
 
@@ -35,14 +35,15 @@
   color: var(--color-black-08);
   position: relative;
   top: -19px;
+  left: -1px;
   /*left: 18px;*/
 }
 
 .introduction__content h2 {
   font-size: 40px;
   letter-spacing: 0;
-  margin-top: 76px;
-  margin-bottom: 32px;
+  margin-top: 7.876%; /*76px;*/
+  margin-bottom: 3.32%; /*32px;*/
   color: var(--color-black-08);
   line-height: 50px;
 }
@@ -70,6 +71,17 @@
   object-fit: cover;
   overflow: hidden;
 }
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  .introduction__content h2 {
+    font-size: 32px;
+  }
+
+  .introduction__content p {
+    font-size: 20px;
+  }
+}
+
 
 /**
 /* About Location
@@ -103,13 +115,14 @@
   margin: 0 auto;
 }
 
+
 /**
 /* About Clients
 **/
 
 .about__clients {
   position: relative;
-  height: var(--height-about-clients);
+  height: 83.07vw; /*var(--height-about-clients);1595px*/
   background-color: var(--color-white-03);
 }
 
@@ -118,13 +131,13 @@
   color: var(--color-black-10);
   letter-spacing: 0;
   text-align: center;
-  padding-top: 180px;
-  padding-bottom: 70px;
+  padding-top: 1129%; /*180px;*/
+  padding-bottom: 4.39%; /*70px;*/
 }
 
 .about__clients p {
-  width: 1000px; /* Sara annotation: 1153px; */
-  height: 110px;
+  width: 1153px;
+  /*height: 110px;*/
   color: var(--color-black-10);
   margin: 0 auto;
   font-family: var(--font-sflight);
@@ -153,8 +166,8 @@
 }
 
 .client__img {
-  width: 1286px;
-  height: 249px;
+  width: 71.44vw; /*1286px;*/
+  /*height: 249px;*/
   position: relative;
   margin: 0 auto;
   margin-top: 110px;
@@ -166,25 +179,45 @@
 }
 
 .nonprofit {
-  height: var(--height-about-clients-nonprofit);
+  height: 33.33vw; /*var(--height-about-clients-nonprofit);*/
   position: relative;
-  top: 189px;
+  top: 9.84vw; /*189px;*/
   background-color: var(--color-white-01);
 }
 
 .about__clients .nonprofit p {
   width: 672px;
   height: 37px;
-  padding-top: 178px;
+  padding-top: 7.81%; /*178px;*/
   /*padding-bottom: 131px;*/
 }
 
 .nonprofit .clients__img {
-  width: 1547px;
-  height: 266px;
+  width: 85.94%; /*1547px;*/
+  height: 41.56%; /*266px;*/
   position: relative;
   margin: 0 auto;
 }
+
+.nonprofit .clients__img img {
+  width: 100%;
+}
+
+@media (min-width: 992px) and (max-width: 1300px) {
+  .about__clients p {
+    width: 650px;
+    font-size: 24px;
+  } 
+
+  .about__clients p span {
+    font-size: 24px;
+  } 
+
+  .about__clients .nonprofit p {
+    font-size: 24px;
+  }
+}
+
 
 /**
 /* About Others
@@ -192,14 +225,23 @@
 
 .about__others {
   position: relative;
-  height: 3527px;
+  height: 195.4vw; /*3527px;*/
   background-color: var(--color-white-03);
+  display: grid;
+  grid-template-rows: 13.92% 18.146% 9.50% 3.6% 20.33% auto 4.59% 18.146% auto;
+  grid-template-columns: 3% 2.6% 40% 15% 37% 2.4%;     
+  overflow: hidden;                 
 }
 
-.about__others .about__section-title {
-  padding-top: 236px;
-  padding-bottom: 218px;
-  color: #333333;
+.about__section-title {
+  grid-row-start: 1;
+  grid-column-start: 1;
+  grid-row-end: 2;
+  grid-column-end: 6;
+  padding-top: 6.69%; /*236px;*/
+  padding-bottom: 6.18%; /*218px;*/
+  color: var(--color-black-10);
+  text-align: center;
 }
 
 .about__others h4 {
@@ -214,20 +256,13 @@
   letter-spacing: 0;
 }
 
-.others__media {
-  position: relative;
-  height: 1102px;
-  display: flex;
-  flex-direction: row;
-}
-
 .media__content {
-  width: 475px;
-  height: 529px;
-  position: relative;
-  padding-left: var(--width-about-media-content);
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 3;
+  grid-column-end: 4;
+  width: 85%;
 }
-
 .media__content h4 {
   font-family: var(--font-sfbold);
   font-size: 24px;
@@ -244,44 +279,43 @@
 }
 
 .media__img {
-  width: 960px;
-  height: 640px;
-  position: relative;
-  top: -10px;
-  left: 206px;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 4;
+  grid-column-end: 6;
+  overflow: hidden;
 }
 
 .media__img img {
   width: 100%;
-  height: 100%;
 }
 
 .others__collection {
-  position: relative;
-  height: 717px;
-  background-color: var(--color-black-15);
-  display: flex;
-  flex-direction: row;
+  grid-row-start: 5;
+  grid-row-end: 6;
+  grid-column-start: 1;
+  grid-column-end: 7;
+  background-color: #333;
 }
 
 .collection__img {
-  width: 734px; 
-  height: 954px; 
-  position: relative;
-  top: -127px;
-  left: var(--width-about-media-collection);
+  grid-row-start: 4;
+  grid-row-end: 7;
+  grid-column-start: 2;
+  grid-column-end: 4;
 }
 
 .collection__img img {
   width: 100%;
-  height: 100%;
 }
 
 .collection__content {
-  width: 467px;
-  position: relative;
-  top: 268px;
-  left: 287px;
+  grid-row-start: 5;
+  grid-row-end: 6;
+  grid-column-start: 5;
+  grid-column-end: 6;
+  width: 85%;
+  padding-top: 30%;
 }
 
 .collection__content h4 {
@@ -298,18 +332,12 @@
   letter-spacing: 0;
 }
 
-.others__teaching {
-  position: relative;
-  height: 1217px;
-  display: flex;
-  flex-direction: row;
-}
-
 .teaching__content {
-  width: 560px;
-  position: relative;
-  padding-top: 494px;
-  padding-left: var(--width-about-media-teaching);
+  grid-row-start: 8;
+  grid-row-end: 9;
+  grid-column-start: 3;
+  grid-column-end: 4;
+  width: 85%;
 }
 
 .teaching__content h4 {
@@ -328,16 +356,25 @@
 }
 
 .teaching__img {
-  width: 960px;
-  height: 640px;
-  position: relative;
-  top: 272px;
-  left: 98px;
+  grid-row-start: 8;
+  grid-row-end: 9;
+  grid-column-start: 4;
+  grid-column-end: 6;
+  overflow-x: hidden;
 }
 
 .teaching__img img {
   width: 100%;
-  height: 100%;
+  overflow: hidden;
+}
+
+
+@media (max-width: 1200px) {
+  .media__content p,
+  .collection__content p,
+  .teach__content p {
+    font-size: 16px;
+  }
 }
 
 
@@ -348,10 +385,11 @@
 .about__hobby {
   position: relative;
   width: 100%;
-  height: 1080px;
+  height: 56.25%;
+  /*height: 100%; 1080px;*/
 }
 
 .about__hobby img {
   width: 100%;
-  height: 100%;
+  height: auto;
 }

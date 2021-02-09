@@ -74,6 +74,7 @@
   --color-black-16: #616161;
   --color-black-17: #666666;
   --color-black-18: #c3c3c3;
+  --color-black-19: #BBBBBB;
 
   --color-dark-blue-01: #062E37;
 
@@ -134,6 +135,11 @@
   --height-about-clients-nonprofit: 640px;
   --height-about-clients: calc(955px + var(--height-about-clients-nonprofit));
 
+
+  --width-scale-1200: 0.625;
+  --width-scale-992: 0.52;
+  --width-scale-768: 0.4267;
+
 }
 
 * {
@@ -172,7 +178,7 @@ li {
   left: 0;
   background-color: var(--color-white-01);
   overflow-x: hidden;
-  transition: 1.0s;
+  transition: all 0.5s;
   z-index: 10000;
 }
 
