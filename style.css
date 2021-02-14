@@ -763,3 +763,26 @@ footer .social-icon {
   margin: 0;
   padding: 0 20px;
 }
+
+
+/*********************/
+/* Popup             */
+/*********************/
+#boxes .window {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 550px;
+  height: 550px;
+  display: none;
+  z-index: 9999;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+}
+#boxes #dialog {
+  width: 550px; 
+  height: auto;
+  padding: 10px 10px 10px 10px;
+  background-color: #ffffff;
+}
