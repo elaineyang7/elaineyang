@@ -105,7 +105,7 @@
   * Width
   */
 
-  --width-left-nav: 120px;
+  --width-left-nav: 100px;
   --width-footer: 1637px;
   --width-homepage-russell-logo: 376px;
   --width-homepage-about-container: 1000px;
@@ -122,7 +122,8 @@
   */
   --height-header: 108px;
   --height-footer: 674px;
-  --height-homepage-banner-section: 979px;
+  --height-section-100vh: calc(100vh - var(--height-header));
+  --height-homepage-banner-section: calc(100vh - var(--height-header));
   --height-homepage-about-section: 1061px;
   --height-homepage-about-container: 666px;
   --height-homepage-portfolio-section: 1080px;
@@ -180,6 +181,13 @@ li {
   overflow-x: hidden;
   transition: all 0.5s;
   z-index: 10000;
+  cursor: pointer;
+  /*display:none;*/
+  /*opacity: 0;*/
+}
+
+.overlay.active {
+  opacity: 1;
 }
 
 .overlay a {
@@ -313,6 +321,31 @@ li {
   padding-right: 44px;
   width: 32px;
   height: 32px;
+  display: flex;
+  flex-direction: column;
+}
+
+.bird svg, 
+.fish svg, 
+.tv svg {
+  fill: var(--color-black-19);
+}
+
+.bird:hover svg, 
+.fish:hover svg, 
+.tv:hover svg {
+  fill: #000;
+}
+
+.sci ul li div img {
+  position: relative;
+  width: 237px;
+  left: -100px;
+  visibility: hidden;
+}
+
+.sci ul li div:hover img {
+  visibility: visible;
 }
 
 .tooltip {
