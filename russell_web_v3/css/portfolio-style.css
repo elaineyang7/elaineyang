@@ -5,12 +5,12 @@ body.scroll__height-logo,
 
 body.scroll__height-print,
 .portfolio__layout-print {
-  height: 5450px !important;
+  height: 5720px !important;
 }
 
 body.scroll__height-vi,
 .portfolio__layout-vi {
-  height: 5720px !important;
+  height: 5450px !important;
 }
 
 .main__logo-page {
@@ -19,12 +19,12 @@ body.scroll__height-vi,
 }
 
 .main__print-page {
-  height: 5450px !important;
+  height: 5720px !important;
   background-color: var(--color-black-18);
 }
 
 .main__vi-page {
-  height: 5720px !important;
+  height: 5450px !important;
   background-color: var(--color-white-05);
 }
 
