@@ -1,9 +1,9 @@
 function openNav() {
-  document.getElementById("overlay").style.width = "100%";
+  document.getElementById("overlay").classList.toggle("active");
 }
 
 function closeNav() {
-  document.getElementById("overlay").style.width = "0%";
+  document.getElementById("overlay").classList.remove("active");
 }
 
 function changeDot() {
