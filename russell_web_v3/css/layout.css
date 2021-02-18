@@ -243,6 +243,10 @@ main {
   background-color: var(--color-black-03);
   display: grid;
   grid-template-rows: 20.47% 57.38% 8.56% 3.19% 10.4%;
+  /*grid-template-columns: 7.69% 30.4% 22.6% 20.79% 10.11% 7.69%;*/
+  grid-template-columns: 7.69% 27% 22.6% 20.79% auto 7.69%;
+}
+
 @media (max-width: 1200px) {
   .footer {
     height: 40vw;
