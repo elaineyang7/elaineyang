@@ -319,7 +319,7 @@
   top: -45%;
 }
 
-.portfolio__more img {
+.portfolio__more-img {
   height: 100%;
   opacity: 1;
   z-index: 2;
@@ -380,9 +380,8 @@
 .mail__content::before {
   content: '';
   position: absolute;
-  left: 120%;
   top: -5px;
-  width: 120%;
+  
   height: 120%;
   background: var(--color-yellow-03);
   animation: animate 2s linear forwards;
@@ -391,9 +390,11 @@
 @keyframes animate {
   0% {
     left: 10%;
+    width: 88%;
   }
   100% {
     left: 100%;
+    width: 10%;
   }
 }
 
