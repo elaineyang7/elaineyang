@@ -134,9 +134,9 @@ button {
 
 .skill-btn {
   padding: 8px 10px;
-  background-color: var(--aux-color);
-  border-style: none;
+  border: 2px solid var(--aux-color);
   border-radius: var(--radius);
+  background-color: #FFFFFF;
   margin: 10px 5px;
 }
 
@@ -152,13 +152,15 @@ button {
 .viewMore {
   display: inline-block;
   padding: 10px;
-  border: 2px solid var(--aux-color);
+  background-color: var(--aux-color);
   border-radius: 10px;
+  color: #FFFFFF;
 }
 
 .viewMore:hover {
-  background-color: var(--aux-color);
-  color: #FFFFFF;
+  border: 2px solid var(--aux-color);
+  color: var(--p-color);
+  transform: scale(1.1);
 }
 
 .github {

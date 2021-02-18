@@ -652,9 +652,9 @@
 
 .skill-btn-sm {
   padding: 5px 8px;
-  background-color: var(--aux-color);
-  border-style: none;
+  border: 2px solid var(--aux-color);
   border-radius: var(--radius);
+  background-color: var(--sec-color);
   margin: 8px 3px;
 }
 
