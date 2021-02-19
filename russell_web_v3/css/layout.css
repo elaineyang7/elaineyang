@@ -3,10 +3,10 @@
 **/
 
 .layout {
-  width: 100vw;
+  width: 100%;
   height: 56.25vw;
   display: grid;
-  grid-template-rows: 108px 90%;
+  grid-template-rows: 108px auto;
   grid-template-columns: 100px auto;
 }
 
@@ -16,7 +16,7 @@
 **/
 
 nav {
-  background: var(--color-black-06);
+  background: #2B2B2B;
   grid-row-start: 2;
   grid-row-end: 3;
   grid-column-start: 1;
@@ -28,14 +28,14 @@ nav {
 }
 
 .nav__left {
-  width: 100%;
+  width: calc(100vh - var(--height-header));
   height: var(--width-left-nav);
   position: fixed;
   top: var(--height-header);
   left: 0;
   overflow-y: hidden;
   overflow-x: auto;
-  background: var(--color-black-06);
+  background: #2B2B2B;
   -webkit-transform-origin: left top;
   -webkit-transform: rotate(-90deg)translateX(-100%);
   -moz-transform-origin: left top;
@@ -46,19 +46,24 @@ nav {
 }
 
 .nav__left ul {
+  width: 526.96px;
+  height: 21px;
   position: relative;
   top: 38.5px;
-  margin: 0 auto;
-  margin-right: 163.2px;
+  margin: 0 calc((var(--height-section-100vh) - 526.96px) / 2);
   padding: 0;
 }
 
 .nav__left ul li {
-  margin-left: 111.6px;
+  padding-left: 111.6px;
   position: relative;
   display: inline;
   float: right;
   height: 100%;
+}
+
+.nav__left ul li.nav__left-noPadding {
+  padding-left: 0;
 }
 
 .nav__left ul li a {
@@ -135,20 +140,22 @@ nav {
   position: relative;
   top: var(--size-overlay-btn-position);
   right: var(--size-overlay-btn-position);
+  fill: #333333;
 }
 
 /* About, Logo, VI, Print Header */
 .header__logo {
-  background-color: var(--color-yellow-10) !important;
+  background-color: #FFC512 !important;
+}
+
+.header__print {
+  background-color: #D8D8D8; !important;
 }
 
 .header__vi {
   background-color: var(--color-white-05) !important;
 }
 
-.header__print {
-  background-color: var(--color-black-18) !important;
-}
 
 /* Logo */
 .gear-logo {
@@ -244,13 +251,13 @@ main {
   display: grid;
   grid-template-rows: 20.47% 57.38% 8.56% 3.19% 10.4%;
   /*grid-template-columns: 7.69% 30.4% 22.6% 20.79% 10.11% 7.69%;*/
-  grid-template-columns: 7.69% 27% 22.6% 20.79% auto 7.69%;
+  grid-template-columns: 7.69% auto 22.6% 20.79% 184px 7.69%;
 }
 
 @media (max-width: 1200px) {
   .footer {
-    height: 40vw;
-    grid-template-columns: 7.69% 28% 20% 20% auto 7.69%;
+    height: 45vw;
+    grid-template-columns: 7.69% auto 20% 20% 184px 7.69%;
   }
 
   .links h3 {
@@ -356,22 +363,26 @@ main {
   flex-direction: column;
 }
 
-.bird svg, 
-.fish svg, 
-.tv svg {
-  fill: var(--color-black-19);
+.linkedin svg path {
+  fill: #FFC512;
 }
 
-.bird:hover svg, 
+.bird svg path, 
+.fish svg, 
+.tv svg {
+  fill: #333;
+}
+
+.bird:hover svg path, 
 .fish:hover svg, 
 .tv:hover svg {
-  fill: #000;
+  fill: #888;
 }
 
 .sci ul li div img {
   position: relative;
   width: 237px;
-  left: -100px;
+  left: -103px;
   visibility: hidden;
 }
 
@@ -387,7 +398,7 @@ main {
 .overlay {
   width: 100vw;
   height: 100vh;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   background-color: #191919;
@@ -446,7 +457,7 @@ main {
   position: relative;
   width: 62.083vw;
   text-align: left;
-  background-color: var(--color-black-04);
+  background-color: #191919;
   display: grid;
   grid-template-rows: 33.61% auto 33.52%;
   grid-template-columns: 23.74% auto;  

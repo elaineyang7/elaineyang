@@ -4,7 +4,7 @@
 
 .about__introduction {
   width: 100%;
-  height: 53.07vw; /*1019px;*/
+  height: var(--height-section-100vh);
   position: relative;
   background-color: var(--color-white-02);
   overflow: hidden;
@@ -24,7 +24,7 @@
 .introduction__title {
   width: 171px;
   height: 64px;
-  background-color: var(--color-yellow-04);
+  background-color: #FFDE79;
   text-align: center;
 }
 
@@ -32,11 +32,10 @@
   font-size: 40px;
   letter-spacing: 0;
   line-height: 96px;
-  color: var(--color-black-08);
+  color: #333;
   position: relative;
   top: -19px;
   left: -1px;
-  /*left: 18px;*/
 }
 
 .introduction__content h2 {
@@ -44,19 +43,19 @@
   letter-spacing: 0;
   margin-top: 7.876%; /*76px;*/
   margin-bottom: 3.32%; /*32px;*/
-  color: var(--color-black-08);
+  color: #333;
   line-height: 50px;
 }
 
 .introduction__content p {
-  font-family: var(--font-sflight);
+  font-family: var(--font-sfultralight);
   font-size: 24px;
   letter-spacing: 0;
-  color: var(--color-black-08);
+  color: #333;
 }
 
 .about__egg {
-  width: 447px;
+  width: 24.56vw;
   height: 596px;
   position: relative;
   padding-top: 156.5px;
@@ -65,8 +64,9 @@
 }
 
 .about__egg img {
-  width: 100%;
-  height: 100%;
+  height: 596px;
+  position: relative;
+  right: -50%;
   opacity: 0.32;
   object-fit: cover;
   overflow: hidden;
@@ -122,8 +122,8 @@
 
 .about__clients {
   position: relative;
-  height: 83.07vw; /*var(--height-about-clients);1595px*/
-  background-color: var(--color-white-03);
+  height: 83.07vw;
+  background-color: #F5F5F5;
 }
 
 .about__section-title {
@@ -131,13 +131,12 @@
   color: var(--color-black-10);
   letter-spacing: 0;
   text-align: center;
-  padding-top: 1129%; /*180px;*/
-  padding-bottom: 4.39%; /*70px;*/
+  padding-top: 1129%;
+  padding-bottom: 4.39%;
 }
 
 .about__clients p {
   width: 1153px;
-  /*height: 110px;*/
   color: var(--color-black-10);
   margin: 0 auto;
   font-family: var(--font-sflight);
@@ -161,13 +160,12 @@
   height: 10px;
   position: absolute;
   bottom: 0;
-  background-color: var(--color-yellow-04);
+  background-color: #FFDE79;
   z-index: -1;
 }
 
 .client__img {
-  width: 71.44vw; /*1286px;*/
-  /*height: 249px;*/
+  width: 71.44vw;
   position: relative;
   margin: 0 auto;
   margin-top: 110px;
@@ -179,17 +177,16 @@
 }
 
 .nonprofit {
-  height: 33.33vw; /*var(--height-about-clients-nonprofit);*/
+  height: 33.33vw;
   position: relative;
-  top: 9.84vw; /*189px;*/
+  top: 9.84vw;
   background-color: var(--color-white-01);
 }
 
 .about__clients .nonprofit p {
   width: 672px;
   height: 37px;
-  padding-top: 7.81%; /*178px;*/
-  /*padding-bottom: 131px;*/
+  padding-top: 7.81%;
 }
 
 .nonprofit .clients__img {
@@ -216,6 +213,13 @@
   .about__clients .nonprofit p {
     font-size: 24px;
   }
+
+  .nonprofit {
+    height: 33.33vw;
+    position: relative;
+    top: 9vw;
+    background-color: var(--color-white-01);
+  }
 }
 
 
@@ -225,8 +229,8 @@
 
 .about__others {
   position: relative;
-  height: 195.4vw; /*3527px;*/
-  background-color: var(--color-white-03);
+  height: 195.4vw;
+  background-color: #F5F5F5;
   display: grid;
   grid-template-rows: 13.92% 18.146% 9.50% 3.6% 20.33% auto 4.59% 18.146% auto;
   grid-template-columns: 3% 2.6% 40% 15% 37% 2.4%;     
@@ -384,12 +388,28 @@
 
 .about__hobby {
   position: relative;
+  display: block;
   width: 100%;
-  height: 56.25%;
-  /*height: 100%; 1080px;*/
+  margin: 0;
 }
 
-.about__hobby img {
+.hobby__overlay {
+  position: relative;
+}
+
+.hobby__overlay img {
   width: 100%;
   height: auto;
+}
+
+.hobby__overlay-text {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: var(--height-section-100vh);
+  top: 0;
+}
+
+.hobby__overlay-text defs path {
+  fill: black;
 }

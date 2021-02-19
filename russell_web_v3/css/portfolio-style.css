@@ -15,12 +15,12 @@ body.scroll__height-vi,
 
 .main__logo-page {
   height: 6450px !important;
-  background-color: var(--color-yellow-10);
+  background-color: #FFC512;
 }
 
 .main__print-page {
   height: 5720px !important;
-  background-color: var(--color-black-18);
+  background-color: #D8D8D8;
 }
 
 .main__vi-page {
@@ -28,9 +28,29 @@ body.scroll__height-vi,
   background-color: var(--color-white-05);
 }
 
+@media (min-width: 1500px) {
+  body.scroll__height-logo,
+  .portfolio__layout-logo,
+  .main__logo-page {
+    height: 5700px !important;
+  }
+
+  body.scroll__height-print,
+  .portfolio__layout-print,
+  .main__print-page {
+    height: 5120px !important;
+  }
+
+  body.scroll__height-vi,
+  .portfolio__layout-vi,
+  .main__vi-page {
+    height: 5120px !important;
+  }
+}
+
 h1 {
   font-size: 30px;
-  color: var(--color-black-01);
+  color: #333;
   letter-spacing: 0;
   line-height: 40px;
   position: fixed;

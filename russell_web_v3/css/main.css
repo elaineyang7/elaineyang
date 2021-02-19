@@ -33,6 +33,11 @@
   src:  url('../fonts/SF-Pro-Text-Light.otf') format('otf');
 }
 
+@font-face {
+  font-family: 'SFProText-UltraLight';
+  src:  url('../fonts/SF-Pro-Text-Ultralight.otf') format('otf');
+}
+
 :root {
 
   /**
@@ -92,6 +97,7 @@
   --font-sfbold: "SFProText-Bold";
   --font-sfmedium: "SFProText-Medium";
   --font-sflight: "SFProText-Light";
+  --font-sfultralight: "SFProText-UltraLight";
 
 
   /**
@@ -152,6 +158,8 @@
 }
 
 html, body {
+  width: 100vw;
+  height: 100vh;
   position: relative;
   background-color: var(--color-white-02);
   font-family: var(--font-primary);

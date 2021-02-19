@@ -22,13 +22,13 @@ body {
 
 .contact__main {
   width: 100vw;
-  height: 50.625vw;
+  height: var(--height-section-100vh);
+  background-color: var(--color-black-02);
 }
 
 .contact {
   position: relative;
   height: 50.625vw;
-  background-color: var(--color-black-02);
   display: grid;
   grid-template-columns: 14.58% 34.375% 14.58% auto;
   overflow: hidden;
@@ -87,6 +87,11 @@ form {
   color: var(--color-white-01);
   border-radius: 4px;
   box-sizing: border-box;
+}
+
+.form__inputBox input:focus,
+.form__inputBox textarea:focus {
+  border: 1px solid #FFC512;
 }
 
 .form__inputBox textarea {

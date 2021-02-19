@@ -1,45 +1,36 @@
-$(document).ready(function() {
+function checkValidation() {
+  const name = document.forms["ContactForm"]["yourname"]; 
+  const email = document.forms["ContactForm"]["email"];
+  const message = document.forms["ContactForm"]["message"]; 
 
-  /* Contact */
-  /*https://formspree.io/*/
-  $('.submit').click(function (event) {
-    console.log('Click')
+  function validateEmail(email) {
+    const re = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    return re.match(email);
+  }
 
-    var companyName = $('.companyname').val()
-    var yourName = $('.yourname').val()
-    var email = $('.email').val()
-    var project = $('.project').val()
-    var statusElm = $('.status')
+  if (name.value == "") { 
+    window.alert("Please enter your name."); 
+    name.focus(); 
+    return false; 
+  } 
 
-    statusElm.empty()
+  if (email.value == "") { 
+    window.alert("Please enter your email address."); 
+    email.focus(); 
+    return false; 
+  }
+  
+  if (validateEmail(email) == false) {
+    window.alert("Please enter valid email address."); 
+    email.focus(); 
+    return false;
+  }
 
-    if(companyName.length >= 2) {
-      statusElm.append("<div>companyName Valid</div>")
-    } else {
-      event.preventDefault()
-      statusElm.append("<div>companyName Not Valid</div>")
-    }
+  if (message.value == "") { 
+    window.alert("Please enter message."); 
+    message.focus(); 
+    return false; 
+  }
 
-    if(yourName.length >= 2) {
-      statusElm.append("<div>yourName Valid</div>")
-    } else {
-      event.preventDefault()
-      statusElm.append("<div>yourName Not Valid</div>")
-    }
-
-    if(email.length >= 5 && email.includes('@') && email.includes('.')) {
-      statusElm.append("<div>Email Valid</div>")
-    } else {
-      event.preventDefault()
-      statusElm.append("<div>Email Not Valid</div>")
-    }
-
-    if(project.length >= 2) {
-      statusElm.append("<div>project Valid</div>")
-    } else {
-      event.preventDefault()
-      statusElm.append("<div>project Not Valid</div>")
-    }
-
-  })
-});
+  return true; 
+}

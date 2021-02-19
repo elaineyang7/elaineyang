@@ -26,7 +26,7 @@
 }
 
 .content__img {
-  width: 33.3%;
+  width: 33.29%;
   height: 100%;
   margin: 0 auto;
 }
@@ -105,17 +105,78 @@
   grid-column-start: 4;
   grid-column-end: 6;
   justify-self: end;
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
 
-.banner__social img {
+.banner__social-icons {
+  width: 240px;
+  height: 24px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+}
+
+.linkedin__container,
+.bird__container,
+.fish__container,
+.tv__container {
+  width: 60px;
+  height: 24px;
+  position: relative;
+}
+
+.linkedin__container svg,
+.bird__container svg,
+.fish__container svg,
+.tv__container svg {
   padding-left: 36px;
   width: 24px;
   height: 24px;
+  position: relative;
 }
 
-.banner__social a {
-  margin: 0;
-  padding: 0;
+.banner__linkedin path {
+  fill: #333;
+}
+
+.banner__bird path,
+.banner__fish path,
+.banner__tv path {
+  fill: #CCC;
+}
+
+.linkedin__container:hover .banner__linkedin path {
+  fill: #FFC512;
+}
+
+.banner__bird:hover path,
+.banner__fish:hover path,
+.banner__tv:hover path {
+  fill: #888;
+}
+
+.banner__linkedin-hover,
+.banner__bird-hover,
+.banner__fish-hover,
+.banner__tv-hover {
+  position: relative;
+  width: 237px;
+  top: -149px;
+  left: -70px;
+  visibility: hidden;
+}
+
+.linkedin__container:hover a .banner__linkedin-hover,
+.bird__container:hover .banner__bird-hover,
+.fish__container:hover .banner__fish-hover,
+.tv__container:hover .banner__tv-hover {
+  visibility: visible;
 }
 
 @media (max-width: 1300px) {
@@ -128,12 +189,6 @@
   }
 }
 
-@media (max-width: 992px) {
-  .banner__social img {
-    width: 22px;
-    height: 22px;
-  }
-} 
 
 
 /**
@@ -220,14 +275,13 @@
 
 .about__content a p {
   width: 45%;
-  padding-right: 10px;
   margin: 0;
   text-align: start;
 }
 
 .about__content a p.about__more {
   width: 55%;
-  padding-right: 20px;
+  padding-right: 10px;
   text-align: end;
 }
 
@@ -471,6 +525,11 @@ form {
   border-radius: 4px;
 }
 
+.form__inputBox input:focus,
+.form__inputBox textarea:focus {
+  border: 1px solid #FFC512;
+}
+
 .form__inputBox textarea {
   height: 64.46%;
 }
@@ -489,7 +548,6 @@ form {
   color: var(--color-black-11);
   letter-spacing: 0.3px;
 }
-
 
 .contact__info {
   grid-column-start: 3;
