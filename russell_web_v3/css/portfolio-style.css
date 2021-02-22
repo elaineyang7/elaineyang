@@ -90,8 +90,8 @@ section {
 
 .portfolio__imgBox {
   position: relative;
-  width: 600px;
-  height: 400px;
+  width: 540px;
+  height: 360px;
   margin-left: 112px;
   background: var(--color-white);
   box-shadow: 0 60px 80px 0 rgba(0,0,0,0.08);
