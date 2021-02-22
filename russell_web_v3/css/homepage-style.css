@@ -573,16 +573,16 @@ form {
 
 .submit {
   width: 260px;
-  height: 80px;
-  background-color: var(--color-yellow-02);
+  height: 72px;
+  background-color: #997400;
   border: none;
   text-transform: uppercase;
   cursor: pointer;
   transition: 0.3s linear;
   border-radius: 4px;
-  font-family: var(--font-sfmedium);
+  font-family: var(--font-secondary);
   font-size: 28px;
-  color: var(--color-black-11);
+  color: #785C03;
   letter-spacing: 0.3px;
 }
 
@@ -606,7 +606,7 @@ form {
 .contact__info span {
   font-family: var(--font-secondary);
   font-size: 24px;
-  color: var(--color-yellow-02);
+  color: #997400;
   letter-spacing: 0;
   font-weight: 400;
 }

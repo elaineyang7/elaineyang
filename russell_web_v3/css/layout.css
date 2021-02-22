@@ -123,7 +123,7 @@ aside {
   width: 13px;
   height: 540px;
   position: fixed;
-  top: 220px;
+  top: calc(50vh - 270px);
   right: 52px;
   z-index: 1;
   margin: 0;
@@ -432,19 +432,27 @@ main {
 }
 
 .linkedin svg path {
-  fill: #FFC512;
+  fill: #997400;
+  transition: 0.3s;
+}
+
+.linkedin:hover svg path {
+  fill: var(--color-yellow1-main);
+  transition: 0.3s;
 }
 
 .bird svg path, 
 .fish svg, 
 .tv svg {
-  fill: #333;
+  fill: var(--color-black4-text);
+  transition: 0.3s;
 }
 
 .bird:hover svg path, 
 .fish:hover svg, 
 .tv:hover svg {
-  fill: #888;
+  fill: var(--color-black5-socialmedia);
+  transition: 0.3s;
 }
 
 .sci ul li div img {
@@ -456,6 +464,7 @@ main {
 
 .sci ul li div:hover img {
   visibility: visible;
+  transition: 0.3s;
 }
 
 
@@ -469,7 +478,7 @@ main {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: #191919;
+  background-color: var(--color-black2-footerbg);
   overflow-x: hidden;
   visibility: hidden;
   transition: all 0.5s;
