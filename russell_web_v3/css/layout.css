@@ -8,6 +8,7 @@
   display: grid;
   grid-template-rows: 108px auto;
   grid-template-columns: 100px auto;
+  /*overflow-x: hidden;*/
 }
 
 
@@ -16,7 +17,7 @@
 **/
 
 nav {
-  background: #2B2B2B;
+  background: var(--color-black3-leftnav);
   grid-row-start: 2;
   grid-row-end: 3;
   grid-column-start: 1;
@@ -28,14 +29,15 @@ nav {
 }
 
 .nav__left {
-  width: calc(100vh - var(--height-header));
+  width: var(--height-section-100vh);
   height: var(--width-left-nav);
   position: fixed;
   top: var(--height-header);
   left: 0;
+  margin: 0 auto;
   overflow-y: hidden;
-  overflow-x: auto;
-  background: #2B2B2B;
+  overflow-x: hidden;
+  background: var(--color-black3-leftnav);
   -webkit-transform-origin: left top;
   -webkit-transform: rotate(-90deg)translateX(-100%);
   -moz-transform-origin: left top;
@@ -52,6 +54,8 @@ nav {
   top: 38.5px;
   margin: 0 calc((var(--height-section-100vh) - 526.96px) / 2);
   padding: 0;
+  display: flex;
+  flex-direction: row-reverse;
 }
 
 .nav__left ul li {
@@ -69,7 +73,7 @@ nav {
 .nav__left ul li a {
   font-family: var(--font-secondary);
   font-size: 18px;
-  color: var(--color-white-01);
+  color: var(--color-white);
   letter-spacing: 3.02px;
   text-transform: uppercase;
   line-height: 21px;
@@ -77,7 +81,71 @@ nav {
 }
 
 .nav__left ul li:hover a {
-  color: var(--color-yellow-01);
+  color: var(--color-yellow1-main);
+}
+
+@media (max-width: 1200px) {
+  .nav__left {
+    width: var(--height-section-100vh);
+    height: var(--width-left-nav);
+    position: fixed;
+    top: var(--height-header);
+    left: 0;
+    margin: 0 auto;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    background: #2B2B2B;
+    -webkit-transform-origin: left top;
+    -webkit-transform: rotate(-90deg)translateX(-100%);
+    -moz-transform-origin: left top;
+    -moz-transform: rotate(-90deg) translateX(-100%);
+    transform-origin: left top;
+    transform: rotate(-90deg) translateX(-100%);
+    z-index: 1;
+  }
+
+  .nav__left ul {
+    width: 483.76px;
+    margin: 0 calc((var(--height-section-100vh) - 483.76px) / 2);
+  }
+
+  .nav__left ul li {
+    padding-left: 90px;
+  }
+}
+
+
+/**
+* Right Side Navigation
+**/
+
+aside {
+  width: 13px;
+  height: 540px;
+  position: fixed;
+  top: 220px;
+  right: 52px;
+  z-index: 1;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+}
+
+aside ul li {
+  height: 50px;
+  margin-bottom: 5px;
+  cursor: default;
+}
+
+aside ul li p {
+  visibility: hidden;
+}
+
+.active {
+  width: 3px;
+  height: 50px;
+  background-color: var(--color-black-09);
 }
 
 
@@ -96,7 +164,7 @@ nav {
   position: fixed;
   display: flex;
   flex-direction: row;
-  overflow-x: hidden;
+  overflow: hidden;
   z-index: 5;
 }
 
@@ -113,7 +181,7 @@ nav {
 
 .header__russell-logo h1 {
   font-size: 28px;
-  color: var(--color-black-07);
+  color: var(--color-black4-text);
   display: flex;
   flex-direction: row;
   letter-spacing: 0;
@@ -145,15 +213,15 @@ nav {
 
 /* About, Logo, VI, Print Header */
 .header__logo {
-  background-color: #FFC512 !important;
+  background-color: var(--color-yellow1-main) !important;
 }
 
 .header__print {
-  background-color: #D8D8D8; !important;
+  background-color: var(--color-gray2-socialmedia) !important;
 }
 
 .header__vi {
-  background-color: var(--color-white-05) !important;
+  background-color: var(--color-white) !important;
 }
 
 
@@ -198,7 +266,7 @@ nav {
 .go-back p {
   font-family: var(--font-sfbold);
   font-size: 20px;
-  color: var(--color-black-01);
+  color: var(--color-black4-text);
   letter-spacing: 0;
   position: relative;
   padding-top: 60px;
@@ -215,7 +283,7 @@ nav {
 .portfolio__nav a {
   font-family: var(--font-sfbold);
   font-size: 20px;
-  color: var(--color-black-01);
+  color: var( --color-black3-leftnav);
   letter-spacing: 0;
   line-height: 40px;
   margin-right: 57px;
@@ -247,7 +315,7 @@ main {
   position: relative;
   width: 100%;
   height: 31.04vw;
-  background-color: var(--color-black-03);
+  background-color: var(--color-black2-footerbg);
   display: grid;
   grid-template-rows: 20.47% 57.38% 8.56% 3.19% 10.4%;
   /*grid-template-columns: 7.69% 30.4% 22.6% 20.79% 10.11% 7.69%;*/
@@ -274,7 +342,7 @@ main {
   grid-row-end: 3;
   grid-column-start: 2;
   grid-column-end: 3;
-  border-bottom: 1px solid var(--color-black-12);
+  border-bottom: 1px solid var(--color-gray1-footertext);
 }
 
 .link__work {
@@ -282,7 +350,7 @@ main {
   grid-row-end: 3;
   grid-column-start: 3;
   grid-column-end: 4;
-  border-bottom: 1px solid var(--color-black-12);
+  border-bottom: 1px solid var(--color-gray1-footertext);
 }
 
 .link__social {
@@ -290,7 +358,7 @@ main {
   grid-row-end: 3;
   grid-column-start: 4;
   grid-column-end: 5;
-  border-bottom: 1px solid var(--color-black-12);
+  border-bottom: 1px solid var(--color-gray1-footertext);
 }
 
 .link__contact {
@@ -298,7 +366,7 @@ main {
   grid-row-end: 3;
   grid-column-start: 5;
   grid-column-end: 6;
-  border-bottom: 1px solid var(--color-black-12);
+  border-bottom: 1px solid var(--color-gray1-footertext);
 }
 
 .links h3 {
@@ -307,7 +375,7 @@ main {
   letter-spacing: 0;
   font-weight: 700;
   margin-bottom: 40px;
-  color: var(--color-black-19);
+  color: var(--color-gray1-footertext);
 }
 
 .links ul li {
@@ -319,7 +387,7 @@ main {
   font-size: 16px;
   letter-spacing: 0;
   font-weight: 400;
-  color: var(--color-black-19);
+  color: var(--color-gray1-footertext);
 }
 
 .copyright {
@@ -332,7 +400,7 @@ main {
   justify-content: space-between;
   font-family: var(--font-sfthin);
   font-size: 16px;
-  color: var(--color-black-19);
+  color: var(--color-gray1-footertext);
   letter-spacing: 0;
   font-weight: 200;
 }
@@ -457,7 +525,7 @@ main {
   position: relative;
   width: 62.083vw;
   text-align: left;
-  background-color: #191919;
+  background-color: var(--color-black2-footerbg);
   display: grid;
   grid-template-rows: 33.61% auto 33.52%;
   grid-template-columns: 23.74% auto;  

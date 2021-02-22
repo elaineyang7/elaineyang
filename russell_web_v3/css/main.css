@@ -82,9 +82,30 @@
   --color-black-19: #BBBBBB;
 
   --color-dark-blue-01: #062E37;
+ 
+ /**
+  * New Color update in 2/18/2021
+  */
 
 
-  --color-black-text: #333333;
+  --color-black1-homebg: #090909;
+  --color-black2-footerbg: #191919;
+  --color-black3-leftnav: #2B2B2B;
+  --color-black4-text: #333333;
+  --color-black5-socialmedia: #888888;
+
+  --color-white: #FFFFFF;
+
+  --color-gray1-footertext:#BBBBBB;
+  --color-gray2-socialmedia:#cccccc;
+  --color-gray3-printbg:#D8D8D8;
+  --color-gray4-aboutbg:#F5F5F5;
+  --color-gray5-mainbg:#FDFDFD;
+
+  --color-yellow1-main:#FFC512;
+  --color-yellow2-light:#FFDE79;
+  --color-yellow3-dark:#E5AC01;
+
 
   /**
   * Font Family
@@ -131,6 +152,7 @@
   */
   --height-header: 108px;
   --height-footer: 674px;
+  --height-section-1080-proportion: calc(56.25vw - var(--height-header));
   --height-section-100vh: calc(100vh - var(--height-header));
   --height-homepage-banner-section: calc(100vh - var(--height-header));
   --height-homepage-about-section: 1061px;
@@ -159,7 +181,7 @@
 
 html, body {
   width: 100vw;
-  height: 100vh;
+  height: 56.25vw;
   position: relative;
   background-color: var(--color-white-02);
   font-family: var(--font-primary);

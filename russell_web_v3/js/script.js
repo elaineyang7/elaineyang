@@ -51,3 +51,13 @@ $('aside li').on('click', function () {
       scrollTop: $(goToSection).offset().top + 1
   })
 })
+
+
+window.onscroll = function () {
+  scrollRotate();
+};
+
+function scrollRotate() {
+  let image = document.getElementById("gear");
+  image.style.transform = "rotate(" + window.pageYOffset/2 + "deg)";
+}

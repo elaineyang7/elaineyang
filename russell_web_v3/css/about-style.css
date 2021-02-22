@@ -6,7 +6,7 @@
   width: 100%;
   height: var(--height-section-100vh);
   position: relative;
-  background-color: var(--color-white-02);
+  background-color: var(--color-gray5-mainbg);
   overflow: hidden;
   display: flex;
   flex-direction: row;
@@ -18,13 +18,13 @@
   position: relative;
   padding-top: 10.74%; /*272.5px;*/
   padding-left: 10.44%; /*188px;*/
-  color: var(--color-black-12);
+  color: var(--color-black4-text);
 }
 
 .introduction__title {
   width: 171px;
   height: 64px;
-  background-color: #FFDE79;
+  background-color: var(--color-yellow1-main);
   text-align: center;
 }
 
@@ -32,7 +32,7 @@
   font-size: 40px;
   letter-spacing: 0;
   line-height: 96px;
-  color: #333;
+  color: var(--color-black4-text);
   position: relative;
   top: -19px;
   left: -1px;
@@ -43,7 +43,7 @@
   letter-spacing: 0;
   margin-top: 7.876%; /*76px;*/
   margin-bottom: 3.32%; /*32px;*/
-  color: #333;
+  color: var(--color-black4-text);
   line-height: 50px;
 }
 
@@ -51,7 +51,7 @@
   font-family: var(--font-sfultralight);
   font-size: 24px;
   letter-spacing: 0;
-  color: #333;
+  color: var(--color-black4-text);
 }
 
 .about__egg {
@@ -104,7 +104,7 @@
 .location__content p {
   width: 399px;
   height: 42px;
-  background-color: var(--color-black-08);
+  background-color: var(--color-black4-text);
   font-family: ArialMT;
   font-size: 20px;
   letter-spacing: 0;
@@ -123,12 +123,12 @@
 .about__clients {
   position: relative;
   height: 83.07vw;
-  background-color: #F5F5F5;
+  background-color: var(--color-gray4-aboutbg);
 }
 
 .about__section-title {
   font-size: 40px;
-  color: var(--color-black-10);
+  color: var(--color-black4-text);
   letter-spacing: 0;
   text-align: center;
   padding-top: 1129%;
@@ -137,7 +137,7 @@
 
 .about__clients p {
   width: 1153px;
-  color: var(--color-black-10);
+  color: var(--color-black4-text);
   margin: 0 auto;
   font-family: var(--font-sflight);
   font-size: 26px;
@@ -147,7 +147,7 @@
 .about__clients p span {
   font-family: var(--font-sfbold);
   font-size: 26px;
-  color: var(--color-black-05);
+  color: var(--color-black4-text);
   letter-spacing: 0;
   line-height: 31px;
   position: relative;
@@ -160,7 +160,7 @@
   height: 10px;
   position: absolute;
   bottom: 0;
-  background-color: #FFDE79;
+  background-color: var(--color-yellow2-light);
   z-index: -1;
 }
 
@@ -180,7 +180,7 @@
   height: 33.33vw;
   position: relative;
   top: 9.84vw;
-  background-color: var(--color-white-01);
+  background-color: var(--color-white);
 }
 
 .about__clients .nonprofit p {
@@ -230,7 +230,7 @@
 .about__others {
   position: relative;
   height: 195.4vw;
-  background-color: #F5F5F5;
+  background-color: var(--color-gray4-aboutbg);
   display: grid;
   grid-template-rows: 13.92% 18.146% 9.50% 3.6% 20.33% auto 4.59% 18.146% auto;
   grid-template-columns: 3% 2.6% 40% 15% 37% 2.4%;     
@@ -270,7 +270,7 @@
 .media__content h4 {
   font-family: var(--font-sfbold);
   font-size: 24px;
-  color: var(--color-black-10);
+  color: var(--color-black4-text);
   letter-spacing: 0;
   margin-bottom: 29px;
 }
@@ -278,7 +278,7 @@
 .media__content p {
   font-family: var(--font-sfthin);
   font-size: 24px;
-  color: var(--color-black-10);
+  color: var(--color-black4-text);
   letter-spacing: 0;
 }
 
@@ -299,7 +299,7 @@
   grid-row-end: 6;
   grid-column-start: 1;
   grid-column-end: 7;
-  background-color: #333;
+  background-color: #191919;
 }
 
 .collection__img {
@@ -347,7 +347,7 @@
 .teaching__content h4 {
   font-family: var(--font-sfbold);
   font-size: 24px;
-  color: var(--color-black-10);
+  color: var(--color-black4-text);
   letter-spacing: 0;
   padding-bottom: 23px;
 }
@@ -356,7 +356,7 @@
   font-family: var(--font-sflight);
   font-size: 20px;
   line-height: 26px;
-  color: var(--color-black-06);
+  color: var(--color-black4-text);
 }
 
 .teaching__img {

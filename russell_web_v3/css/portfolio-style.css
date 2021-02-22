@@ -1,31 +1,35 @@
 body.scroll__height-logo,
-.portfolio__layout-logo {
+.portfolio__layout-logo,
+.main__logo-page {
   height: 6450px !important;
 }
 
 body.scroll__height-print,
-.portfolio__layout-print {
+.portfolio__layout-print,
+.main__print-page {
   height: 5720px !important;
 }
 
 body.scroll__height-vi,
-.portfolio__layout-vi {
+.portfolio__layout-vi,
+.main__vi-page {
   height: 5450px !important;
 }
 
 .main__logo-page {
-  height: 6450px !important;
-  background-color: #FFC512;
+  width: 100vw !important;
+  background-color: var(--color-yellow1-main);
+  position: relative;
 }
 
 .main__print-page {
-  height: 5720px !important;
   background-color: #D8D8D8;
+  position: relative;
 }
 
 .main__vi-page {
-  height: 5450px !important;
-  background-color: var(--color-white-05);
+  background-color: var(--color-white);
+  position: relative;
 }
 
 @media (min-width: 1500px) {
@@ -39,6 +43,7 @@ body.scroll__height-vi,
   .portfolio__layout-print,
   .main__print-page {
     height: 5120px !important;
+  background-color: var(--color-gray2-socialmedia);
   }
 
   body.scroll__height-vi,
@@ -50,7 +55,7 @@ body.scroll__height-vi,
 
 h1 {
   font-size: 30px;
-  color: #333;
+  color: var(--color-black4-text);
   letter-spacing: 0;
   line-height: 40px;
   position: fixed;
@@ -80,7 +85,7 @@ section {
 }
 
 .portfolio__section-logo {
-  background-color: var(--color-yellow-10);
+  background-color: var(--color-yellow1-main);
 }
 
 .portfolio__imgBox {
@@ -88,7 +93,7 @@ section {
   width: 600px;
   height: 400px;
   margin-left: 112px;
-  background: var(--color-white-01);
+  background: var(--color-white);
   box-shadow: 0 60px 80px 0 rgba(0,0,0,0.08);
 }
 
@@ -111,7 +116,7 @@ section {
 .portfolio__desc h2 {
   font-family: var(--font-sfbold);
   font-size: 19px; /* 16px; */
-  color: var(--color-black-01);
+  color: var(--color-black4-text);
   letter-spacing: 0;
   line-height: 19px;
   padding-bottom: 17px;
@@ -120,7 +125,7 @@ section {
 .portfolio__desc p {
   font-family: var(--font-secondary);
   font-size: 16px;
-  color: var(--color-black-01);
+  color: var(--color-black4-text);
   letter-spacing: 0;
   line-height: 19px;
 }
@@ -150,9 +155,45 @@ section {
 .portfolio__next-page p {
   font-family: var(--font-secondary);
   font-size: 16px;
-  color: var(--color-black-01);
+  color: var(--color-black4-text);
   letter-spacing: 0;
   line-height: 19px;
   text-align: center;
   margin-top: 20px;
+}
+
+.portfolio__gear {
+  width: 188.8px;
+  height: 188.8px;
+  position: fixed;
+  right: -95px; /*-82.8px;*/
+  bottom: -38px;
+}
+
+.portfolio__gear-img {
+  width: 100%;
+  height: 100%;
+}
+
+.portfolio__scroll {
+  width: 66px;
+  height: 30px;
+  position: fixed;
+  right: 166px;
+  bottom: 42px;
+  font-family: var(--font-secondary);
+  font-size: 14px;
+  color: #333;
+  letter-spacing: 1.75px;
+  line-height: 30px;
+}
+
+.portfolio__scroll:after {
+  content: "";
+  width: 38px;
+  height: 1px;
+  position: absolute;
+  top: 50%;
+  left: 80px;
+  background-color: #333;
 }
