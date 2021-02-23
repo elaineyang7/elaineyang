@@ -24,6 +24,7 @@ body {
   width: 100vw;
   height: var(--height-section-100vh);
   background-color: var(--color-black-02);
+  left: 0;
 }
 
 .contact {
