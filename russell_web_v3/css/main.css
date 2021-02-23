@@ -136,8 +136,15 @@
   */
 
   --width-left-nav: 100px;
-  --width-footer: 1637px;
   --width-homepage-russell-logo: 376px;
+  --width-main-100vw: calc(100vw - var(--width-left-nav));
+
+  --width-left-nav-1440: 76px;
+  --width-homepage-russell-logo-1440: 264px;
+  --width-main-100vw-1440: calc(100vw - var(--width-left-nav-1440));
+
+
+  --width-footer: 1637px;
   --width-homepage-about-container: 1000px;
   --width-homepage-portfolio-container: 1256px;
   --width-homepage-portfolio-img: 914px;
@@ -146,14 +153,21 @@
   --width-about-media-collection: calc(181px - var(--width-left-nav));
   --width-about-media-teaching: calc(257px - var(--width-left-nav));
 
+  
 
   /**
   * Height
   */
+
   --height-header: 108px;
-  --height-footer: 674px;
   --height-section-1080-proportion: calc(56.25vw - var(--height-header));
   --height-section-100vh: calc(100vh - var(--height-header));
+
+  --height-header-1440: 80.54px;
+  --height-section-1080-proportion-1440: calc(56.25vw - var(--height-header-1440));
+  --height-section-100vh-1440: calc(100vh - var(--height-header-1440));
+  
+  --height-footer: 674px;
   --height-homepage-banner-section: calc(100vh - var(--height-header));
   --height-homepage-about-section: 1061px;
   --height-homepage-about-container: 666px;
@@ -166,11 +180,6 @@
   --height-about-location: 1080px;
   --height-about-clients-nonprofit: 640px;
   --height-about-clients: calc(955px + var(--height-about-clients-nonprofit));
-
-
-  --width-scale-1200: 0.625;
-  --width-scale-992: 0.52;
-  --width-scale-768: 0.4267;
 
 }
 

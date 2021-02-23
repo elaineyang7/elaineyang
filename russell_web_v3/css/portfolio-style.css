@@ -23,7 +23,7 @@ body.scroll__height-vi,
 }
 
 .main__print-page {
-  background-color: #D8D8D8;
+  background-color: var(--color-gray2-socialmedia);
   position: relative;
 }
 
@@ -196,4 +196,10 @@ section {
   top: 50%;
   left: 80px;
   background-color: #333;
+}
+
+@media (max-width: 1440px) {
+  .portfolio__container {
+    left: calc(var(--width-left-nav-1440) + 8px);
+  }
 }
