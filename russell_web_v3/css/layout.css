@@ -517,7 +517,20 @@ main {
 
 .sci ul li div:hover img {
   visibility: visible;
-  transition: 0.3s;
+  transition: 1s;
+}
+
+@media (min-width: 1440px) and (max-width: 1670px) {
+  .sci ul li {
+    padding-right: 30px;
+    width: 24px;
+    height: 24px;
+  }
+
+  .sci ul li div img {
+    width: 237px;
+    left: -107px;
+  }
 }
 
 

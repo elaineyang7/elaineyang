@@ -533,10 +533,9 @@
 .contact {
   position: relative;
   height: var(--height-section-1080-proportion);
-  background-color: var(--color-black-02);
+  background-color: var(--color-black1-homebg);
   display: grid;
   grid-template-columns: 46.15% 15.38% 38.46%;
-  
 }
 
 .contact__form {
@@ -570,34 +569,64 @@ form {
 
 .form__inputBox {
   width: 100%;
-  height: 127px;/*20.31%;*/
+  height: 145px;
   position: relative;
   font-family: var(--font-sfthin);
-  font-size: 14px;
+  font-size: 16px;
   letter-spacing: 0;
+  font-weight: 200;
   display: flex;
   flex-direction: column;
 }
 
+.form__inputBox label {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.form__inputBox label p {
+  color: #DC5C5C;
+  visibility: hidden;
+}
+
+.form__inputBox .name__valid  p,
+.form__inputBox .email__valid  p,
+.form__inputBox .message__valid  p {
+  visibility: visible;
+}
+
 .form__inputBox-textarea {
-  height: 270px;/*46.88%;*/
+  height: 300px;
 }
 
 .form__inputBox input,
 .form__inputBox textarea {
-  width: 100%;
-  height: 72px; /*51.1%;*/
-  padding: 5px 10px;
-  font-family: var(--font-secondary);
-  font-size: 20px;
+  width: calc(100% - 42px);
+  height: 72px; 
+  padding: 21px;
+  font-family: var(--font-sflight);
+  font-size: 24px;
   margin-top: 16px;
   margin-bottom: 38px;
-  border: 1px solid var(--color-black-07);
-  background-color: var(--color-black-02);
+  border: 0.75px solid #2A2A2A;
+  background-color: var(--color-black1-homebg);
   outline: none;
   resize: none;
-  color: var(--color-white);
   border-radius: 4px;
+  color: #FFFFFF;
+  letter-spacing: 0;
+  font-weight: 200;
+}
+
+.form__inputBox input::placeholder,
+.form__inputBox textarea::placeholder {
+  font-family: var(--font-sflight);
+  font-size: 24px;
+  color: var(--color-black3-leftnav);
+  letter-spacing: 0;
+  font-weight: 200;
 }
 
 .form__inputBox input:focus,
@@ -605,73 +634,108 @@ form {
   border: 1px solid var(--color-yellow1-main);
 }
 
-.form__inputBox textarea {
-  height: 180px;/*64.46%;*/
+.form__inputBox:focus-within {
+  color: var(--color-yellow1-main);
 }
 
-@media (min-width: 1440px) and (max-width: 1670px) {
-  .contact__form h2 {
-    font-size: 48px;
-    line-height: 48px;
-  }
+.form__inputBox textarea {
+  height: 210px;
+}
 
-  .form__inputBox {
-    width: 100%;
-    height: 127px;/*20.31%;*/
-    position: relative;
-    font-family: var(--font-sfthin);
-    font-size: 14px;
-    letter-spacing: 0;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .form__inputBox-textarea {
-    height: 210px;/*46.88%;*/
-  }
+.form__inputBox input.error, 
+.form__inputBox textarea.error {
+  border: 1px solid #DC5C5C;
+}
 
-  .form__inputBox input,
-  .form__inputBox textarea {
-    width: 100%;
-    height: 54px; /*51.1%;*/
-    padding: 5px 10px;
-    font-family: var(--font-secondary);
-    font-size: 20px;
-    margin-top: 16px;
-    margin-bottom: 38px;
-    border: 1px solid var(--color-black-07);
-    background-color: var(--color-black-02);
-    outline: none;
-    resize: none;
-    color: var(--color-white);
-    border-radius: 4px;
-  }
-
-  .form__inputBox input:focus,
-  .form__inputBox textarea:focus {
-    border: 1px solid var(--color-yellow1-main);
-  }
-
-  .form__inputBox textarea {
-    height: 120px; /*64.46%;*/
-    margin-top: 19px;
-    margin-bottom: 52px;
-  }
+.form__inputBox input.success, 
+.form__inputBox textarea.success {
+  background: var(--color-black2-footerbg);
+  border: 1px solid #2A2A2A;
 }
 
 .submit {
   width: 260px;
   height: 72px;
-  background-color: #997400;
+  background-color: var(--color-yellow4-contactdark);
   border: none;
   text-transform: uppercase;
-  cursor: pointer;
   transition: 0.3s linear;
   border-radius: 4px;
   font-family: var(--font-secondary);
   font-size: 28px;
   color: #785C03;
   letter-spacing: 0.3px;
+}
+
+.submit__success {
+  width: 260px;
+  height: 72px;
+  background-color: var(--color-yellow1-main);
+  border: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.3s linear;
+  border-radius: 4px;
+  font-family: var(--font-sfmedium);
+  font-size: 24px;
+  color: #343434;
+  letter-spacing: 0.26px;
+  font-weight: 500;
+}
+
+@media (min-width: 1440px) and (max-width: 1670px) {
+  .contact {
+    height: var(--height-section-1080-proportion-1440);
+  }
+  
+  .contact__form h2 {  
+    font-size: 45px;
+    line-height: 45px;
+  }
+  
+  .form__inputBox {
+    height: 108.75px;
+    font-size: 12px;
+  }
+  
+  .form__inputBox-textarea {
+    height: 225px;
+  }
+  
+  .form__inputBox input,
+  .form__inputBox textarea {
+    height: 54px;
+    font-size: 20px;
+    margin-top: 12.25px;
+    margin-bottom: 28.5px;
+  }
+  
+  .form__inputBox input::placeholder,
+  .form__inputBox textarea::placeholder {
+    font-size: 20px;
+  }
+  
+  .form__inputBox input:focus,
+  .form__inputBox textarea:focus {
+    border: 0.75px solid var(--color-yellow1-main);
+  }
+  
+  .form__inputBox textarea {
+    height: 157.5px;
+  }
+  
+  .submit {
+    width: 195px;
+    height: 54px;
+    font-size: 18px;
+  }
+  
+  .submit__success {
+    width: 260px;
+    height: 72px;
+    font-size: 18px;
+    letter-spacing: 0.19px;
+  }
 }
 
 .contact__info {
@@ -694,7 +758,7 @@ form {
 .contact__info span a {
   font-family: var(--font-secondary);
   font-size: 24px;
-  color: #997400;
+  color: var(--color-yellow4-contactdark);
   letter-spacing: 0;
   font-weight: 400;
 }
@@ -707,7 +771,6 @@ form {
 .info__email-p {
   grid-row-start: 2;
   grid-row-end: 3;
-
 }
 
 .info__email-span {
@@ -745,4 +808,15 @@ form {
 .go-top img {
   width: 100%;
   transform: rotate(-90deg);
+}
+
+@media (min-width: 1440px) and (max-width: 1670px) {
+  .contact__info p {
+    padding-bottom: 18px;
+    font-size: 15px;
+  }
+  
+  .contact__info span a {
+    font-size: 18px;
+  }
 }
