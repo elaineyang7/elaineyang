@@ -652,7 +652,7 @@
 
 .skill-btn-sm {
   padding: 5px 8px;
-  border: 2px solid var(--aux-color);
+  border: 1px solid var(--aux-color);
   border-radius: var(--radius);
   background-color: var(--sec-color);
   margin: 8px 3px;
@@ -666,7 +666,7 @@
 
 @media screen and (min-width: 300px) and (max-width: 992px){
   .projects-sm {
-    grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+    grid-template-columns: repeat(auto-fill, minmax(250px,1fr));
     -webkit-column-gap: 20px;
     column-gap: 20px;
   }
@@ -779,10 +779,15 @@ footer .social-icon {
   padding: 20px;
   border-radius: 15px;
   text-align: center;
+  box-shadow: 0 5px 15px 0 rgba(0,0,0,0.3);
 }
 #boxes #dialog {
   width: 550px; 
   height: auto;
   padding: 10px 10px 10px 10px;
   background-color: #ffffff;
+}
+
+.popup__img {
+  box-shadow: 0 5px 10px 0 rgba(0,0,0,0.5);
 }

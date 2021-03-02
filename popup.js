@@ -25,17 +25,17 @@ $(document).ready(function() {
   $(id).fadeIn(1000); 
 
   setTimeout(function () {
-    $('#mask').hide();
-    $('.window').hide();
-  }, 4000);	
+    $('#mask').delay(2000).fadeOut(); 
+    $('.window').delay(2000).fadeOut();
+  }, 6000);	
 
   //if close button is clicked
   $('.window .close').click(function (e) {
     //Cancel the link behavior
     e.preventDefault();
     
-    $('#mask').hide();
-    $('.window').hide();
+    $('#mask').delay(500).fadeOut(); 
+    $('.window').delay(500).fadeOut();
   });		
 
   //if mask is clicked

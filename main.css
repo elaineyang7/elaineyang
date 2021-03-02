@@ -134,7 +134,7 @@ button {
 
 .skill-btn {
   padding: 8px 10px;
-  border: 2px solid var(--aux-color);
+  border: 1px solid var(--aux-color);
   border-radius: var(--radius);
   background-color: #FFFFFF;
   margin: 10px 5px;
