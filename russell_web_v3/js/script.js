@@ -17,30 +17,32 @@ function changeDot() {
   const heightSec8= $('#section8').offset().top;
 
   if (scrollValue < heightSec2) {
-      $('aside li').not('.bar1').removeClass('active');
-      $('.bar1').addClass('active');
+    $('aside li').not('.bar1').removeClass('active');
+    $('.bar1').addClass('active');
   } else if (scrollValue < heightSec3) {
-      $('aside li').not('.bar2').removeClass('active');
-      $('.bar2').addClass('active');
+    $('aside li').not('.bar2').removeClass('active');
+    $('.bar2').addClass('active');
   } else if (scrollValue < heightSec4) {
-      $('aside li').not('.bar3').removeClass('active');
-      $('.bar3').addClass('active');
+    $('aside li').not('.bar3').removeClass('active');
+    $('.bar3').addClass('active');
   } else if (scrollValue < heightSec5) {
-      $('aside li').not('.bar4').removeClass('active');
-      $('.bar4').addClass('active');
+    $('aside li').not('.bar4').removeClass('active');
+    $('.bar4').addClass('active');
   } else if (scrollValue < heightSec6) {
-      $('aside li').not('.bar5').removeClass('active');
-      $('.bar5').addClass('active');
+    $('aside li').not('.bar5').removeClass('active');
+    $('.bar5').addClass('active');
   } else if (scrollValue < heightSec7) {
-      $('aside li').not('.bar6').removeClass('active');
-      $('.bar6').addClass('active');
+    $('.mail__content').toggleClass('mail__content--active');
+    $('aside li').not('.bar6').removeClass('active');
+    $('.bar6').addClass('active');
   } else if (scrollValue < heightSec8) {
-      $('aside li').not('.bar7').removeClass('active');
-      $('.bar7').addClass('active');
+    $('aside li').not('.bar7').removeClass('active');
+    $('.bar7').addClass('active');
   } else {
-      $('aside li').not('.bar8').removeClass('active');
-      $('.bar8').addClass('active');
+    $('aside li').not('.bar8').removeClass('active');
+    $('.bar8').addClass('active');
   }
+  
 }
 
 $(window).on("scroll", changeDot)
@@ -51,13 +53,3 @@ $('aside li').on('click', function () {
       scrollTop: $(goToSection).offset().top + 1
   })
 })
-
-
-window.onscroll = function () {
-  scrollRotate();
-};
-
-function scrollRotate() {
-  let image = document.getElementById("gear");
-  image.style.transform = "rotate(" + window.pageYOffset/2 + "deg)";
-}

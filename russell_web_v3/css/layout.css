@@ -513,11 +513,14 @@ main {
   width: 237px;
   left: -103px;
   visibility: hidden;
+  opacity: 0;
+  transition: 0.2s;
 }
 
 .sci ul li div:hover img {
   visibility: visible;
-  transition: 1s;
+  opacity: 1;
+  transition: 0.2s;
 }
 
 @media (min-width: 1440px) and (max-width: 1670px) {
