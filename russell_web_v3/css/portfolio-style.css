@@ -1,61 +1,61 @@
-body.scroll__height-logo,
-.portfolio__layout-logo,
-.main__logo-page {
+body.scroll__height--logo,
+.portfolio__layout--logo,
+.main__logo--page {
   height: 6450px !important;
 }
 
-body.scroll__height-print,
-.portfolio__layout-print,
-.main__print-page {
+body.scroll__height--print,
+.portfolio__layout--print,
+.main__print--page {
   height: 5720px !important;
 }
 
-body.scroll__height-vi,
-.portfolio__layout-vi,
-.main__vi-page {
+body.scroll__height--vi,
+.portfolio__layout--vi,
+.main__vi--page {
   height: 5450px !important;
 }
 
-.main__logo-page {
+.main__logo--page {
   width: 100vw !important;
-  background-color: var(--color-yellow1-main);
+  background-color: var(--color-yellow-1-main);
   position: relative;
 }
 
-.main__print-page {
-  background-color: var(--color-gray2-socialmedia);
+.main__print--page {
+  background-color: var(--color-gray-2-socialmedia);
   position: relative;
 }
 
-.main__vi-page {
+.main__vi--page {
   background-color: var(--color-white);
   position: relative;
 }
 
-@media (min-width: 1500px) {
-  body.scroll__height-logo,
-  .portfolio__layout-logo,
-  .main__logo-page {
+@media (min-width: 1670px) {
+  body.scroll__height--logo,
+  .portfolio__layout--logo,
+  .main__logo--page {
     height: 5700px !important;
   }
 
-  body.scroll__height-print,
-  .portfolio__layout-print,
-  .main__print-page {
+  body.scroll__height--print,
+  .portfolio__layout--print,
+  .main__print--page {
     height: 5120px !important;
   background-color: var(--color-gray2-socialmedia);
   }
 
-  body.scroll__height-vi,
-  .portfolio__layout-vi,
-  .main__vi-page {
+  body.scroll__height--vi,
+  .portfolio__layout--vi,
+  .main__vi--page {
     height: 5120px !important;
   }
 }
 
 h1 {
   font-size: 30px;
-  color: var(--color-black4-text);
+  color: var(--color-black-5-text);
   letter-spacing: 0;
   line-height: 40px;
   position: fixed;
@@ -70,12 +70,12 @@ h1 {
   display: flex;
 }
 
-.portfolio__container-logo,
-.portfolio__container-print {
+.portfolio__container--logo,
+.portfolio__container--print {
   width: 700px;
 }
 
-.portfolio__container-vi {
+.portfolio__container--vi {
   width: 1000px;
 }
 
@@ -84,8 +84,8 @@ section {
   display: flex;
 }
 
-.portfolio__section-logo {
-  background-color: var(--color-yellow1-main);
+.portfolio__section--logo {
+  background-color: var(--color-yellow-1-main);
 }
 
 .portfolio__imgBox {
@@ -115,8 +115,8 @@ section {
 
 .portfolio__desc h2 {
   font-family: var(--font-sfbold);
-  font-size: 19px; /* 16px; */
-  color: var(--color-black4-text);
+  font-size: 19px; 
+  color: var(--color-black-5-text);
   letter-spacing: 0;
   line-height: 19px;
   padding-bottom: 17px;
@@ -125,21 +125,23 @@ section {
 .portfolio__desc p {
   font-family: var(--font-secondary);
   font-size: 16px;
-  color: var(--color-black4-text);
+  color: var(--color-black-5-text);
   letter-spacing: 0;
   line-height: 19px;
 }
 
-.portfolio__next-page {
+.portfolio__next--page {
   width: 300px;
   position: relative;
   display: flex;
   flex-direction: column;
   margin-left: 120px;
-  transform: translateY(25%);
+  -webkit-transform: translateY(25%);
+      -ms-transform: translateY(25%);
+          transform: translateY(25%);
 }
 
-.portfolio__next-page a {
+.portfolio__next--page a {
   width: 100px;
   height: 100px;
   position: relative;
@@ -152,10 +154,10 @@ section {
   height: 100%;
 }
 
-.portfolio__next-page p {
+.portfolio__next--page p {
   font-family: var(--font-secondary);
   font-size: 16px;
-  color: var(--color-black4-text);
+  color: var(--color-black-5-text);
   letter-spacing: 0;
   line-height: 19px;
   text-align: center;
@@ -163,14 +165,14 @@ section {
 }
 
 .portfolio__gear {
-  width: 188.8px;
-  height: 188.8px;
+  width: 150px; /*188.8px;*/
+  height: 150px; /*188.8px;*/
   position: fixed;
-  right: -95px; /*-82.8px;*/
-  bottom: -38px;
+  right: -60px; /*-95px;*/
+  bottom: -8px; /*-38px;*/
 }
 
-.portfolio__gear-img {
+.portfolio__gear--img {
   width: 100%;
   height: 100%;
 }
@@ -183,7 +185,7 @@ section {
   bottom: 42px;
   font-family: var(--font-secondary);
   font-size: 14px;
-  color: #333;
+  color: var(--color-black-5-text);
   letter-spacing: 1.75px;
   line-height: 30px;
 }
@@ -195,11 +197,17 @@ section {
   position: absolute;
   top: 50%;
   left: 80px;
-  background-color: #333;
+  background-color: var(--color-black-5-text);
 }
 
-@media (max-width: 1440px) {
-  .portfolio__container {
-    left: calc(var(--width-left-nav-1440) + 8px);
+@media (max-width: 1670px) {
+  h1 {
+    padding-top: 100px;
+    padding-left: 128px;
   }
+
+  .portfolio__container {
+    top: 280px;
+    left: calc(var(--width-left-nav-1440) + 8px);
+  }  
 }

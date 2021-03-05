@@ -33,26 +33,35 @@
           <h2>Contact</h2>
           <form id="form" name="ContactForm" onsubmit="return checkValidation()">
             <div class="form__inputBox">
-              <label for="yourname">Your name</label>
-              <input type="text" name="yourname" class="yourname" id="yourname" autofocus>
+              <label for="yourname" id="yourname">
+                Your name
+                <p>This field is required.</p>
+              </label>
+              <input type="text" name="yourname" class="yourname" placeholder="eg. Jack">
             </div>
             <div class="form__inputBox">
-              <label for="email">Email Address</label>
-              <input type="text" name="email" class="email" id="email">
+              <label for="email" id="email">
+                Email Address
+                <p>This email is not valid.</p>
+              </label>
+              <input type="text" name="email" class="email" placeholder="eg. name@gmail.com">
             </div>
-            <div class="form__inputBox form__inputBox-textarea">
-              <label for="content">Tell us about your project</label>
-              <textarea type="text" name="content" class="content" id="content"></textarea>
+            <div class="form__inputBox form__inputBox--textarea">
+              <label for="message" id="message">
+                Tell us about your project
+                <p>This field must be at least “10” characters.</p>
+              </label>
+              <textarea type="text" name="message" class="message" placeholder="Your message..."></textarea>
             </div>
-            <button type="submit" class="submit" id="button" value="Submit">SUBMIT</button>
+            <button type="submit" class="submit" id="submit" value="Submit">SUBMIT</button>
           </form>
         </div>
         <div class="contact__info">
-          <p class="info__email-p">Email</p>
-          <span class="info__email-span">RLD@RussellLeong.com</span>
-          <p class="info__phone-p">Phone</p>
-          <span class="info__phone-span">+1 (650) 207 9979</span>
-          <p class="info__social-p">Social Media</p>
+          <p class="info__email--p">Email</p>
+          <span class="info__email--span"><a href="mailto:RLD@RussellLeong.com">RLD@RussellLeong.com</a></span>
+          <p class="info__phone--p">Phone</p>
+          <span class="info__phone--span"><a href="#">+1&nbsp(650)&nbsp207&nbsp9979</a></span>
+          <p class="info__social--p">Social Media</p>
           <div class="sci">
             <ul>
               <li>

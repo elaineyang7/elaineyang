@@ -4,27 +4,27 @@
 
 .about__introduction {
   width: 100%;
-  height: var(--height-section-100vh);
+  height: var(--height-section-1080-proportion);
   position: relative;
-  background-color: var(--color-gray5-mainbg);
+  background-color: var(--color-gray-5-mainbg);
   overflow: hidden;
   display: flex;
   flex-direction: row;
 }
 
 .introduction__content {
-  width: 50.5%; /*909px;*/
-  height: 94.70%; /*965px;*/
+  width: 50.5%;
+  height: 94.70%;
   position: relative;
-  padding-top: 10.74%; /*272.5px;*/
-  padding-left: 10.44%; /*188px;*/
-  color: var(--color-black4-text);
+  padding-top: 10.74%;
+  padding-left: 10.44%;
+  color: var(--color-black-5-text);
 }
 
 .introduction__title {
   width: 170px;
   height: 60px;
-  background-color: var(--color-yellow1-main);
+  background-color: var(--color-yellow-1-main);
   text-align: center;
 }
 
@@ -32,7 +32,7 @@
   font-size: 40px;
   letter-spacing: 0;
   line-height: 96px;
-  color: var(--color-black4-text);
+  color: var(--color-black-5-text);
   position: relative;
   top: -19px;
   left: -1px;
@@ -41,9 +41,9 @@
 .introduction__content h2 {
   font-size: 40px;
   letter-spacing: 0;
-  margin-top: 7.876%; /*76px;*/
-  margin-bottom: 3.32%; /*32px;*/
-  color: var(--color-black4-text);
+  margin-top: 7.876%;
+  margin-bottom: 3.32%;
+  color: var(--color-black-5-text);
   line-height: 50px;
 }
 
@@ -56,7 +56,7 @@
 
 .about__egg {
   width: 24.56vw;
-  height: 596px;
+  height: 100%; /*596px;*/
   position: relative;
   padding-top: 156.5px;
   padding-left: 256px;
@@ -64,15 +64,20 @@
 }
 
 .about__egg img {
-  height: 596px;
+  height: 350px; /*596px;*/
   position: relative;
+  top: 15%;
   right: -50%;
   opacity: 0.32;
   object-fit: cover;
   overflow: hidden;
 }
 
-@media (min-width: 992px) and (max-width: 1200px) {
+@media (max-width: 1440px) {
+  .about__introduction {
+    height: var(--height-section-1080-proportion-1440);
+  }
+
   .introduction__content h2 {
     font-size: 32px;
   }
@@ -89,7 +94,7 @@
 
 .about__location {
   position: relative;
-  height: var(--height-about-location);
+  height: var(--height-section-1080-proportion);
 }
 
 .location__content {
@@ -104,14 +109,14 @@
 .location__content p {
   width: 399px;
   height: 42px;
-  background-color: var(--color-black4-text);
-  font-family: ArialMT;
+  background-color: var(--color-black-5-text);
+  font-family: var(--font-span);
   font-size: 20px;
   letter-spacing: 0;
   line-height: 43px;
   text-align: center;
   position: relative;
-  top: 509px;
+  top: calc(var(--height-section-1080-proportion) / 2 - 21px);
   margin: 0 auto;
 }
 
@@ -123,21 +128,21 @@
 .about__clients {
   position: relative;
   height: 83.07vw;
-  background-color: var(--color-gray4-aboutbg);
+  background-color: var(--color-gray-4-aboutbg);
 }
 
-.about__section-title {
+.about__section--title {
   font-size: 40px;
-  color: var(--color-black4-text);
+  color: var(--color-black-5-text);
   letter-spacing: 0;
   text-align: center;
-  padding-top: 1129%;
+  padding-top: 10%;
   padding-bottom: 4.39%;
 }
 
 .about__clients p {
   width: 1153px;
-  color: var(--color-black4-text);
+  color: var(--color-black-5-text);
   margin: 0 auto;
   font-family: var(--font-sflight);
   font-size: 26px;
@@ -147,7 +152,7 @@
 .about__clients p span {
   font-family: var(--font-sfbold);
   font-size: 26px;
-  color: var(--color-black4-text);
+  color: var(--color-black-5-text);
   letter-spacing: 0;
   line-height: 31px;
   position: relative;
@@ -160,7 +165,7 @@
   height: 10px;
   position: absolute;
   bottom: 0;
-  background-color: var(--color-yellow2-light);
+  background-color: var(--color-yellow-2-light);
   z-index: -1;
 }
 
@@ -190,8 +195,8 @@
 }
 
 .nonprofit .clients__img {
-  width: 85.94%; /*1547px;*/
-  height: 41.56%; /*266px;*/
+  width: 85.94%;
+  height: 41.56%;
   position: relative;
   margin: 0 auto;
 }
@@ -215,10 +220,7 @@
   }
 
   .nonprofit {
-    height: 33.33vw;
-    position: relative;
     top: 9vw;
-    background-color: var(--color-white-01);
   }
 }
 
@@ -230,21 +232,21 @@
 .about__others {
   position: relative;
   height: 195.4vw;
-  background-color: var(--color-gray4-aboutbg);
+  background-color: var(--color-gray-4-aboutbg);
   display: grid;
   grid-template-rows: 13.92% 18.146% 9.50% 3.6% 20.33% auto 4.59% 18.146% auto;
   grid-template-columns: 3% 2.6% 40% 15% 37% 2.4%;     
-  overflow: hidden;                 
+  overflow: hidden;
 }
 
-.about__section-title {
+.about__section--title {
   grid-row-start: 1;
   grid-column-start: 1;
   grid-row-end: 2;
   grid-column-end: 6;
-  padding-top: 6.69%; /*236px;*/
-  padding-bottom: 6.18%; /*218px;*/
-  color: var(--color-black-10);
+  padding-top: 6.69%;
+  padding-bottom: 6.18%;
+  color: var(--color-black-5-text);
   text-align: center;
 }
 
@@ -270,7 +272,7 @@
 .media__content h4 {
   font-family: var(--font-sfbold);
   font-size: 24px;
-  color: var(--color-black4-text);
+  color: var(--color-black-5-text);
   letter-spacing: 0;
   margin-bottom: 29px;
 }
@@ -278,7 +280,7 @@
 .media__content p {
   font-family: var(--font-sfthin);
   font-size: 24px;
-  color: var(--color-black4-text);
+  color: var(--color-black-5-text);
   letter-spacing: 0;
 }
 
@@ -299,7 +301,7 @@
   grid-row-end: 6;
   grid-column-start: 1;
   grid-column-end: 7;
-  background-color: #191919;
+  background-color: var(--color-black-2-footerbg);
 }
 
 .collection__img {
@@ -347,7 +349,7 @@
 .teaching__content h4 {
   font-family: var(--font-sfbold);
   font-size: 24px;
-  color: var(--color-black4-text);
+  color: var(--color-black-5-text);
   letter-spacing: 0;
   padding-bottom: 23px;
 }
@@ -356,7 +358,7 @@
   font-family: var(--font-sflight);
   font-size: 20px;
   line-height: 26px;
-  color: var(--color-black4-text);
+  color: var(--color-black-5-text);
 }
 
 .teaching__img {
@@ -371,7 +373,6 @@
   width: 100%;
   overflow: hidden;
 }
-
 
 @media (max-width: 1200px) {
   .media__content p,
@@ -393,7 +394,7 @@
   height: 3500px;
   margin: 0;
   padding: 0;
-  background-color: var(--color-black2-footerbg);
+  background-color: var(--color-black-2-footerbg);
 }
 
 .hobby__overlay {
@@ -415,4 +416,3 @@
   top: 0;
   left: 0
 }
-

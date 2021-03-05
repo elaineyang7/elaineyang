@@ -66,7 +66,7 @@
           </a>
           <p data-aos="fade-left" data-aos-duration="1000">Back</p>
         </div>
-        <div class="header__overlay-menu" id="overlay-menu">
+        <div class="header__overlay--menu" id="overlay-menu">
           <svg class="openbtn" onclick="openNav()" version="1.1" id="&#x56FE;&#x5C42;_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
             y="0px" viewBox="0 0 64 64" style="enable-background:new 0 0 64 64;" xml:space="preserve">
             <path d="M0,15.276h64v1H0V15.276z M0,1.276h64v-1H0V1.276z M53.34,33.5v7.053c0,2.294,1.625,3.947,4.33,3.947
@@ -89,7 +89,7 @@
             <p data-aos="fade-up" data-aos-duration="2000">The prevailing attitude at Russell Leong Design is that design should reflect one’s life. For Russell Leong this means taking a serious approach and introducing aspects of humanity and humor when appropriate. This attitude along with the tempering of personal style, function and sensitivity to client needs are essential factors in the continuing success of Russell Leong Design.</p>
           </div>
           <div class="about__egg">
-            <img src="images/About_egg.png" alt="simple and plain egg" data-aos="fade-left" data-aos-duration="3000">
+            <img src="images/about/About_egg.png" alt="simple and plain egg" data-aos="fade-left" data-aos-duration="3000">
           </div>
         </section>
 
@@ -102,7 +102,7 @@
 
         <!-- Clients -->
         <section class="about__clients" id="section3">
-          <h3 class="about__section-title" data-aos="fade-up" data-aos-duration="2000">Clients</h3>
+          <h3 class="about__section--title" data-aos="fade-up" data-aos-duration="2000">Clients</h3>
           <p>Leong has kept his office small by design, yet maintains a large range of clients which varies in size from small retail to large <span>Fortune 500 Silicon Valley</span> firms. Just to name a few below.</p>
           <div class="client__img" data-aos="fade-up" data-aos-duration="2000">
             <img src="images/about/clients-logo.png">
@@ -117,7 +117,7 @@
 
         <!-- Others -->
         <section class="about__others" id="section4">
-          <h3 class="about__section-title" data-aos="fade-up" data-aos-duration="2000">Others</h3>
+          <h3 class="about__section--title" data-aos="fade-up" data-aos-duration="2000">Others</h3>
           <div class="media__content" data-aos="fade-up" data-aos-duration="2000">
             <h4>Media</h4>
             <p>RLD's work has been published in design annuals produced by the San Francisco Art Directors Club, Western Art Directors Club, Art Directors Club of Los Angeles, New York Art Directors Club, Houston Art Directors Club and Print Magazine Regional Annual, and the American Institute of Graphic Arts (AIGA).
@@ -147,17 +147,15 @@
         <!-- Hobby -->
         <section class="about__hobby" id="section7">
           <div class="hobby__overlay">
-            <img class="hobby__bg" src="images/surfing.jpg">
+            <img class="hobby__bg" src="images/about/surfing.jpg">
             <svg class="hobby__overlay-text" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice">
               <defs>
                 <mask id="knockout" maskContentUnits="objectBoundingBox">
                   <rect x="0" y="0" width="1" height="1" fill="white"/>
                   <g fill="black"
-                      data-530-bottom="transform: translate(0.5px,0.5px) scale(0.0009) translate(-480px,-50px);"
-                      data-330-bottom="transform: translate(0.5px,0.5px) scale(0.001) translate(-480px,-50px);"
-                      data-230-bottom="transform: translate(0.5px,0.5px) scale(0.01) translate(-480px,-50px);"
-                      data-100-bottom="transform: translate(0.5px,0.5px) scale(0.07) translate(-480px,-50px);"
-                      data-bottom="transform: translate(0.5px,0.5px) scale(0.1) translate(-480px,-50px);">
+                      data-150-bottom="transform: translate(0.5px,0.5px) scale(0.0009) translate(-480px,-50px);"
+                      
+                      data-bottom="transform: translate(0.5px,0.5px) scale(0.08) translate(-480px,-50px);">
                       <path style="fill-rule:evenodd;clip-rule:evenodd;" d="M782.224,5.451h-13.968v12.028h13.968V5.451z M28.694,19.884
                         c2.796,0,4.701,0.511,5.716,1.534c1.015,1.022,1.522,2.489,1.522,4.399c0,1.292-0.321,2.435-0.964,3.431
                         c-0.643,0.996-1.471,1.614-2.486,1.857l-0.258,0.069c-1.865,0.492-3.132,0.739-3.8,0.739h-6.46V19.884H28.694z M220.561,33.115
@@ -268,9 +266,9 @@
           $(document).ready(function() {
             var s = skrollr.init();
             constants: {
-              //fill the box for a "duration" of 250% of the viewport (pause for 250%)
+              //fill the box for a "duration" of 180% of the viewport (pause for 180%)
               //adjust for shorter/longer pause
-              knockout: '250p'
+              knockout: '1000p'
             }
           })
         </script>
@@ -323,7 +321,7 @@
           <ul>
             <li><a href="about.html">About</a></li>
             <li><a href="logo.html">Portfolio</a></li>
-            <li class="nav__left-noPadding"><a href="contact.html">Contact</a></li>
+            <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
       </nav>
@@ -348,7 +346,7 @@
           </div>
         </div>
         <div class="menu__contact">
-          <div class="menu__contact-content">
+          <div class="menu__contact--content">
             <p><a href="tel:+16502079979">(650) 207-9979</a></p>
             <p class="contact__content-spacing"><a href="mailto:RLD@RussellLeong.com">RLD@RussellLeong.com</a></p>
             <div class="sci">
