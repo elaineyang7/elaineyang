@@ -9,9 +9,12 @@
     <meta name="description" content="A logo isn't just a tiny piece of art, it's the building block your company needs to build a strong brand identity with. Using it on various parts of your business gets your brand the much-needed visibility. If a logo gives a view of the business you are into in just one glance, then it's a great logo!" />
     <meta name="keywords" content="Russell Leong, Design, logo design, print, visual identity, Silicon Valley" />
     <link rel="stylesheet" href="css/main.css" />
-    <link rel="stylesheet" href="css/portfolio-style.css" />
     <link rel="stylesheet" href="css/layout.css" />
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/portfolio-style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/utils/Draggable.min.js?r=clKd"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/ThrowPropsPlugin.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="js/script.js"></script>
     <script src="js/scroll.js"></script>
@@ -53,60 +56,86 @@
 
       <main class="main__logo--page">
         <h1>Logotypes</h1>
-        <div class="portfolio__container portfolio__container--logo" data-0="transform:translateX(0%)" data-8000="transform:translateX(-500%)">
-          <section class="portfolio__section--logo">
-            <div class="portfolio__imgBox">
-              <img src="images/portfolio/logo-1.png">
+        <div id="dragSpace">
+          <div id="wrapperBoxes">
+            <div class="portfolio__Box">
+              <div class="portfolio__imgBox">
+                <img src="images/portfolio/logo-1.png">
+              </div>
+              <div class="portfolio__desc">
+                <h2>HP Netserver Solutions</h2>
+                <p>Person</p>
+                <p>Communications</p>
+                <p>Server product</p>
+                <p>branding</p>
+              </div>
             </div>
-            <div class="portfolio__desc">
-              <h2>HP Netserver Solutions</h2>
-              <p>Person</p>
-              <p>Communications</p>
-              <p>Server product</p>
-              <p>branding</p>
+            <div class="portfolio__Box">
+              <div class="portfolio__imgBox">
+                <img src="images/portfolio/logo-2.png">
+              </div>
+              <div class="portfolio__desc">
+                <h2>Dr. Martin Luther King, Jr. Library</h2>
+                <p>City of San Jose and San Jose State University Public Library</p>
+              </div>
             </div>
-          </section>
-          <section class="portfolio__section--logo">
-            <div class="portfolio__imgBox">
-              <img src="images/portfolio/logo-2.png">
+            <div class="portfolio__Box">
+              <div class="portfolio__imgBox">
+                <img src="images/portfolio/logo-3.png">
+              </div>
+              <div class="portfolio__desc">
+                <h2>WhoWhere?</h2>
+                <p>LYCOS, INC.</p>
+                <p>Internet search engine product branding</p>
+              </div>
             </div>
-            <div class="portfolio__desc">
-              <h2>Dr. Martin Luther King, Jr. Library</h2>
-              <p>City of San Jose and San Jose State University Public Library</p>
+            <div class="portfolio__Box">
+              <div class="portfolio__imgBox">
+                <img src="images/portfolio/logo-4.png">
+              </div>
+              <div class="portfolio__desc">
+                <h2>BETELNUT</h2>
+                <p>REAL RESTAURANTS, INC.</p>
+                <p>Pan-Asian restraunt</p>
+              </div>
             </div>
-          </section>
-          <section class="portfolio__section--logo">
-            <div class="portfolio__imgBox">
-              <img src="images/portfolio/logo-3.png">
+            <div class="portfolio__next--page">
+              <a href="print.html">
+                <img src="images/SVG/enter.svg">
+              </a>
+              <p>Print Work</p>
             </div>
-            <div class="portfolio__desc">
-              <h2>WhoWhere?</h2>
-              <p>LYCOS, INC.</p>
-              <p>Internet search engine product branding</p>
-            </div>
-          </section>
-          <section class="portfolio__section--logo">
-            <div class="portfolio__imgBox">
-              <img src="images/portfolio/logo-4.png">
-            </div>
-            <div class="portfolio__desc">
-              <h2>BETELNUT</h2>
-              <p>REAL RESTAURANTS, INC.</p>
-              <p>Pan-Asian restraunt</p>
-            </div>
-          </section>
-          <div class="portfolio__next--page">
-            <a href="print.html">
-              <img src="images/SVG/enter.svg">
-            </a>
-            <p>Print Work</p>
           </div>
         </div>
+          
         <p class="portfolio__scroll">SCROLL</p>
         <div class="portfolio__gear">
-          <img class="portfolio__scroll-img" id="gear" src="images/portfolio/portfolio_gear.png">
+          <img class="portfolio__scroll--img" id="gear" src="images/portfolio/portfolio_gear.png">
         </div>
       </main>
+
+      <script>
+        Draggable.create("#wrapperBoxes", {
+          bounds:"#dragSpace",
+        //allowNativeTouchScrolling:false,
+          type:"x"
+        })
+
+        TweenMax.set("body", {overflowY:'scroll'});
+
+        var scrollSpeed = 0.5; // half of user scroll
+        var scrollHeight = 3536;
+
+        TweenMax.set("body", {height:scrollHeight, overflowY:'scroll'});
+
+        $(document).on("scroll", function (){
+          const pixels = $(document).scrollTop();
+          TweenMax.to('#wrapperBoxes',1,{x:-0.5 * pixels})
+          
+          //  '0.5' = half speed of user scroll
+          console.log(pixels);
+        })
+      </script>
 
       <!-- Left Side Nav -->
       <nav>
@@ -232,9 +261,5 @@
       </div>
     </div>
 
-    <script type="text/javascript" src="js/skrollr.js"></script>
-    <script type="text/javascript">
-      skrollr.init({forceHeight: false});
-    </script>
   </body>
 </html>

@@ -9,9 +9,12 @@
     <meta name="description" content="About Russell Leong - Print" />
     <meta name="keywords" content="Russell Leong, Design, logo design, print, visual identity, Silicon Valley" />
     <link rel="stylesheet" href="css/main.css" />
-    <link rel="stylesheet" href="css/portfolio-style.css" />
     <link rel="stylesheet" href="css/layout.css" />
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/portfolio-style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/utils/Draggable.min.js?r=clKd"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/ThrowPropsPlugin.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="js/script.js"></script>
     <script src="js/scroll.js"></script>
@@ -53,55 +56,80 @@
 
       <main class="main__print--page">
         <h1>Print Work</h1>
-        <div class="portfolio__container portfolio__container--print" data-0="transform:translateX(0%)" data-7000="transform:translateX(-500%)">
-          <section class="portfolio__section--print">
-            <div class="portfolio__imgBox">
-              <img src="images/portfolio/print-1.png">
+        <div id="dragSpace">
+          <div id="wrapperBoxes">
+            <div class="portfolio__Box">
+              <div class="portfolio__imgBox">
+                <img src="images/portfolio/print-1.png">
+              </div>
+              <div class="portfolio__desc">
+                <h2>Restaurant Menus</h2>
+                <p>Restaurant Qi / Roti Bistro / Betelnut / Shanghai 1930 / Guanxi Lounge</p>
+              </div>
             </div>
-            <div class="portfolio__desc">
-              <h2>Restaurant Menus</h2>
-              <p>Restaurant Qi / Roti Bistro / Betelnut / Shanghai 1930 / Guanxi Lounge</p>
+            <div class="portfolio__Box">
+              <div class="portfolio__imgBox">
+                <img src="images/portfolio/print-2.png">
+              </div>
+              <div class="portfolio__desc">
+                <h2>brochure / Black & White Ball</h2>
+                <p>Liquid Audio / Clarify / Auspex / King & VanBalen</p>
+              </div>
             </div>
-          </section>
-          <section class="portfolio__section--print">
-            <div class="portfolio__imgBox">
-              <img src="images/portfolio/print-2.png">
+            <div class="portfolio__Box">
+              <div class="portfolio__imgBox">
+                <img src="images/portfolio/print-3.png">
+              </div>
+              <div class="portfolio__desc">
+                <h2>Presentation folders</h2>
+                <p>Iconix Bioscience / ReleaseNow / PointBase / Iconix / Visa International Vitria / WhoWhere? / Technology Vision Group / Prophet</p>
+              </div>
             </div>
-            <div class="portfolio__desc">
-              <h2>brochure / Black & White Ball</h2>
-              <p>Liquid Audio / Clarify / Auspex / King & VanBalen</p>
+            <div class="portfolio__Box">
+              <div class="portfolio__imgBox">
+                <img src="images/portfolio/print-4.png">
+              </div>
+              <div class="portfolio__desc">
+                <h2>Event programs for non-profits</h2>
+                <p>Self Help for the Elderly / Chinese Culture Center of San Francisco / Chinese Historic and Culture Project</p>
+              </div>
             </div>
-          </section>
-          <section class="portfolio__section--print">
-            <div class="portfolio__imgBox">
-              <img src="images/portfolio/print-3.png">
+            <div class="portfolio__next--page">
+              <a href="vi.html">
+                <img src="images/SVG/enter.svg">
+              </a>
+              <p>Visual Identity</p>
             </div>
-            <div class="portfolio__desc">
-              <h2>Presentation folders</h2>
-              <p>Iconix Bioscience / ReleaseNow / PointBase / Iconix / Visa International Vitria / WhoWhere? / Technology Vision Group / Prophet</p>
-            </div>
-          </section>
-          <section class="portfolio__section--print">
-            <div class="portfolio__imgBox">
-              <img src="images/portfolio/print-4.png">
-            </div>
-            <div class="portfolio__desc">
-              <h2>Event programs for non-profits</h2>
-              <p>Self Help for the Elderly / Chinese Culture Center of San Francisco / Chinese Historic and Culture Project</p>
-            </div>
-          </section>
-          <div class="portfolio__next--page">
-            <a href="vi.html">
-              <img src="images/SVG/enter.svg">
-            </a>
-            <p>Visual Identity</p>
           </div>
         </div>
         <p class="portfolio__scroll">SCROLL</p>
         <div class="portfolio__gear">
-          <img class="portfolio__scroll-img" id="gear" src="images/portfolio/portfolio_gear.png">
+          <img class="portfolio__scroll--img" id="gear" src="images/portfolio/portfolio_gear.png">
         </div>
       </main>
+
+      <script>
+        Draggable.create("#wrapperBoxes", {
+          bounds:"#dragSpace",
+        //allowNativeTouchScrolling:false,
+          type:"x"
+        })
+
+        TweenMax.set("body", {overflowY:'scroll'});
+
+        var scrollSpeed = 0.5; // half of user scroll
+        var scrollHeight = 3536;
+
+        TweenMax.set("body", {height:scrollHeight, overflowY:'scroll'});
+
+        $(document).on("scroll", function (){
+          const pixels = $(document).scrollTop();
+          TweenMax.to('#wrapperBoxes',1,{x:-0.5 * pixels})
+          
+          //  '0.5' = half speed of user scroll
+          console.log(pixels);
+        })
+      </script>
 
       <!-- Left Side Nav -->
       <nav>
@@ -109,7 +137,7 @@
           <ul>
             <li><a href="about.html">About</a></li>
             <li><a href="logo.html">Portfolio</a></li>
-            <li class="nav__left-noPadding"><a href="contact.html">Contact</a></li>
+            <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
       </nav>
@@ -226,10 +254,6 @@
         </div>
       </div>
     </div>
-
-    <script type="text/javascript" src="js/skrollr.js"></script>
-    <script type="text/javascript">
-      skrollr.init({forceHeight: false});
-    </script>
+	
   </body>
 </html>

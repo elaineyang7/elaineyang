@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/contact-style.css" />
     <link rel="stylesheet" href="css/layout.css" />
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
     <script src="js/send-mail.js"></script>
   </head>
 
@@ -37,7 +38,7 @@
                 Your name
                 <p>This field is required.</p>
               </label>
-              <input type="text" name="yourname" class="yourname" placeholder="eg. Jack">
+              <input type="text" name="yourname" class="yourname" placeholder="eg. Jack" autofocus>
             </div>
             <div class="form__inputBox">
               <label for="email" id="email">
@@ -150,61 +151,6 @@
         </div>
       </section>
     </main>
-
-    <!-- Overlay Menu -->
-    <div id="overlay" class="overlay">
-			<a href="javascript:void(0)"
-					class="closebtn" onclick="closeNav()">
-					×
-			</a>
-			<div class="overlay__content">
-				<div class="menu__item">
-					<a href="about.html">About</a>
-					<a href="logo.html">Portfolio</a>
-					<a href="contact.html">Contact</a>
-				</div>
-				<div class="menu__contact">
-          <div class="menu__contact-content">
-            <p>(650) 207-9979</p>
-            <p class="contact__content-spacing">RLD@RussellLeong.com</p>
-            <div class="sci">
-              <ul>
-                <li class="overlay-menu__icons">
-                  <div class="tooltip">
-                    <img src="images/homepage/social_media/bottom_contact/bird.png" class="img-org">
-                    <img src="images/homepage/social_media/bottom_contact/bird_hover.png" class="img-hover">
-                    <span class="tooltiptext">See, this is not a Twitter bird. We'll open Twitter soon!</span>
-                  </div>
-                </li>
-                <li class="overlay-menu__icons">
-                  <div class="tooltip">
-                    <img src="images/homepage/social_media/bottom_contact/facebook.png" class="img-org">
-                    <img src="images/homepage/social_media/bottom_contact/facebook_hover.png" class="img-hover">
-                    <span class="tooltiptext">It's a fish rather than the Facebook's F. We'll on Facebook soon!</span>
-                  </div>
-                </li>
-                <li class="overlay-menu__icons">
-                  <div class="tooltip">
-                    <img src="images/homepage/social_media/bottom_contact/ins.png" class="img-org">
-                    <img src="images/homepage/social_media/bottom_contact/ins_hover.png" class="img-hover">
-                    <span class="tooltiptext">It's a TV rather than Instagram's Camera. We'll not on Instagram yet!</span>
-                  </div>
-                </li>
-                <li class="overlay-menu__icons linkedin__icon">
-                  <div class="tooltip">
-                    <a href="#">
-                      <img src="images/homepage/social_media/bottom_contact/linkedin.png" class="img-org">
-                      <img src="images/homepage/social_media/bottom_contact/linkedin_hover.png" class="img-hover">
-                    </a>
-                    <span class="tooltiptext exitLinkedIn">Click and see my LinkedIn profile!</span>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-				</div>
-			</div>
-    </div>
     
   </body>
 </html>
