@@ -44,68 +44,29 @@
   * Color
   */
 
-  --color-white-01: #FFFFFF;
-  --color-white-02: #FDFDFD;
-  --color-white-03: #F5F5F5;
-  --color-white-04: #D8D8D8;
-  --color-white-05: #FEFEFE;
-
-  --color-yellow-01: #FFC84E;
-  --color-yellow-02: #F2BB12;
-  --color-yellow-03: #FFC512;
-  --color-yellow-04: #FBCF46;
-  --color-yellow-05: #FFD70F;
-  --color-yellow-06: #FFC84E;
-  --color-yellow-07: #FFE396;
-  --color-yellow-08: #FDC332;
-  --color-yellow-09: #FEC433;
-  --color-yellow-10: #FDBE2B;
-
-  --color-black-01: #000000;
-  --color-black-02: #090909;
-  --color-black-03: #1F1F1F;
-  --color-black-04: #141414;
-  --color-black-05: #151515;
-  --color-black-06: #2A2929;
-  --color-black-07: #2A2A2A;
-  --color-black-08: #2B2B2B;
-  --color-black-09: #282828;
-  --color-black-10: #333333;
-  --color-black-11: #343434;
-  --color-black-12: #373737;
-  --color-black-13: #393938;
-  --color-black-14: #444444;
-  --color-black-15: #4c4c4c;
-  --color-black-16: #616161;
-  --color-black-17: #666666;
-  --color-black-18: #c3c3c3;
-  --color-black-19: #BBBBBB;
-
-  --color-dark-blue-01: #062E37;
- 
- /**
-  * New Color update in 2/18/2021
-  */
-
-
-  --color-black1-homebg: #090909;
-  --color-black2-footerbg: #191919;
-  --color-black3-leftnav: #2B2B2B;
-  --color-black4-text: #333333;
-  --color-black5-socialmedia: #888888;
+  --color-black-1-homebg: #090909;
+  --color-black-2-footerbg: #191919;
+  --color-black-3-formBorder: #2A2A2A;
+  --color-black-4-leftNav: #2B2B2B;
+  --color-black-5-text: #333333;
+  --color-black-6-validText: #343434;
+  --color-black-7-socialMedia: #888888;
 
   --color-white: #FFFFFF;
 
-  --color-gray1-footertext:#BBBBBB;
-  --color-gray2-socialmedia:#cccccc;
-  --color-gray3-printbg:#D8D8D8;
-  --color-gray4-aboutbg:#F5F5F5;
-  --color-gray5-mainbg:#FDFDFD;
+  --color-gray-1-footertext:#BBBBBB;
+  --color-gray-2-socialmedia:#CCCCCC;
+  --color-gray-3-printbg:#D8D8D8;
+  --color-gray-4-aboutbg:#F5F5F5;
+  --color-gray-5-mainbg:#FDFDFD;
 
-  --color-yellow1-main:#FFC512;
-  --color-yellow2-light:#FFDE79;
-  --color-yellow3-dark:#E5AC01;
-  --color-yellow4-contactdark: #997400;
+  --color-yellow-1-main:#FFC512;
+  --color-yellow-2-light:#FFDE79;
+  --color-yellow-3-dark:#E5AC01;
+  --color-yellow-4-contactdark: #997400;
+  --color-yellow-5-invalidText: #785C03;
+
+  --color-red-error: #DC5C5C;
 
 
   /**
@@ -137,24 +98,13 @@
   */
 
   --width-left-nav: 100px;
-  --width-homepage-russell-logo: 376px;
+  --width-homepage-russell-logo: 354px;
   --width-main-100vw: calc(100vw - var(--width-left-nav));
 
   --width-left-nav-1440: 76px;
   --width-homepage-russell-logo-1440: 264px;
   --width-main-100vw-1440: calc(100vw - var(--width-left-nav-1440));
 
-
-  --width-footer: 1637px;
-  --width-homepage-about-container: 1000px;
-  --width-homepage-portfolio-container: 1256px;
-  --width-homepage-portfolio-img: 914px;
-
-  --width-about-media-content: calc(234px - var(--width-left-nav));
-  --width-about-media-collection: calc(181px - var(--width-left-nav));
-  --width-about-media-teaching: calc(257px - var(--width-left-nav));
-
-  
 
   /**
   * Height
@@ -168,20 +118,6 @@
   --height-section-1080-proportion-1440: calc(56.25vw - var(--height-header-1440));
   --height-section-100vh-1440: calc(100vh - var(--height-header-1440));
   
-  --height-footer: 674px;
-  --height-homepage-banner-section: calc(100vh - var(--height-header));
-  --height-homepage-about-section: 1061px;
-  --height-homepage-about-container: 666px;
-  --height-homepage-portfolio-section: 1080px;
-  --height-homepage-portfolio-container: 610px;
-  --height-homepage-portfolio-img: 610px;
-  --height-homepage-mail-section: 1148px;
-  --height-homepage-contact-section: 1800px;
-
-  --height-about-location: 1080px;
-  --height-about-clients-nonprofit: 640px;
-  --height-about-clients: calc(955px + var(--height-about-clients-nonprofit));
-
 }
 
 * {
@@ -193,17 +129,17 @@ html, body {
   width: 100vw;
   height: 56.25vw;
   position: relative;
-  background-color: var(--color-white-02);
+  background-color: var(--color-gray5-mainbg);
   font-family: var(--font-primary);
   margin: 0;
   padding: 0;
-  color: var(--color-white-01);
+  color: var(--color-white);
   box-sizing: border-box;
 }
 
 a {
   text-decoration: none;
-  color: var(--color-white-01);
+  color: var(--color-white);
 }
 
 li {
