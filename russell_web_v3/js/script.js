@@ -32,7 +32,6 @@ function changeDot() {
     $('aside li').not('.bar5').removeClass('active');
     $('.bar5').addClass('active');
   } else if (scrollValue < heightSec7) {
-    $('.mail__content').toggleClass('mail__content--active');
     $('aside li').not('.bar6').removeClass('active');
     $('.bar6').addClass('active');
   } else if (scrollValue < heightSec8) {
@@ -53,3 +52,16 @@ $('aside li').on('click', function () {
       scrollTop: $(goToSection).offset().top + 1
   })
 })
+
+document.addEventListener('scroll', function (e) {
+  var top  = window.pageYOffset + window.innerHeight,
+      isVisibleMail = top > document.querySelector('#section6').offsetTop
+      /*isVisibleLocation = top > document.querySelector('#section2').offsetTop*/;
+       
+   if (isVisibleMail) {
+     document.getElementsByClassName('mail__content')[0].classList.add('mail__content--active');
+   }
+   /*if (isVisibleLocation) {
+    document.getElementsByClassName('location__content--text')[0].classList.add('location__content--active');
+  }*/
+});
