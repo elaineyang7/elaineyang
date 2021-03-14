@@ -1,0 +1,179 @@
+@import 'main.css';
+
+.hero__section {
+  width: 100%;
+  background: linear-gradient(to top, #d9dcff 0%, #dbd9e3 60%, #e9ebfe 100%);
+  padding: 80px 50px;
+}
+
+.hero__img {
+  width: 70%;
+  position: relative;
+  margin: 0 auto;
+}
+
+.hero__content {
+  width: 70%;
+  position: relative;
+  margin: 0 auto;
+}
+
+@media (min-width: 992px) {
+  .hero__img {
+    width: 100%;
+  }
+
+  .hero__content {
+    width: 90%;
+    top: 9%;
+  }
+}
+
+@media (min-width: 1440px) {
+  .hero__content {
+    width: 80%;
+  }
+}
+
+.bg {
+  background-color: #d9dcff;
+}
+
+.bg__white {
+  padding-top: 150px;
+  background-color: #FFF;
+}
+
+.waves {
+  position: relative;
+  width: 100%;
+  height: 15vh;
+  margin-bottom: -10px;
+  min-height: 100px;
+  max-height: 150px;
+}
+
+.webiste__detail {
+  width: 100%;
+  position: relative;
+  padding-top: 100px;
+  background-color: #FFF;
+}
+
+.detail__container {
+  width: 50%;
+  position: relative;
+  margin: 0 auto;
+}
+
+.detail__container div {
+  padding: 20px 0;
+}
+
+.problems ul {
+  margin-top: 20px;
+}
+
+.ui__bg {
+  width: 100%;
+  position: relative;
+  top: 0;
+  background: linear-gradient(to top, #e9ebfe 0%, #dbd9e3 60%, #d9dcff 100%);
+}
+
+.content__box {
+  position: relative;
+  padding-top: 150px;
+  padding-bottom: 50px;
+}
+
+.content__text {
+  padding-left: 15vw;
+  padding-bottom: 20px;
+}
+
+.content__text p {
+  padding-top: 5px;
+}
+
+.content__img {
+  width: 50%;
+  position: relative;
+  margin: 0 auto;
+}
+
+.content__img img {
+  width: 100%;
+  box-shadow: 0 60px 80px 0 rgba(0,0,0,0.3);
+}
+
+.content__img .nav-img-1 {
+  width: 400px;
+  position: relative;
+  top: 0;
+  left: 0;
+  box-shadow: 0 60px 60px 0 rgba(0,0,0,0.15);
+}
+
+.content__img .nav-img-2 {
+  width: 350px;
+  position: absolute;
+  top: 150px;
+  left: 130px;
+  box-shadow: 0 60px 60px 0 rgba(0,0,0,0.15);
+}
+
+@media (min-width: 785px) {
+  .content__text:before {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 80px;
+    background: url("code.png");
+    background-size: 48px 48px;
+    background-position: top;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 150px;
+    left: 20px;
+    z-index: 2;
+  }
+  
+  .content__text:after {
+    content: "";
+    width: 2px;
+    height: 60%;
+    position: absolute;
+    top: 180px;
+    left: 60px;
+    background-color: #a699d1;
+    opacity: 0.5;
+    z-index: 1;
+  }
+}
+
+@media (min-width: 992px) {
+  .content__img {
+    width: 600px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .content__text {
+    padding-left: 10vw;
+  }
+}
+
+@media (min-width: 1400px) {
+  .content__text {
+    padding-left: 10vw;
+  }
+
+  .content__text:before {
+    left: 80px;
+  }
+  
+  .content__text:after {
+    left: 120px;
+  }
+}
