@@ -265,14 +265,14 @@
         <script>
           
           $(document).ready(function() {
-            
+            if ($(window).width() <= 1440) {
+              $(".about__hobby").height(3500);
+            }
             
             var s = skrollr.init();
             constants: {
-              if ($(window).width() > 1440) {
-                knockout = '150p'
-
-              }
+              knockout = '150p'
+              
               //fill the box for a "duration" of 180% of the viewport (pause for 180%)
               //adjust for shorter/longer pause
               //knockout: '1000p'
