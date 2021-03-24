@@ -382,8 +382,10 @@
   background-color: var(--color-black-1-homebg);
   position: relative;
   display: grid;
-  grid-template-rows: 23.56% 21.94% 12.59% 21.94% auto;
-  grid-template-columns: 8.96% 21.21% 5.99% 3.9% 3.57% auto 36.65% 1.65% 7.86%;
+  grid-template-rows: 23.56% 24.38% 14% 24.38% auto;
+  grid-template-columns: 8.96% 21.21% auto 3.74% 3.74% 11.59% 35% 1.7% 7.86%;
+  /*grid-template-rows: 23.56% 21.94% 12.59% 21.94% auto;*/
+  /*grid-template-columns: 8.96% 21.21% 5.99% 3.9% 3.57% auto 36.65% 1.65% 7.86%;*/
   overflow: hidden;
 }
 
@@ -399,11 +401,12 @@
   grid-row-start: 1;
   grid-row-end: 6;
   grid-column-start: 7;
-  grid-column-end: 8;
+  grid-column-end: 9;
 
   width: 100%;
   height: auto;
   background-image: url("../images/homepage/text_bg.png");
+  background-size: 100%;
   opacity: 0.52;
 }
 
@@ -436,14 +439,15 @@
   grid-row-start: 2;
   grid-row-end: 5;
   grid-column-start: 5;
-  grid-column-end: 9;
+  grid-column-end: 8;
   z-index: 2;
 }
 
 .portfolio__photo img {
-  width: 100%;
+  height: 100%;
   background-color: var(--color-black-1-homebg);
   z-index: 3;
+  object-fit: cover;
 }
 
 .portfolio__more {
@@ -508,6 +512,19 @@
   .portfolio__content p {
     font-size: 14px;
     margin-top: 20px;
+  }
+}
+
+
+@media (max-width: 992px) {
+  .portfolio__content h2 {
+    font-size: 32px;
+    line-height: 48px;
+  }
+  
+  .portfolio__content p {
+    font-size: 10px;
+    margin-top: 16px;
   }
 }
 
@@ -932,11 +949,37 @@ form {
   color: var(--color-yellow-4-contactdark);
   letter-spacing: 0;
   font-weight: 400;
+  position: relative;
+}
+
+.contact__info span a:before {
+  content: "";
+  height: 1px;
+  position: absolute;
+  top: 26px;
+  left: 0;
+  background-color: var(--color-yellow-1-main);
+  opacity: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: 0.5s;
+}
+
+.contact__info .info__email--span a:before {
+  width: 260px;
+}
+
+.contact__info .info__phone--span a:before {
+  width: 200px;
 }
 
 .contact__info span:hover a {
   color: var(--color-yellow-1-main);
-  text-decoration: underline;
+}
+
+.contact__info span:hover a:before {
+  opacity: 1;
+  transform: scaleX(1);
 }
 
 .info__email--p {
