@@ -19,11 +19,12 @@ $(function(){
   function nameValidate() {
     if (name.val().length === 0) {
       name.addClass("error");
-      $("#yourname").addClass("name__valid");
+      name.removeClass("success");      
+      $("#yourname").addClass("name__invalid");
       return false;
     } else {
       name.removeClass("error");
-      $("#yourname").removeClass("name__valid");
+      $("#yourname").removeClass("name__invalid");
       name.addClass("success");
     }
   }
@@ -31,15 +32,17 @@ $(function(){
   function emailValidate() {
     if (email.val().length === 0) {
       email.addClass("error");
-      $("#email").addClass("email__valid");
+      email.removeClass("success");
+      $("#email").addClass("email__invalid");
       return false;
     } else if (validateEmail(email.val()) == false) {
       email.addClass("error");
-      $("#email").addClass("email__valid");
+      email.removeClass("success");
+      $("#email").addClass("email__invalid");
       return false;
     } else {
       email.removeClass("error");
-      $("#email").removeClass("email__valid");
+      $("#email").removeClass("email__invalid");
       email.addClass("success");
     }
   }
@@ -47,16 +50,18 @@ $(function(){
   function messageValidate() {
     if (message.val().length === 0) { 
       message.addClass("error");
-      $("#message").addClass("message__valid");
+      message.removeClass("success");
+      $("#message").addClass("message__invalid");
       return false;
     } else if (countWords(message.val()) < 10) {
       console.log("Hi");
       message.addClass("error");
-      $("#message").addClass("message__valid");
+      message.removeClass("success");
+      $("#message").addClass("message__invalid");
       return false;
     } else { 
       message.removeClass("error");
-      $("#message").removeClass("message__valid");
+      $("#message").removeClass("message__invalid");
       message.addClass("success");
     }
   }
@@ -64,11 +69,11 @@ $(function(){
   function validate(field) {
     const className = field.get(0).className;
     
-    if (className == 'yourname' || className == 'yourname error')  {
+    if (className == 'yourname' || className == 'yourname error' || className == 'yourname name__invalid')  {
       nameValidate();
-    } else if (className == 'email' || className == 'email error') {
+    } else if (className == 'email' || className == 'email error' || className == 'email email__invalid')  {
       emailValidate();
-    } else if (className == 'message' || className == 'message error') {
+    } else if (className == 'message' || className == 'message error' || className == 'message message__invalid')  {
       messageValidate();
     }
 
@@ -77,6 +82,10 @@ $(function(){
 
   function checkFormValidation() {
     if ($("input[name='yourname']").hasClass("yourname success") && $("input[name='email']").hasClass("email success") && $("textarea[name='message']").hasClass("message success")) {
+      nameValidate();
+      emailValidate();
+      messageValidate();
+    
       $(".submit").addClass("submit__success");
     }
   }

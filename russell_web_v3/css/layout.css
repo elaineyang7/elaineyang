@@ -40,11 +40,11 @@ nav {
 }
 
 .nav__left ul {
-  width: 526.96px;
+  width: 498px;
   height: 21px;
   position: relative;
   top: 38.5px;
-  margin: 0 calc((var(--height-section-100vh) - 526.96px) / 2);
+  margin: 0 calc((var(--height-section-100vh) - 498px) / 2);
   padding: 0;
   display: flex;
   flex-direction: row-reverse;
@@ -65,15 +65,21 @@ nav {
 .nav__left ul li a {
   width: 21px;
   font-family: var(--font-secondary);
-  font-size: 18px;
+  font-size: 16px;
   color: var(--color-white);
-  letter-spacing: 3.02px;
+  letter-spacing: 3px;
   text-transform: uppercase;
-  line-height: 21px;
+  line-height: 22px;
+   -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+      transition: 0.5s;
 }
 
 .nav__left ul li:hover a {
   color: var(--color-yellow-1-main);
+  -webkit-transition: 0.5s;
+       -o-transition: 0.5s;
+          transition: 0.5s;
 }
 
 @media (max-width: 1670px) {
@@ -95,7 +101,7 @@ nav {
   }
 
   .nav__left ul li a {
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 
@@ -306,6 +312,22 @@ aside ul li p {
   }
 }
 
+.fadeInRight {
+  animation: fadeInRight 0.8s linear forwards;
+}
+
+@keyframes fadeInRight {
+  0% {
+     opacity: 1;
+     transform: translateX(30px);
+  }
+  100% {
+     opacity: 1;
+     transform: translateX(0);
+  }
+} 
+
+
 /* About, Logo, VI, Print Header */
 .header__logo {
   background-color: var(--color-yellow-1-main) !important;
@@ -382,6 +404,7 @@ main {
   display: grid;
   grid-template-rows: 20.47% 57.38% 8.56% 3.19% 10.4%;
   grid-template-columns: 7.69% auto 22.6% 20.79% 184px 7.69%;
+  font-family: var(--font-sfultralight)
 }
 
 @media (max-width: 1670px) {
@@ -396,7 +419,7 @@ main {
   grid-row-end: 3;
   grid-column-start: 2;
   grid-column-end: 3;
-  border-bottom: 1px solid var(--color-gray-1-footertext);
+  border-bottom: 1px solid var(--color-black-7-socialMedia);
 }
 
 .link__work {
@@ -404,7 +427,7 @@ main {
   grid-row-end: 3;
   grid-column-start: 3;
   grid-column-end: 4;
-  border-bottom: 1px solid var(--color-gray-1-footertext);
+  border-bottom: 1px solid var(--color-black-7-socialMedia);
 }
 
 .link__others {
@@ -412,7 +435,8 @@ main {
   grid-row-end: 3;
   grid-column-start: 4;
   grid-column-end: 5;
-  border-bottom: 1px solid var(--color-gray-1-footertext);
+  border-bottom: 1px solid var(--color-black-7-socialMedia);
+
 }
 
 .link__contact {
@@ -420,7 +444,7 @@ main {
   grid-row-end: 3;
   grid-column-start: 5;
   grid-column-end: 6;
-  border-bottom: 1px solid var(--color-gray-1-footertext);
+  border-bottom: 1px solid var(--color-black-7-socialMedia);
 }
 
 .links h3 {
@@ -428,12 +452,12 @@ main {
   font-size: 24px;
   letter-spacing: 0;
   font-weight: 700;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   color: var(--color-gray-1-footertext);
 }
 
 .links ul li {
-  padding-bottom: 21px;
+  padding-bottom: 12px;
 }
 
 .links ul li a {
@@ -441,7 +465,7 @@ main {
   font-size: 16px;
   letter-spacing: 0;
   font-weight: 400;
-  color: var(--color-gray-1-footertext);
+  color: var(--color-black-7-socialMedia);
 }
 
 .copyright {
@@ -452,16 +476,16 @@ main {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  font-family: var(--font-sfthin);
-  font-size: 16px;
-  color: var(--color-gray-1-footertext);
+  font-family: var(--font-sfultralight);
+  font-size: 12px;
+  color: var(--color-black-7-socialMedia);
   letter-spacing: 0;
   font-weight: 200;
 }
 
 @media (max-width: 1670px) {
   .links h3 {
-    font-size: 18px;
+    font-size: 16px;
   }
   
   .links ul li a {
@@ -501,34 +525,34 @@ main {
 
 .linkedin svg path {
   fill: var(--color-yellow-4-contactdark);
-  -webkit-transition: 0.3s;
-       -o-transition: 0.3s;
-          transition: 0.3s;
+  -webkit-transition: 0.5s;
+       -o-transition: 0.5s;
+          transition: 0.5s;
 }
 
 .linkedin:hover svg path {
   fill: var(--color-yellow-1-main);
-  -webkit-transition: 0.3s;
-       -o-transition: 0.3s;
-          transition: 0.3s;
+  -webkit-transition: 0.5s;
+       -o-transition: 0.5s;
+          transition: 0.5s;
 }
 
 .bird svg path, 
 .fish svg, 
 .tv svg {
   fill: var(--color-black-5-text);
-  -webkit-transition: 0.3s;
-       -o-transition: 0.3s;
-          transition: 0.3s;
+  -webkit-transition: 0.5s;
+       -o-transition: 0.5s;
+          transition: 0.5s;
 }
 
 .bird:hover svg path, 
 .fish:hover svg, 
 .tv:hover svg {
   fill: var(--color-black-7-socialMedia);
-  -webkit-transition: 0.3s;
-       -o-transition: 0.3s;
-          transition: 0.3s;
+  -webkit-transition: 0.5s;
+       -o-transition: 0.5s;
+          transition: 0.5s;
 }
 
 .sci ul li div img {
@@ -537,17 +561,17 @@ main {
   left: -84px;
   visibility: hidden;
   opacity: 0;
-  -webkit-transition: 0.2s;
-       -o-transition: 0.2s;
-          transition: 0.2s;
+  -webkit-transition: 0.5s;
+       -o-transition: 0.5s;
+          transition: 0.5s;
 }
 
 .sci ul li div:hover img {
   visibility: visible;
   opacity: 1;
-  -webkit-transition: 0.2s;
-       -o-transition: 0.2s;
-          transition: 0.2s;
+  -webkit-transition: 0.5s;
+       -o-transition: 0.5s;
+          transition: 0.5s;
 }
 
 @media (max-width: 1670px) {
@@ -746,13 +770,33 @@ main {
 
 .sci .menu__sci li div img {
   left: -90px;
-    -webkit-transition: 0.3s;
-       -o-transition: 0.3s;
-          transition: 0.3s;
+    -webkit-transition: 0.5s;
+       -o-transition: 0.5s;
+          transition: 0.5s;
 } 
 
 @media (max-width: 1670px) {
   .sci .menu__sci li div img {
     left: -80px;
   }
+}
+
+
+/*
+ * Fade in animation
+ */
+
+@keyframes fadeInLeft {
+  0% {
+     opacity: 1;
+     transform: translateX(-30px);
+  }
+  100% {
+     opacity: 1;
+     transform: translateX(0);
+  }
+} 
+
+.fadeInLeft {
+  animation: fadeInLeft 0.8s linear forwards;
 }

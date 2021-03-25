@@ -120,6 +120,134 @@
   margin: 0 auto;
 }
 
+.location__content--active::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  
+  height: 120%;
+  background: #f1c243;
+  -webkit-animation: animate 2s linear forwards;
+    -moz-animation: animate 2s linear forwards;
+      -o-animation: animate 2s linear forwards;
+         animation: animate 2s linear forwards;
+}
+
+@-webkit-keyframes animate {
+  0% {
+    left: 10%;
+    width: 100%;
+  }
+  25% {
+    left: 32.5%;
+    width: 80%;
+  }
+  50% {
+    left: 55%;
+    width: 50%;
+  }
+  75% {
+    left: 77.5%;
+    width: 30%;
+  }
+  100% {
+    left: 100%;
+    width: 1%;
+  }
+}
+
+@-moz-keyframes animate {
+  0% {
+    left: 10%;
+    width: 100%;
+  }
+  25% {
+    left: 32.5%;
+    width: 80%;
+  }
+  50% {
+    left: 55%;
+    width: 50%;
+  }
+  75% {
+    left: 77.5%;
+    width: 30%;
+  }
+  100% {
+    left: 100%;
+    width: 1%;
+  }
+}
+
+@-ms-keyframes animate {
+  0% {
+    left: 10%;
+    width: 100%;
+  }
+  25% {
+    left: 32.5%;
+    width: 80%;
+  }
+  50% {
+    left: 55%;
+    width: 50%;
+  }
+  75% {
+    left: 77.5%;
+    width: 30%;
+  }
+  100% {
+    left: 100%;
+    width: 1%;
+  }
+}
+
+@-o-keyframes animate {
+  0% {
+    left: 10%;
+    width: 100%;
+  }
+  25% {
+    left: 32.5%;
+    width: 80%;
+  }
+  50% {
+    left: 55%;
+    width: 50%;
+  }
+  75% {
+    left: 77.5%;
+    width: 30%;
+  }
+  100% {
+    left: 100%;
+    width: 1%;
+  }
+}
+
+@keyframes animate {
+  0% {
+    left: 10%;
+    width: 100%;
+  }
+  25% {
+    left: 32.5%;
+    width: 80%;
+  }
+  50% {
+    left: 55%;
+    width: 50%;
+  }
+  75% {
+    left: 77.5%;
+    width: 30%;
+  }
+  100% {
+    left: 100%;
+    width: 1%;
+  }
+}
+
 
 /**
 /* About Clients

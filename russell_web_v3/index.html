@@ -185,18 +185,20 @@
         </section>
         
         <!-- About -->
-        <section class="about" id="section2">
+        <section class="about" id="section2">          
           <div class="about__container">
-            <img src="images/homepage/about.png">
-            <figcaption class="about__content">
-              <h2>About</h2>
-              <p>We are a design office that produces appropriate and meaningful brand identity graphics for a multitude of clients, small and large: high tech, and soft tech.</p>
-              <a href="about.html">
-                <p class="about__more">MORE</p>
-                <p>&#62;</p>
-              </a>
-            </figcaption>
-          </div>
+            <a href="about.html">
+              <img src="images/homepage/about.png">
+              <figcaption class="about__content">
+                <h2>About</h2>
+                <p>We are a design office that produces appropriate and meaningful brand identity graphics for a multitude of clients, small and large: high tech, and soft tech.</p>
+                <div class="about__more">
+                  <p class="about__more--p">MORE</p>
+                  <p>&#62;</p>
+                </div>
+              </figcaption>
+            </a>
+          </div>        
         </section>
 
         <!-- Logo -->
@@ -208,10 +210,10 @@
             <h2 data-aos="fade-right" data-aos-duration="1000">Logo</h2>
             <p data-aos="fade-right" data-aos-duration="1000">A logo isn't just a tiny piece of art, it's the building block your company needs to build a strong brand identity with. Using it on various parts of your business gets your brand the much-needed visibility. If a logo gives a view of the business you are into in just one glance, then it's a great logo!</p>
           </div>
-          <div class="portfolio__photo" data-aos="fade-left" data-aos-duration="1000">
+          <a href="logo.html" class="portfolio__photo" data-aos="fade-left" data-aos-duration="1000">
             <img src="images/homepage/logo.png" alt="Logo work">
-          </div>
-          <a href="logo.html" class="portfolio__more" data-aos-duration="1000">
+          </a>
+          <a href="logo.html" class="portfolio__more" data-aos="new-animation" data-aos-duration="1000">
             <span>more</span>
             <img src="images/SVG/enter.svg" class="portfolio__more--img" alt="enter button">
           </a>
@@ -220,16 +222,16 @@
         <!-- Print -->
         <section class="print" id="section4">
           <div class="portfolio__bg">
-            <img src="images/homepage/text_bg.png">
+            <!--<img src="images/homepage/text_bg.png">-->
           </div>
           <div class="portfolio__content">
             <h2 data-aos="fade-right" data-aos-duration="1000">Print</h2>
             <p data-aos="fade-right" data-aos-duration="1000">A logo isn't just a tiny piece of art, it's the building block your company needs to build a strong brand identity with. Using it on various parts of your business gets your brand the much-needed visibility. If a logo gives a view of the business you are into in just one glance, then it's a great logo!</p>
           </div>
-          <div class="portfolio__photo" data-aos="fade-left" data-aos-duration="1000">
+          <a href="print.html" class="portfolio__photo" data-aos="fade-left" data-aos-duration="1000">
             <img src="images/homepage/print.png" alt="Print work">
-          </div>
-          <a href="logo.html" class="portfolio__more" data-aos="fade-right" data-aos-duration="2000">
+          </a>
+          <a href="print.html" class="portfolio__more" data-aos="fade-right" data-aos-duration="2000">
             <span>more</span>
             <img src="images/SVG/enter.svg" class="portfolio__more--img" alt="enter button">
           </a>
@@ -238,16 +240,16 @@
         <!-- VI -->
         <section class="vi" id="section5">
           <div class="portfolio__bg">
-            <img src="images/homepage/text_bg.png">
+            <!--<img src="images/homepage/text_bg.png">-->
           </div>
           <div class="portfolio__content">
             <h2 data-aos="fade-right" data-aos-duration="1000">Visual Identity</h2>
             <p data-aos="fade-right" data-aos-duration="1000">A logo isn't just a tiny piece of art, it's the building block your company needs to build a strong brand identity with. Using it on various parts of your business gets your brand the much-needed visibility. If a logo gives a view of the business you are into in just one glance, then it's a great logo!</p>
           </div>
-          <div class="portfolio__photo" data-aos="fade-left" data-aos-duration="1000">
+          <a href="vi.html" class="portfolio__photo" data-aos="fade-left" data-aos-duration="1000">
             <img src="images/homepage/vi.png" alt="Visual Identity work">
-          </div>
-          <a href="logo.html" class="portfolio__more" data-aos="fade-right" data-aos-duration="2000">
+          </a>
+          <a href="vi.html" class="portfolio__more" data-aos="fade-right" data-aos-duration="2000">
             <span>more</span>
             <img src="images/SVG/enter.svg" class="portfolio__more--img" alt="enter button">
           </a>
@@ -277,7 +279,7 @@
           
           <div class="contact__form">
             <h2>Contact</h2>
-            <form id="form" name="ContactForm" onsubmit="return checkValidation()">
+            <form id="form" name="ContactForm" onsubmit="return checkValidation()"> <!-- action="https://formspree.io/joyfulelaine7@gmail.com" method="POST">-->
               <div class="form__inputBox">
                 <label for="yourname" id="yourname">
                   Your name
@@ -304,14 +306,20 @@
           </div>
           <div class="contact__info">
             <p class="info__email--p">Email</p>
-            <span class="info__email--span"><a href="mailto:RLD@RussellLeong.com">RLD@RussellLeong.com</a></span>
+            <span class="info__email--span">
+              <a href="mailto:RLD@RussellLeong.com">RLD@RussellLeong.com</a>
+            </span>
             <p class="info__phone--p">Phone</p>
-            <span class="info__phone--span"><a href="#">+1&nbsp(650)&nbsp207&nbsp9979</a></span>
+            <span class="info__phone--span">
+              <a href="tel:+16502079979">+1&nbsp(650)&nbsp207&nbsp9979</a>
+            </span>
             <p class="info__social--p">Social Media</p>
             <div class="sci">
               <ul>
                 <li>
                   <div class="linkedin">
+                    <a href="https://www.linkedin.com/in/russell-leong-72695/">
+
                     <svg version="1.1" id="&#x56FE;&#x5C42;_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
                       y="0px" viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
                       <path d="M6.375,4.152c0,1.203-1.009,2.152-2.208,2.152S1.959,5.354,1.959,4.152C1.959,2.949,2.968,2,4.167,2
@@ -319,7 +327,8 @@
                         c0,0,0.063-12.848,0-14.304h3.602l-0.006,2.848h0.063c0.883-1.456,2.271-2.405,4.227-2.405c1.451,0,2.65,0.38,3.533,1.456
                         c0.883,1.013,1.388,2.405,1.388,4.304V22z M6.312,22h-4.29V7.696h4.29V22z"/>
                     </svg>
-                    <img src="images/contact_Twitter.png">
+                  </a>
+                    <img src="images/contact_Linkedin.png">
                   </div>
                 </li>
                 <li>

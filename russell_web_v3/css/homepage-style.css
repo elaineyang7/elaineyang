@@ -304,8 +304,7 @@
           transition: 0.5s;
 }
 
-.about__container:hover .about__content p,
-.about__container:hover .about__content a {
+.about__container:hover .about__content p {
   opacity: 1;
   -webkit-transform: translateY(0);
 	    -ms-transform: translateY(0);
@@ -315,7 +314,7 @@
           transition: 0.5s;
 }
 
-.about__content a {
+.about__more {
   position: relative;
   display: flex;
   flex-direction: row;
@@ -325,13 +324,13 @@
   margin-top: 60px;
 }
 
-.about__content a p {
+.about__more p {
   width: 45%;
   margin: 0;
   text-align: start;
 }
 
-.about__content a p.about__more {
+.about__more p.about__more--p {
   width: 55%;
   padding-right: 10px;
   text-align: end;
@@ -527,6 +526,26 @@
     margin-top: 16px;
   }
 }
+
+[data-aos="new-animation"] {
+  opacity: 1;
+  transition-property: transform, opacity;
+}
+
+[data-aos="new-animation"].aos-animate {
+  opacity: 1;
+}
+
+@media screen and (max-width: 1980px) {
+  [data-aos="new-animation"] {
+    transform: translateX(-50px);
+  }
+
+  [data-aos="new-animation"].aos-animate {
+    transform: translateX(0);
+  }
+}
+
 
 
 /**
@@ -775,9 +794,9 @@ form {
   visibility: hidden;
 }
 
-.form__inputBox .name__valid  p,
-.form__inputBox .email__valid  p,
-.form__inputBox .message__valid  p {
+.form__inputBox .name__invalid  p,
+.form__inputBox .email__invalid  p,
+.form__inputBox .message__invalid  p {
   visibility: visible;
 }
 

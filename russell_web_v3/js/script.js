@@ -55,13 +55,13 @@ $('aside li').on('click', function () {
 
 document.addEventListener('scroll', function (e) {
   var top  = window.pageYOffset + window.innerHeight,
-      isVisibleMail = top > document.querySelector('#section6').offsetTop
-      /*isVisibleLocation = top > document.querySelector('#section2').offsetTop*/;
+      isVisibleMail = top > document.querySelector('#section6').offsetTop;
+      isVisibleLocation = top > document.querySelector('#section2').offsetTop;
        
    if (isVisibleMail) {
      document.getElementsByClassName('mail__content')[0].classList.add('mail__content--active');
    }
-   /*if (isVisibleLocation) {
+   if (isVisibleLocation) {
     document.getElementsByClassName('location__content--text')[0].classList.add('location__content--active');
-  }*/
+  }
 });
