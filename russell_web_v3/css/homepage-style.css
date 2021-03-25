@@ -246,6 +246,9 @@
   grid-column-end: 3;
   width: 100%;
   position: relative;
+    -webkit-transition: 0.5s;
+       -o-transition: 0.5s;
+          transition: 0.5s;
 }
 
 .about__container img {
@@ -267,38 +270,42 @@
 }
 
 .about__content h2 {
-  font-size: 40px;
+  font-size: 36px;
   line-height: 100px;
-	-webkit-transition: 0.5s;
-       -o-transition: 0.5s;
-          transition: 0.5s;
+	-webkit-transition: 1s;
+       -o-transition: 1s;
+          transition: 1s;
 }
 
 .about__content p {
-  width: 500px;
+  width: 480px;
   margin: 0 auto;
-  font-family: var(--font-secondary);
-  font-size: 16px;
+  font-family: var(--font-sfultralight);
+  color: var(--color-gray-1-footertext);
+  font-size: 14px;
   letter-spacing: 2px;
-  margin-top: 20px;
+  margin-top: 0px;
 	opacity: 0;
-	-webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
-          transition: opacity 0.5s, -webkit-transform 0.5s;
-       -o-transition: opacity 0.5s, transform 0.5s;
-          transition: opacity 0.5s, transform 0.5s;
-          transition: opacity 0.5s, transform 0.5s, -webkit-transform 0.5s;
+	-webkit-transition: opacity 1s, -webkit-transform 1s;
+          transition: opacity 1s, -webkit-transform 1s;
+       -o-transition: opacity 1s, transform 1s;
+          transition: opacity 1s, transform 1s;
+          transition: opacity 1s, transform 1s, -webkit-transform 1s;
 }
 
 .about__container:hover img {
   opacity: 0.38;
   background-color: #020202;
+  -webkit-transition: 0.5s;
+       -o-transition: 0.5s;
+          transition: 0.5s;
 }
 
 .about__container:hover .about__content {
   height: 100%;
-  -webkit-transform: translateY(-90px);
-      -ms-transform: translateY(-90px);
-          transform: translateY(-90px);
+  -webkit-transform: translateY(-50px);
+      -ms-transform: translateY(-50px);
+          transform: translateY(-50px);
   -webkit-transition: 0.5s;
        -o-transition: 0.5s;
           transition: 0.5s;
@@ -309,9 +316,9 @@
   -webkit-transform: translateY(0);
 	    -ms-transform: translateY(0);
 	        transform: translateY(0);
-  -webkit-transition: 0.5s;
-       -o-transition: 0.5s;
-          transition: 0.5s;
+  -webkit-transition: opacity 2s, transform 1s;
+       -o-transition: opacity 2s, transform 1s;
+          transition: opacity 2s, transform 1s;
 }
 
 .about__more {
