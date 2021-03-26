@@ -32,20 +32,20 @@ body.scroll__height--vi,
 }
 
 h1 {
-  font-size: 30px;
+  font-size: 28px;
   color: var(--color-black-5-text);
   letter-spacing: 0;
   line-height: 40px;
   position: fixed;
-  padding-top: 138px;
-  padding-left: 128px;
+  padding-top: 108px;
+  padding-left: 102px;
 }
 
 #dragSpace {
   position: fixed;
   width: 7272px;
   height: 360px;
-  top: 330px;
+  top: 280px;
   left: calc(-3636px + var(--width-left-nav) + 15px); /*-4910px;*/
   margin-top: 10px;
 }
@@ -69,9 +69,9 @@ h1 {
 
 .portfolio__imgBox {
   position: relative;
-  width: 540px;
+  width:540px;
   height: 360px;
-  margin-left: 112px;
+  margin-left: 88px;
   background: var(--color-white);
   box-shadow: 0 60px 80px 0 rgba(0,0,0,0.08);
 }
@@ -94,19 +94,19 @@ h1 {
 
 .portfolio__desc h2 {
   font-family: var(--font-sfbold);
-  font-size: 19px; 
+  font-size: 16px; 
   color: var(--color-black-5-text);
   letter-spacing: 0;
-  line-height: 19px;
-  padding-bottom: 17px;
+  line-height: 18px;
+  padding-bottom: 16px;
 }
 
 .portfolio__desc p {
-  font-family: var(--font-secondary);
-  font-size: 16px;
+  font-family: var(--font-sflight);
+  font-size: 14px;
   color: var(--color-black-5-text);
   letter-spacing: 0;
-  line-height: 19px;
+  line-height: 14px;
 }
 
 .portfolio__next--page {
@@ -124,7 +124,6 @@ h1 {
   width: 100px;
   height: 100px;
   position: relative;
-  border: 1px solid rgba(0, 0, 0, .6);
   border-radius: 50%;
 }
 
@@ -144,14 +143,14 @@ h1 {
 }
 
 .portfolio__gear {
-  width: 150px; /*188.8px;*/
-  height: 150px; /*188.8px;*/
+  width: 160px; /*188.8px;*/
+  height: 160px; /*188.8px;*/
   position: fixed;
-  right: -60px; /*-95px;*/
-  bottom: -8px; /*-38px;*/
+  right: -76px; /*-95px;*/
+  bottom: -34px; /*-38px;*/
 }
 
-.portfolio__gear--img {
+.portfolio__gear img {
   width: 100%;
   height: 100%;
 }
@@ -160,10 +159,10 @@ h1 {
   width: 66px;
   height: 30px;
   position: fixed;
-  right: 166px;
-  bottom: 42px;
-  font-family: var(--font-secondary);
-  font-size: 14px;
+  right: 240px;
+  bottom: 30px;
+  font-family: var(--font-sflight);
+  font-size: 12px;
   color: var(--color-black-5-text);
   letter-spacing: 1.75px;
   line-height: 30px;
@@ -171,8 +170,8 @@ h1 {
 
 .portfolio__scroll:after {
   content: "";
-  width: 38px;
-  height: 1px;
+  width: 80px;
+  height: 0.5px;
   position: absolute;
   top: 50%;
   left: 80px;
@@ -182,20 +181,24 @@ h1 {
 @media (max-width: 1670px) {
   h1 {
     padding-top: 100px;
-    padding-left: 128px;
+    padding-left: 100px;
   }
 
   #dragSpace {
-    top: 270px;
+    top: 254px;
     left: calc(-3636px + var(--width-left-nav-1440));
   }
 
+  .portfolio__imgBox {
+    margin-left: 100px;
+  }
+
   .portfolio__gear {
-    width: 120px;
-    height: 120px;
+    width: 140px;
+    height: 140px;
     position: fixed;
-    right: -20px;
-    bottom: -5px;
+    right: -68px;
+    bottom: -30px;
   }
 }
 

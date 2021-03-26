@@ -1062,4 +1062,12 @@ form {
   .contact__info span a {
     font-size: 18px;
   }
+
+  .contact__info .info__email--span a:before {
+    width: 200px;
+  }
+  
+  .contact__info .info__phone--span a:before {
+    width: 155px;
+  }
 }

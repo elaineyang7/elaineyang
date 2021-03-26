@@ -81,13 +81,22 @@ $(function(){
   }
 
   function checkFormValidation() {
-    if ($("input[name='yourname']").hasClass("yourname success") && $("input[name='email']").hasClass("email success") && $("textarea[name='message']").hasClass("message success")) {
+   
+    if ($("input[name='yourname']").hasClass("yourname success") 
+      && $("input[name='email']").hasClass("email success") 
+      && $("textarea[name='message']").hasClass("message success")) {
       nameValidate();
       emailValidate();
       messageValidate();
     
-      $(".submit").addClass("submit__success");
-    }
+      if ($("input[name='yourname']").hasClass("yourname error") 
+        || $("input[name='email']").hasClass("email error") 
+        || $("textarea[name='message']").hasClass("message error")) {
+        $(".submit").removeClass("submit__success");
+      } else {
+        $(".submit").addClass("submit__success");
+      }
+    }    
   }
 
   $('input').blur(function() {
@@ -100,7 +109,8 @@ $(function(){
     checkFormValidation();
   });  
 
-  $("button").on("click" , function(){
+  $("button").on("click" , function() {
+ 
     if (nameValidate() == false || emailValidate() == false || messageValidate() == false) {
       return false;
     }

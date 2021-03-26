@@ -56,6 +56,7 @@ nav {
   display: inline;
   float: right;
   height: 100%;
+  transition: all 0.4s ease;
 }
 
 .nav__left ul li:last-child {
@@ -80,6 +81,10 @@ nav {
   -webkit-transition: 0.5s;
        -o-transition: 0.5s;
           transition: 0.5s;
+}
+
+.nav__left ul li a.current__nav {
+  color: var(--color-yellow-1-main);
 }
 
 @media (max-width: 1670px) {
@@ -262,7 +267,7 @@ aside ul li p {
 .gear-logo img {
   width: var(--size-gear-logo);
   height: var(--size-gear-logo);
-  margin: calc(50% - var(--size-gear-logo) / 2) calc(50% - var(--size-gear-logo) / 2);
+  margin: calc(54% - var(--size-gear-logo) / 2) calc(50% - var(--size-gear-logo) / 2);
 }
 
 @media (max-width: 1670px) {
@@ -289,17 +294,17 @@ aside ul li p {
   height: var(--size-go-back);
   position: relative;
   top: 30px;
-  left: 64px;
+  left: 40px;
 }
 
 .go-back p {
-  font-family: var(--font-sfbold);
-  font-size: 20px;
+  font-family: var(--font-sflight);
+  font-size: 16px;
   color: var(--color-black-5-text);
   letter-spacing: 0;
   position: relative;
   padding-top: 60px;
-  left: 84px;
+  left: 52px;
 }
 
 @media (max-width: 1670px) {
@@ -349,17 +354,47 @@ aside ul li p {
 }
 
 .portfolio__nav a {
-  font-family: var(--font-sfbold);
-  font-size: 20px;
+  font-family: var(--font-sflight);
+  font-size: 18px;
   color: var(--color-black-4-leftNav);
   letter-spacing: 0;
-  line-height: 40px;
-  margin-right: 57px;
+  line-height: 36px;
+  margin-right: 60px;
+  transition: .4s;
 }
 
-.current__page {
-  padding-bottom: 10px;
-  border-bottom: 4px solid var(--color-black-4-leftNav);
+.portfolio__nav a.current__page {
+  font-family: var(--font-secondary);
+}
+
+.portfolio__nav a:hover {
+  font-family: var(--font-secondary);
+  margin-right: 59px;
+}
+
+.underline {
+	display: block;
+	position: relative;
+	z-index: 0;
+	bottom: 5px;
+	height: 2px;
+	background-color: var(--color-black-4-leftNav);
+	pointer-events: none;
+	mix-blend-mode: multiply;
+	transition: transform 1s ease-in-out;
+}
+
+.portfolio__nav a:nth-child(1).current__page ~ .underline {
+  width: 9.5%;
+  left: 0%;
+}
+.portfolio__nav a:nth-child(2).current__page ~ .underline {
+	width: 20%;
+  left: 24.5%;
+}
+.portfolio__nav a:nth-child(3).current__page ~ .underline {
+  width: 26%;
+  left: 60%;
 }
 
 @media (max-width: 1670px) {
@@ -402,7 +437,7 @@ main {
   height: 31.04vw;
   background-color: var(--color-black-2-footerbg);
   display: grid;
-  grid-template-rows: 20.47% 57.38% 8.56% 3.19% 10.4%;
+  grid-template-rows: 24% 50% 6% 12% 8%;
   grid-template-columns: 7.69% auto 22.6% 20.79% 184px 7.69%;
   font-family: var(--font-sfultralight)
 }
@@ -419,7 +454,7 @@ main {
   grid-row-end: 3;
   grid-column-start: 2;
   grid-column-end: 3;
-  border-bottom: 1px solid var(--color-black-7-socialMedia);
+  position: relative;
 }
 
 .link__work {
@@ -427,7 +462,7 @@ main {
   grid-row-end: 3;
   grid-column-start: 3;
   grid-column-end: 4;
-  border-bottom: 1px solid var(--color-black-7-socialMedia);
+  position: relative;
 }
 
 .link__others {
@@ -435,7 +470,7 @@ main {
   grid-row-end: 3;
   grid-column-start: 4;
   grid-column-end: 5;
-  border-bottom: 1px solid var(--color-black-7-socialMedia);
+  position: relative;
 
 }
 
@@ -444,7 +479,7 @@ main {
   grid-row-end: 3;
   grid-column-start: 5;
   grid-column-end: 6;
-  border-bottom: 1px solid var(--color-black-7-socialMedia);
+  position: relative;
 }
 
 .links h3 {
@@ -466,6 +501,29 @@ main {
   letter-spacing: 0;
   font-weight: 400;
   color: var(--color-black-7-socialMedia);
+  -webkit-transition: 0.8s;
+       -o-transition: 0.8s;
+          transition: 0.8s;
+}
+
+.links ul li a:hover {
+  color: var(--color-gray-1-footertext);
+  -webkit-transition: 0.8s;
+       -o-transition: 0.8s;
+          transition: 0.8s;
+}
+
+.link__RLD:before,
+.link__work:before,
+.link__others:before,
+.link__contact:before {
+  content: "";
+  width: 100%;
+  height: 0.3px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: var(--color-black-7-socialMedia);
 }
 
 .copyright {
