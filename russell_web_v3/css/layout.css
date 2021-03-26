@@ -267,7 +267,7 @@ aside ul li p {
 .gear-logo img {
   width: var(--size-gear-logo);
   height: var(--size-gear-logo);
-  margin: calc(54% - var(--size-gear-logo) / 2) calc(50% - var(--size-gear-logo) / 2);
+  margin: calc(56% - var(--size-gear-logo) / 2) calc(50% - var(--size-gear-logo) / 2);
 }
 
 @media (max-width: 1670px) {
@@ -275,6 +275,13 @@ aside ul li p {
     width: var(--width-left-nav-1440);
     height: var(--height-header-1440);
   }
+
+ .gear-logo img {
+  width: var(--size-gear-logo-1440);
+  height: var(--size-gear-logo-1440);
+  margin: calc(54% - var(--size-gear-logo-1440) / 2) calc(50% - var(--size-gear-logo-1440) / 2);
+}
+
 }
 
 /* Back to home */
