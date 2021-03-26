@@ -11,31 +11,43 @@
 @font-face {
   font-family: 'SFProText-Regular';
   src:  url('../fonts/SF-Pro-Text-Regular.otf') format('otf');
+  src:  url('../fonts/SF-Pro-Text-Regular.woff') format('woff');
+  src:  url('../fonts/SF-Pro-Text-Regular.woff2') format('woff2');
 }
 
 @font-face {
   font-family: 'SFProText-Thin';
   src:  url('../fonts/SF-Pro-Text-Thin.otf') format('otf');
+  src:  url('../fonts/SF-Pro-Text-Thin.woff') format('woff');
+  src:  url('../fonts/SF-Pro-Text-Thin.woff2') format('woff2');
 }
 
 @font-face {
   font-family: 'SFProText-Bold';
   src:  url('../fonts/SF-Pro-Text-Bold.otf') format('otf');
+  src:  url('../fonts/SF-Pro-Text-Bold.woff') format('woff');
+  src:  url('../fonts/SF-Pro-Text-Bold.woff2') format('woff2');
 }
 
 @font-face {
   font-family: 'SFProText-Medium';
   src:  url('../fonts/SF-Pro-Text-Medium.otf') format('otf');
+  src:  url('../fonts/SF-Pro-Text-Medium.woff') format('woff');
+  src:  url('../fonts/SF-Pro-Text-Medium.woff2') format('woff2');
 }
 
 @font-face {
   font-family: 'SFProText-Light';
   src:  url('../fonts/SF-Pro-Text-Light.otf') format('otf');
+  src:  url('../fonts/SF-Pro-Text-Light.woff') format('woff');
+  src:  url('../fonts/SF-Pro-Text-Light.woff2') format('woff2');
 }
 
 @font-face {
   font-family: 'SFProText-UltraLight';
   src:  url('../fonts/SF-Pro-Text-Ultralight.otf') format('otf');
+  src:  url('../fonts/SF-Pro-Text-Ultralight.woff') format('woff');
+  src:  url('../fonts/SF-Pro-Text-Ultralight.woff2') format('woff2');
 }
 
 :root {
