@@ -16,30 +16,45 @@ function changeDot() {
   const heightSec7 = $('#section7').offset().top;
   const heightSec8= $('#section8').offset().top;
 
+  var progress1 = scrollValue / heightSec2 * 100;
+  var progress2 = (scrollValue - heightSec2) / (heightSec3 - heightSec2) * 100;
+  var progress3 = (scrollValue - heightSec3) / (heightSec4 - heightSec3) * 100;
+  var progress4 = (scrollValue - heightSec4) / (heightSec5 - heightSec4) * 100;
+  var progress5 = (scrollValue - heightSec5) / (heightSec6 - heightSec5) * 100;
+  var progress6 = (scrollValue - heightSec6) / (heightSec7 - heightSec6) * 100;
+  var progress7 = (scrollValue - heightSec7) / (heightSec8 - heightSec7) * 100;
+
   if (scrollValue < heightSec2) {
-    $('aside li').not('.bar1').removeClass('active');
-    $('.bar1').addClass('active');
+    $('aside li').not('.bar1').removeClass('rightNav-line');
+    $('.bar1').addClass('rightNav-line');
+    $('.rightNav-line').css({"transform":"translateY(" + progress1 + "%)"});
   } else if (scrollValue < heightSec3) {
-    $('aside li').not('.bar2').removeClass('active');
-    $('.bar2').addClass('active');
+    $('aside li').not('.bar2').removeClass('rightNav-line');
+    $('.bar2').addClass('rightNav-line');
+    $('.rightNav-line').css({"transform":"translateY(" + progress2 + "%)"});
   } else if (scrollValue < heightSec4) {
-    $('aside li').not('.bar3').removeClass('active');
-    $('.bar3').addClass('active');
+    $('aside li').not('.bar3').removeClass('rightNav-line');
+    $('.bar3').addClass('rightNav-line');
+    $('.rightNav-line').css({"transform":"translateY(" + progress3 + "%)"});
   } else if (scrollValue < heightSec5) {
-    $('aside li').not('.bar4').removeClass('active');
-    $('.bar4').addClass('active');
+    $('aside li').not('.bar4').removeClass('rightNav-line');
+    $('.bar4').addClass('rightNav-line');
+    $('.rightNav-line').css({"transform":"translateY(" + progress4 + "%)"});
   } else if (scrollValue < heightSec6) {
-    $('aside li').not('.bar5').removeClass('active');
-    $('.bar5').addClass('active');
+    $('aside li').not('.bar5').removeClass('rightNav-line');
+    $('.bar5').addClass('rightNav-line');
+    $('.rightNav-line').css({"transform":"translateY(" + progress5 + "%)"});
   } else if (scrollValue < heightSec7) {
-    $('aside li').not('.bar6').removeClass('active');
-    $('.bar6').addClass('active');
+    $('aside li').not('.bar6').removeClass('rightNav-line');
+    $('.bar6').addClass('rightNav-line');
+    $('.rightNav-line').css({"transform":"translateY(" + progress6 + "%)"});
   } else if (scrollValue < heightSec8) {
-    $('aside li').not('.bar7').removeClass('active');
-    $('.bar7').addClass('active');
+    $('aside li').not('.bar7').removeClass('rightNav-line');
+    $('.bar7').addClass('rightNav-line');
+    $('.rightNav-line').css({"transform":"translateY(" + progress7 + "%)"});
   } else {
-    $('aside li').not('.bar8').removeClass('active');
-    $('.bar8').addClass('active');
+    $('aside li').not('.bar8').removeClass('rightNav-line');
+    $('.bar8').addClass('rightNav-line');
   }
   
 }

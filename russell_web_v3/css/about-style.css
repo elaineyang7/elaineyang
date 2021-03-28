@@ -458,13 +458,13 @@
 }
 
 .hobby__bg{
-  width: 100%;
+  width: 105%;
 }
 
 .hobby__overlay-text {
   display: block;
   position: absolute;
-  width: 100%;
+  width: 105%;
   height: 100%;
   top: 0;
   left: 0
