@@ -16,13 +16,13 @@ function changeDot() {
   const heightSec7 = $('#section7').offset().top;
   const heightSec8= $('#section8').offset().top;
 
-  var progress1 = scrollValue / heightSec2 * 100;
-  var progress2 = (scrollValue - heightSec2) / (heightSec3 - heightSec2) * 100;
-  var progress3 = (scrollValue - heightSec3) / (heightSec4 - heightSec3) * 100;
-  var progress4 = (scrollValue - heightSec4) / (heightSec5 - heightSec4) * 100;
-  var progress5 = (scrollValue - heightSec5) / (heightSec6 - heightSec5) * 100;
-  var progress6 = (scrollValue - heightSec6) / (heightSec7 - heightSec6) * 100;
-  var progress7 = (scrollValue - heightSec7) / (heightSec8 - heightSec7) * 100;
+  const progress1 = scrollValue / heightSec2 * 100;
+  const progress2 = (scrollValue - heightSec2) / (heightSec3 - heightSec2) * 100;
+  const progress3 = (scrollValue - heightSec3) / (heightSec4 - heightSec3) * 100;
+  const progress4 = (scrollValue - heightSec4) / (heightSec5 - heightSec4) * 100;
+  const progress5 = (scrollValue - heightSec5) / (heightSec6 - heightSec5) * 100;
+  const progress6 = (scrollValue - heightSec6) / (heightSec7 - heightSec6) * 100;
+  const progress7 = (scrollValue - heightSec7) / (heightSec8 - heightSec7) * 100;
 
   if (scrollValue < heightSec2) {
     $('aside li').not('.bar1').removeClass('rightNav-line');
@@ -59,17 +59,8 @@ function changeDot() {
   
 }
 
-$(window).on("scroll", changeDot)
-
-$('aside li').on('click', function () {
-  const goToSection = '.s' + $(this).attr('id');
-  $('body, html').animate({
-      scrollTop: $(goToSection).offset().top + 1
-  })
-})
-
-document.addEventListener('scroll', function (e) {
-  var top  = window.pageYOffset + window.innerHeight,
+function mailLocationTextAnimation() {
+  const top  = window.pageYOffset + window.innerHeight,
       isVisibleMail = top > document.querySelector('#section6').offsetTop;
       isVisibleLocation = top > document.querySelector('#section2').offsetTop;
        
@@ -79,4 +70,17 @@ document.addEventListener('scroll', function (e) {
    if (isVisibleLocation) {
     document.getElementsByClassName('location__content--text')[0].classList.add('location__content--active');
   }
-});
+}
+
+$(window).on("scroll", changeDot)
+
+$('aside li').on('click', function () {
+  const goToSection = '.s' + $(this).attr('id');
+  $('body, html').animate({
+      scrollTop: $(goToSection).offset().top + 1
+  })
+})
+
+$(window).on("scroll", mailLocationTextAnimation)
+
+

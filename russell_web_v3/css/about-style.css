@@ -107,7 +107,7 @@
   background-attachment: fixed;
 }
 
-.location__content--active {
+.location__content--text {
   width: 399px;
   height: 42px;
   background-color: var(--color-black-5-text);
@@ -119,10 +119,13 @@
   position: relative;
   top: calc(var(--height-section-1080-proportion) / 2 - 21px);
   margin: 0 auto;
+}
+
+.location__content--active {
   -webkit-animation: reveal 2s linear forwards;
-    -moz-animation: reveal 2s linear forwards;
-      -o-animation: reveal 2s linear forwards;
-         animation: reveal 2s linear forwards;
+     -moz-animation: reveal 2s linear forwards;
+       -o-animation: reveal 2s linear forwards;
+          animation: reveal 2s linear forwards;
 }
 
 @-webkit-keyframes reveal {
@@ -177,6 +180,7 @@
 
 .about__clients {
   position: relative;
+  /*height: 83.07vw;*/
   height: 83.07vw;
   background-color: var(--color-gray-4-aboutbg);
 }
@@ -186,8 +190,9 @@
   color: var(--color-black-5-text);
   letter-spacing: 0;
   text-align: center;
-  padding-top: 8%;
-  padding-bottom: 10px;
+  /*padding-top: 9%;*/
+  padding-top: 8.57vw;
+  padding-bottom: 30px;
 }
 
 .about__clients p {
@@ -234,7 +239,8 @@
 .nonprofit {
   height: 33.33vw;
   position: relative;
-  top: 9.84vw;
+  /*top: 9.84vw;*/
+  top: 15vw;
   background-color: var(--color-white);
 }
 
@@ -284,7 +290,7 @@
   height: 160vw;
   background-color: var(--color-gray-4-aboutbg);
   display: grid;
-  grid-template-rows: 8% 18.146% 6% 3.6% 20% 3% auto 18.146% auto;
+  grid-template-rows: 9% 18.146% 6% 3.6% 25.51% 3.6% auto 18.146% auto;
   grid-template-columns: 3% 2.6% 40% 15% 37% 2.4%;     
   overflow: hidden;
 }
@@ -294,10 +300,12 @@
   grid-column-start: 1;
   grid-row-end: 2;
   grid-column-end: 6;
-  padding-top: 2%;
-  padding-bottom: 2%;
   color: var(--color-black-5-text);
   text-align: center;
+}
+
+.section__title-others {
+  padding-bottom: 9%;
 }
 
 .about__others h4 {
@@ -371,7 +379,7 @@
   grid-column-start: 5;
   grid-column-end: 6;
   width: 85%;
-  padding-top: 30%;
+  padding-top: 50%;
 }
 
 .collection__content h4 {
@@ -387,7 +395,6 @@
   line-height: 20px;
   letter-spacing: 0;
   color: var(--color-gray-1-footertext);
-
 }
 
 .teaching__content {
