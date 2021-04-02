@@ -87,7 +87,7 @@ nav {
   color: var(--color-yellow-1-main);
 }
 
-@media (max-width: 1670px) {
+@media (max-width: 1679px) {
   nav {
     width: var(--width-left-nav-1440);
     height: var(--height-section-100vh-1440);
@@ -140,8 +140,8 @@ aside {
 }
 
 aside ul li {
-  height: 50px;
-  margin-bottom: 5px;
+  height: 60px;
+  /*margin-bottom: 5px;*/
   cursor: default;
 }
 
@@ -149,14 +149,24 @@ aside ul li p {
   visibility: hidden;
 }
 
-.rightNav-line {
+#line-index,
+#line-about {
   width: 3px;
-  height: 10%;
-  background-color: var(--color-black-4-leftNav);
+  height: 12.5%;
   position: relative;
 }
 
-@media (max-width: 1670px) {
+.line-black {
+  background-color: var(--color-black-4-leftNav);
+}
+
+.line-yellow {
+  width: 3px;
+  height: 12.5%;
+  background-color: var(--color-yellow-1-main);
+}
+
+@media (max-width: 1679px) {
   aside {
     width: 8px;
     height: 345px;
@@ -166,7 +176,7 @@ aside ul li p {
   }
   
   aside ul li {
-    height: 32px;
+    height: 42px;
   }
 }
 
@@ -186,7 +196,7 @@ aside ul li p {
   z-index: 5;
 }
 
-@media (max-width: 1670px) {
+@media (max-width: 1679px) {
   .header {
     height: var(--height-header-1440);
   }
@@ -218,7 +228,7 @@ aside ul li p {
   letter-spacing: 4.06px;
 }
 
-@media (max-width: 1670px) {
+@media (max-width: 1679px) {
   .header__russell--logo {
     width: var(--width-homepage-russell-logo-1440);
     height: var(--height-header-1440);
@@ -246,7 +256,7 @@ aside ul li p {
   fill: var(--color-black-5-text);
 }
 
-@media (max-width: 1670px) {
+@media (max-width: 1679px) {
   .openbtn {
     top: 36px;
     right: 36px;
@@ -267,7 +277,7 @@ aside ul li p {
   margin: calc(56% - var(--size-gear-logo) / 2) calc(50% - var(--size-gear-logo) / 2);
 }
 
-@media (max-width: 1670px) {
+@media (max-width: 1679px) {
   .gear-logo {
     width: var(--width-left-nav-1440);
     height: var(--height-header-1440);
@@ -311,7 +321,7 @@ aside ul li p {
   left: 52px;
 }
 
-@media (max-width: 1670px) {
+@media (max-width: 1679px) {
   .go-back a img {
     top: 12px;
   }
@@ -401,7 +411,7 @@ aside ul li p {
   left: 60%;
 }
 
-@media (max-width: 1670px) {
+@media (max-width: 1679px) {
   .portfolio__nav {
     top: 36px;
   }
@@ -421,7 +431,7 @@ main {
   margin: 0;
 }
 
-@media (max-width: 1670px) {
+@media (max-width: 1679px) {
   main {
     width: var(--width-main-100vw-1440);
     height: var(--height-section-100vh-1440);
@@ -447,7 +457,7 @@ main {
   font-family: var(--font-sfultralight)
 }
 
-@media (max-width: 1670px) {
+@media (max-width: 1679px) {
   .footer {
     height: 35vw;
     grid-template-columns: 7.69% auto 20% 20% 184px 7.69%;
@@ -546,7 +556,7 @@ main {
   font-weight: 200;
 }
 
-@media (max-width: 1670px) {
+@media (max-width: 1679px) {
   .links h3 {
     font-size: 16px;
   }
@@ -637,7 +647,7 @@ main {
           transition: 0.5s;
 }
 
-@media (max-width: 1670px) {
+@media (max-width: 1679px) {
   .sci ul li {
     padding-right: 30px;
     width: 24px;
@@ -838,7 +848,7 @@ main {
           transition: 0.5s;
 } 
 
-@media (max-width: 1670px) {
+@media (max-width: 1679px) {
   .sci .menu__sci li div img {
     left: -80px;
   }

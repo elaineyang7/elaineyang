@@ -124,6 +124,10 @@ h1 {
   width: 100px;
   height: 100px;
   position: relative;
+}
+
+.next__page--shade {
+  box-shadow: 0 0px 80px 0 rgba(0,0,0,0.5);
   border-radius: 50%;
 }
 
@@ -178,7 +182,7 @@ h1 {
   background-color: var(--color-black-5-text);
 }
 
-@media (max-width: 1670px) {
+@media (max-width: 1679px) {
   h1 {
     padding-top: 100px;
     padding-left: 100px;
