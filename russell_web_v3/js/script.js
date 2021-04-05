@@ -6,7 +6,32 @@ function closeNav() {
   document.getElementById("overlay").classList.remove("active");
 }
 
-function changeDot() {
+function adjustLineHeight() {
+  let rightNavLine;
+
+  if ($("#line-index")[0]){
+    rightNavLine = "line-index";
+  } else if ($("#line-about")[0]) {
+    rightNavLine = "line-about";
+  }
+
+  const documentHeight = $(document).height();
+  const windowtHeight = $(window).height();
+  const scrollHeight = documentHeight - windowtHeight;
+  let rulerHeight;
+
+  if ($(window).width() < 1680) {
+    rulerHeight = 345;
+  } else {
+    rulerHeight = 540;
+  }
+
+  const lineHeight = rulerHeight - scrollHeight / documentHeight * rulerHeight;
+
+  $('#' + rightNavLine).css({"height":"" + lineHeight + "px"});
+}
+
+function moveLine() {
 
   let rightNavLine;
 
@@ -16,25 +41,26 @@ function changeDot() {
     rightNavLine = "line-about";
   }
 
-  var lineHeight = document.getElementById(rightNavLine);  
+  const documentHeight = $(document).height();
+  const windowtHeight = $(window).height();
+  const scrollHeight = documentHeight - windowtHeight;
+  let rulerHeight;
+
+  if ($(window).width() < 1680) {
+    rulerHeight = 345;
+  } else {
+    rulerHeight = 540;
+  }
+
+  const lineHeight = rulerHeight - scrollHeight / documentHeight * rulerHeight;
 
   const scrollValue = $(window).scrollTop();
-  const heightSec2 = $('#section2').offset().top;
-  const heightSec3 = $('#section3').offset().top;
-  const heightSec4 = $('#section4').offset().top;
-  const heightSec5 = $('#section5').offset().top;
-  const heightSec6 = $('#section6').offset().top;
-  const heightSec7 = $('#section7').offset().top;
-  const heightSec8= $('#section8').offset().top;
+  const moveHeight = scrollValue / scrollHeight * (rulerHeight - lineHeight);
 
-  const progress1 = scrollValue / heightSec2 * 100;
-  const progress2 = (scrollValue - heightSec2) / (heightSec3 - heightSec2) * 100;
-  const progress3 = (scrollValue - heightSec3) / (heightSec4 - heightSec3) * 100;
-  const progress4 = (scrollValue - heightSec4) / (heightSec5 - heightSec4) * 100;
-  const progress5 = (scrollValue - heightSec5) / (heightSec6 - heightSec5) * 100;
-  const progress6 = (scrollValue - heightSec6) / (heightSec7 - heightSec6) * 100;
-  const progress7 = (scrollValue - heightSec7) / (heightSec8 - heightSec7) * 100;
+  $('#' + rightNavLine).css({"height":"" + lineHeight + "px"});
+  $('#' + rightNavLine).css({"transform":"translateY(" + moveHeight + "px)"});
 
+  const curLineHeight = document.getElementById(rightNavLine).getBoundingClientRect().top;
   const curSec2Height = document.getElementById("section2").getBoundingClientRect().top;
   const curSec5Height = document.getElementById("section5").getBoundingClientRect().top;
   const curSec5BotHeight = document.getElementById("section5").getBoundingClientRect().bottom;
@@ -42,206 +68,43 @@ function changeDot() {
   const curSec7Height = document.getElementById("section7").getBoundingClientRect().top;
   const curSec7BotHeight = document.getElementById("section7").getBoundingClientRect().bottom;
 
-  console.log(progress1);
-  /*if (scrollValue < heightSec2) {
-    $('aside li').not('.bar1').removeClass(rightNavLine);
-    $('.bar1').addClass(rightNavLine);
-    $('.' + rightNavLine).css({"transform":"translateY(" + progress1 + "%)"});
-  } else if (scrollValue < heightSec3) {
-    $('aside li').not('.bar2').removeClass(rightNavLine);
-    $('.bar2').addClass(rightNavLine);
-    $('.' + rightNavLine).css({"transform":"translateY(" + progress2 + "%)"});    
-  } else if (scrollValue < heightSec4) {
-    $('aside li').not('.bar3').removeClass(rightNavLine);
-    $('.bar3').addClass(rightNavLine);
-    $('.' + rightNavLine).css({"transform":"translateY(" + progress3 + "%)"});
-  } else if (scrollValue < heightSec5) {
-    $('aside li').not('.bar4').removeClass(rightNavLine);
-    $('.bar4').addClass(rightNavLine);
-    $('.' + rightNavLine).css({"transform":"translateY(" + progress4 + "%)"});
-  } else if (scrollValue < heightSec6) {
-    $('aside li').not('.bar5').removeClass(rightNavLine);
-    $('.bar5').addClass(rightNavLine);
-    $('.' + rightNavLine).css({"transform":"translateY(" + progress5 + "%)"});
-  } else if (scrollValue < heightSec7) {
-    $('aside li').not('.bar6').removeClass(rightNavLine);
-    $('.bar6').addClass(rightNavLine);
-    $('.' + rightNavLine).css({"transform":"translateY(" + progress6 + "%)"});
-  } else if (scrollValue < heightSec8) {
-    $('aside li').not('.bar7').removeClass(rightNavLine);
-    $('.bar7').addClass(rightNavLine);
-    $('.' + rightNavLine).css({"transform":"translateY(" + progress7 + "%)"});
-  } else {
-    $('aside li').not('.bar8').removeClass(rightNavLine);
-    $('.bar8').addClass(rightNavLine);
-  }*/
-
   if (rightNavLine === "line-index") {
-    console.log(rightNavLine);
-    if (scrollValue < heightSec2) {
-      $('aside li').not('.bar1').removeAttr('id', rightNavLine);
-      $('aside li').not('.bar1').removeClass('line-black');
-      $('aside li').not('.bar1').removeClass('line-yellow');
-      $('.bar1').removeClass('line-yellow');
-      $('.bar1').attr('id', rightNavLine);
-      $('.bar1').addClass('line-black');
-      $('#' + rightNavLine).css({"transform":"translateY(" + progress1 + "%)"}); 
-      if (curSec2Height <= lineHeight.getBoundingClientRect().top) {
-        $('.bar1').removeClass('line-black');
-        $('.bar1').addClass('line-yellow');
-      }
-    } else if (scrollValue < heightSec3) {
-      $('aside li').not('.bar2').removeAttr('id', rightNavLine);
-      $('aside li').not('.bar2').removeClass('line-black');
-      $('aside li').not('.bar2').removeClass('line-yellow');
-      $('.bar2').attr('id', rightNavLine);
-      $('.bar2').addClass('line-yellow');
-      $('#' + rightNavLine).css({"transform":"translateY(" + progress2 + "%)"});
-    } else if (scrollValue < heightSec4) {
-      $('aside li').not('.bar3').removeAttr('id', rightNavLine);
-      $('aside li').not('.bar3').removeClass('line-black');
-      $('aside li').not('.bar3').removeClass('line-yellow');
-      $('.bar3').attr('id', rightNavLine);
-      $('.bar3').addClass('line-yellow');
-      $('#' + rightNavLine).css({"transform":"translateY(" + progress3 + "%)"});
-    } else if (scrollValue < heightSec5) {
-      $('aside li').not('.bar4').removeAttr('id', rightNavLine);
-      $('aside li').not('.bar4').removeClass('line-black');
-      $('aside li').not('.bar4').removeClass('line-yellow');
-      $('.bar4').attr('id', rightNavLine);
-      $('.bar4').addClass('line-yellow');
-      $('#' + rightNavLine).css({"transform":"translateY(" + progress4 + "%)"});
-    } else if (scrollValue < heightSec6) {
-      $('aside li').not('.bar5').removeAttr('id', rightNavLine);
-      $('aside li').not('.bar5').removeClass('line-black');
-      $('aside li').not('.bar5').removeClass('line-yellow');
-      $('.bar5').attr('id', rightNavLine);
-      $('.bar5').addClass('line-yellow');
-      $('#' + rightNavLine).css({"transform":"translateY(" + progress5 + "%)"});
-      if (curSec6Height <= lineHeight.getBoundingClientRect().top) {
-        $('.bar5').removeClass('line-yellow');
-        $('.bar5').addClass('line-black');
-      }
-    } else if (scrollValue < heightSec7) {
-      $('aside li').not('.bar6').removeAttr('id', rightNavLine);
-      $('aside li').not('.bar6').removeClass('line-black');
-      $('aside li').not('.bar6').removeClass('line-yellow');
-      $('.bar6').attr('id', rightNavLine);
-      $('.bar6').addClass('line-black');
-      $('#' + rightNavLine).css({"transform":"translateY(" + progress5 + "%)"});
-      if (curSec7Height <= lineHeight.getBoundingClientRect().top) {
-        $('.bar6').removeClass('line-black');
-        $('.bar6').addClass('line-yellow');
-      }
-    } else if (scrollValue < heightSec8) {
-      $('aside li').not('.bar7').removeAttr('id', rightNavLine);
-      $('aside li').not('.bar7').removeClass('line-black');
-      $('aside li').not('.bar7').removeClass('line-yellow');
-      $('.bar7').attr('id', rightNavLine);
-      $('.bar7').addClass('line-yellow');
-      $('#' + rightNavLine).css({"transform":"translateY(" + progress6 + "%)"});
+    if (curLineHeight >= curSec2Height && curLineHeight <= curSec6Height || curLineHeight >= curSec7Height) {
+      $('#' + rightNavLine).css({"background-color":"#FFC512"});
     } else {
-      $('aside li').not('.bar8').removeAttr('id', rightNavLine);
-      $('aside li').not('.bar8').removeClass('line-black');
-      $('aside li').not('.bar8').removeClass('line-yellow');
-      $('.bar8').attr('id', rightNavLine);
-      $('.bar8').addClass('line-yellow');
-      $('#' + rightNavLine).css({"transform":"translateY(" + progress7 + "%)"});
+      $('#' + rightNavLine).css({"background-color":"#2B2B2B"});
     }
   } else {
-    if (scrollValue < heightSec2) {
-      $('aside li').not('.bar1').removeAttr('id', rightNavLine);
-      $('aside li').not('.bar1').removeClass('line-black');
-      $('aside li').not('.bar1').removeClass('line-yellow');
-      $('.bar1').attr('id', rightNavLine);
-      $('.bar1').removeClass('line-yellow');
-      $('.bar1').addClass('line-black');
-      $('#' + rightNavLine).css({"transform":"translateY(" + progress1 + "%)"}); 
-    } else if (scrollValue < heightSec3) {
-      $('aside li').not('.bar2').removeAttr('id', rightNavLine);
-      $('aside li').not('.bar2').removeClass('line-black');
-      $('aside li').not('.bar2').removeClass('line-yellow');
-      $('.bar2').attr('id', rightNavLine);
-      $('.bar2').removeClass('line-yellow');
-      $('.bar2').addClass('line-black');
-      $('#' + rightNavLine).css({"transform":"translateY(" + progress2 + "%)"}); 
-    } else if (scrollValue < heightSec4) {
-      $('aside li').not('.bar3').removeAttr('id', rightNavLine);
-      $('aside li').not('.bar3').removeClass('line-black');
-      $('aside li').not('.bar3').removeClass('line-yellow');
-      $('.bar3').attr('id', rightNavLine);
-      $('.bar3').removeClass('line-yellow');
-      $('.bar3').addClass('line-black');
-      $('#' + rightNavLine).css({"transform":"translateY(" + progress3 + "%)"}); 
-    } else if (scrollValue < heightSec5) {
-      $('aside li').not('.bar4').removeAttr('id', rightNavLine);
-      $('aside li').not('.bar4').removeClass('line-black');
-      $('aside li').not('.bar4').removeClass('line-yellow');
-      $('.bar4').attr('id', rightNavLine);
-      $('.bar4').removeClass('line-yellow');
-      $('.bar4').addClass('line-black');
-      $('#' + rightNavLine).css({"transform":"translateY(" + progress4 + "%)"});
-      if (curSec5Height <= lineHeight.getBoundingClientRect().top) {
-        $('.bar4').removeClass('line-black');
-        $('.bar4').addClass('line-yellow');
-      }
-    } else if (scrollValue < heightSec6) {
-      $('aside li').not('.bar5').removeAttr('id', rightNavLine);
-      $('aside li').not('.bar5').removeClass('line-black');
-      $('aside li').not('.bar5').removeClass('line-yellow');
-      $('.bar5').attr('id', rightNavLine);
-      $('.bar5').addClass('line-yellow');
-      $('#' + rightNavLine).css({"transform":"translateY(" + progress5 + "%)"});
-      if (curSec5BotHeight <= lineHeight.getBoundingClientRect().top) {
-        $('.bar5').removeClass('line-yellow');
-        $('.bar5').addClass('line-black');
-      }
-    } else if (scrollValue < heightSec7) {
-      $('aside li').not('.bar6').removeAttr('id', rightNavLine);
-      $('aside li').not('.bar6').removeClass('line-black');
-      $('aside li').not('.bar6').removeClass('line-yellow');
-      $('.bar6').attr('id', rightNavLine);
-      $('.bar6').addClass('line-black');
-      $('#' + rightNavLine).css({"transform":"translateY(" + progress5 + "%)"});
-    } else if (scrollValue < heightSec8) {
-      $('aside li').not('.bar7').removeAttr('id', rightNavLine);
-      $('aside li').not('.bar7').removeClass('line-black');
-      $('aside li').not('.bar7').removeClass('line-yellow');
-      $('.bar7').attr('id', rightNavLine);
-      $('.bar7').addClass('line-black');
-      $('#' + rightNavLine).css({"transform":"translateY(" + progress6 + "%)"});
-      if (curSec7BotHeight <= lineHeight.getBoundingClientRect().top) {
-        $('.bar7').removeClass('line-black');
-        $('.bar7').addClass('line-yellow');
-      }
+    if (curLineHeight >= curSec5Height && curLineHeight <= curSec5BotHeight || curLineHeight >= curSec7BotHeight) {
+      $('#' + rightNavLine).css({"background-color":"#FFC512"});
     } else {
-      $('aside li').not('.bar8').removeAttr('id', rightNavLine);
-      $('aside li').not('.bar8').removeClass('line-black');
-      $('aside li').not('.bar8').removeClass('line-yellow');
-      $('.bar8').attr('id', rightNavLine);
-      $('.bar8').addClass('line-yellow');
-      $('#' + rightNavLine).css({"transform":"translateY(" + progress7 + "%)"});
+      $('#' + rightNavLine).css({"background-color":"#2B2B2B"});
+    }
+    const overlayImgHeight = curSec7BotHeight + (curSec7BotHeight - curSec7Height / 3.8);
+    console.log(overlayImgHeight);
+    console.log(scrollValue);
+    if (scrollValue > overlayImgHeight) {
+      $('.hobby__overlay--img').addClass('overlay__img--active');
+    } else {
+      $('.hobby__overlay--img').removeClass('overlay__img--active');
     }
   }
-
-  
-  
 }
 
 function mailLocationTextAnimation() {
-  const top  = window.pageYOffset + window.innerHeight,
-      isVisibleMail = top > document.querySelector('#section6').offsetTop;
-      isVisibleLocation = top > document.querySelector('#section2').offsetTop;
-       
-   if (isVisibleMail) {
-     document.getElementsByClassName('mail__content')[0].classList.add('mail__content--active');
-   }
-   if (isVisibleLocation) {
+  const top  = window.pageYOffset + window.innerHeight;
+  const isVisibleMail = top > document.querySelector('#section6').offsetTop;
+  const isVisibleLocation = top > document.querySelector('#section2').offsetTop;
+  
+  if (isVisibleMail) {
+    document.getElementsByClassName('mail__content')[0].classList.add('mail__content--active');
+  }
+  if (isVisibleLocation) {
     document.getElementsByClassName('location__content--text')[0].classList.add('location__content--active');
   }
 }
 
-$(window).on("scroll", changeDot)
+$(window).on("scroll", moveLine)
 
 $('aside li').on('click', function () {
   const goToSection = '.s' + $(this).attr('id');
@@ -252,4 +115,6 @@ $('aside li').on('click', function () {
 
 $(window).on("scroll", mailLocationTextAnimation)
 
-
+$(document).ready(function(){
+  adjustLineHeight();
+})

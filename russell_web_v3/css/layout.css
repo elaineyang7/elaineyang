@@ -139,31 +139,17 @@ aside {
   flex-direction: row;
 }
 
-aside ul li {
-  height: 60px;
-  /*margin-bottom: 5px;*/
-  cursor: default;
-}
-
-aside ul li p {
-  visibility: hidden;
+.line {
+  width: 3px;
+  height: 100%;
+  position: relative;
 }
 
 #line-index,
 #line-about {
   width: 3px;
-  height: 12.5%;
   position: relative;
-}
-
-.line-black {
   background-color: var(--color-black-4-leftNav);
-}
-
-.line-yellow {
-  width: 3px;
-  height: 12.5%;
-  background-color: var(--color-yellow-1-main);
 }
 
 @media (max-width: 1679px) {
@@ -173,10 +159,6 @@ aside ul li p {
     position: fixed;
     top: calc(50vh - 172.5px);
     right: 32px;
-  }
-  
-  aside ul li {
-    height: 42px;
   }
 }
 

@@ -127,7 +127,7 @@ h1 {
 }
 
 .next__page--shade {
-  box-shadow: 0 0px 80px 0 rgba(0,0,0,0.5);
+  box-shadow: 0 20px 80px 0 rgb(0 0 0 / 12%);
   border-radius: 50%;
 }
 
@@ -160,25 +160,25 @@ h1 {
 }
 
 .portfolio__scroll {
-  width: 66px;
+  width: 200px;
   height: 30px;
   position: fixed;
-  right: 240px;
-  bottom: 30px;
+  right: 146px;
+  bottom: 20px;
   font-family: var(--font-sflight);
-  font-size: 12px;
+  font-size: 11px;
   color: var(--color-black-5-text);
-  letter-spacing: 1.75px;
-  line-height: 30px;
+  letter-spacing: 1.5px;
+  line-height: 12px;
 }
 
 .portfolio__scroll:after {
   content: "";
-  width: 80px;
+  width: 40px;
   height: 0.5px;
   position: absolute;
-  top: 50%;
-  left: 80px;
+  top: 20%;
+  left: 186px;
   background-color: var(--color-black-5-text);
 }
 
