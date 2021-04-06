@@ -290,7 +290,7 @@
   height: 160vw;
   background-color: var(--color-gray-4-aboutbg);
   display: grid;
-  grid-template-rows: 9% 18.146% 6% 3.6% 25.51% 3.6% auto 18.146% auto;
+  grid-template-rows: 10.3% 18.146% 6% 3.6% 25.51% 3.6% auto 18.146% auto;
   grid-template-columns: 3% 2.6% 40% 15% 37% 2.4%;     
   overflow: hidden;
 }
