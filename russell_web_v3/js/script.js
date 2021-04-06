@@ -81,8 +81,7 @@ function moveLine() {
       $('#' + rightNavLine).css({"background-color":"#2B2B2B"});
     }
     const overlayImgHeight = curSec7BotHeight + (curSec7BotHeight - curSec7Height / 3.8);
-    console.log(overlayImgHeight);
-    console.log(scrollValue);
+
     if (scrollValue > overlayImgHeight) {
       $('.hobby__overlay--img').addClass('overlay__img--active');
     } else {
@@ -106,15 +105,26 @@ function mailLocationTextAnimation() {
 
 $(window).on("scroll", moveLine)
 
-$('aside li').on('click', function () {
-  const goToSection = '.s' + $(this).attr('id');
-  $('body, html').animate({
-      scrollTop: $(goToSection).offset().top + 1
-  })
-})
-
 $(window).on("scroll", mailLocationTextAnimation)
 
 $(document).ready(function(){
   adjustLineHeight();
-})
+  $("a").on('click', function(event) {
+    if (this.hash === "#section3" || this.hash === "#section4") {
+      var hashcode = window.location.hash;
+      $('html,body').animate({
+        scrollTop: $('div#' + hascode).offset().top
+      },'slow');
+    }
+    if (this.hash !== "") {
+      event.preventDefault();
+      var hash = this.hash;
+      console.log(hash);
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+        window.location.hash = hash;
+      });
+    } 
+  });
+});
