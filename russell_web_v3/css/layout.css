@@ -481,7 +481,7 @@ main {
 
 .links h3 {
   font-family: var(--font-sfbold);
-  font-size: 24px;
+  font-size: 20px;
   letter-spacing: 0;
   font-weight: 700;
   margin-bottom: 30px;
@@ -494,7 +494,7 @@ main {
 
 .links ul li a {
   font-family: var(--font-sflight);
-  font-size: 16px;
+  font-size: 12px;
   letter-spacing: 0;
   font-weight: 400;
   color: var(--color-black-7-socialMedia);
@@ -572,8 +572,8 @@ main {
 
 .sci ul li {
   padding-right: 44px;
-  width: 32px;
-  height: 32px;
+  width: 28px;
+  height: 28px;
   display: flex;
   flex-direction: column;
 }

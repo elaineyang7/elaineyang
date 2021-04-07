@@ -465,14 +465,13 @@
 }
 
 .hobby__overlay--img {
-  width: 469px;
-  height: 56px;
+  height: 44px;
   position: absolute;
-  top: 45%;
+  top: 35%;
   left: calc(var(--width-main-100vw) / 2 - 234.5px);
   visibility: hidden;
   opacity: 0;
-  transition: 0.8s;
+  transition: 0.5s;
 }
 
 .overlay__img--active {
