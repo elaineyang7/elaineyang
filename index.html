@@ -23,6 +23,7 @@
     <script src="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.8.9/jquery-ui.js" type="text/javascript"></script>
     <link href="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.8.9/themes/blitzer/jquery-ui.css" rel="stylesheet" type="text/css"></script>
     <script type="text/javascript" src="popup.js"></script>
+    <script src="parallax.js"></script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XS8DM1R8LS"></script>
@@ -113,9 +114,16 @@
     <!-- end of sidebar -->
     <!-- hero -->
     <header class="hero" id="home">
-      <div class="hero-container">
+      <div class="hero-container" id="scene">
+        <div class="daisy1">
+          <img class="layer"  data-depth="0.5" src="images/daisy.png">
+        </div>
+        <div class="daisy2">
+          <img class="layer"  data-depth="0.5" src="images/daisy.png">
+        </div>
+        
         <article class="hero-img"> <!--</article> data-aos="fade-left" data-aos-duration="3000">-->
-          <img src="images/lamb.png" alt="hero image - lamb with sunflower">
+          <img class="layer"  data-depth="0.2" src="images/lamb-daisy.png" alt="hero image - lamb with sunflower">
         </article>
         <article class="hero-info">
           <h1>i'm Elaine</h1>
@@ -537,5 +545,9 @@
       AOS.init();
     </script>
 
+    <script>
+      var scene = document.getElementById('scene');
+      var parallax = new Parallax(scene);
+    </script>
   </body>
 </html>

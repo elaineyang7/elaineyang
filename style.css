@@ -219,6 +219,12 @@
   width: 100%;
   height: 100vh;
   background-color: var(--sec-color);
+	background-attachment: fixed;
+}
+
+.mixBlnd
+{
+	background-blend-mode: screen;
 }
 
 .hero-container {
@@ -260,8 +266,8 @@
 .hero-img::before {
   content: "";
   position: absolute;
-  width: 100%;
-  height: 100%;
+  width: 95%;
+  height: 95%;
   top: 5px;
   right: 10px;
   border: 0.25rem solid var(--aux-color);
@@ -313,6 +319,39 @@
     width: 100%;
   }
 }
+
+.daisy1 {
+  width: 256px;
+  height: 256px;
+  position: absolute;
+  top: 20px;
+  left: -50px;
+}
+
+.daisy2 {
+  width: 128px;
+  height: 128px;
+  position: absolute;
+  bottom: 80px;
+  right: 0px;
+}
+
+.daisy1 img,
+.daisy2 img {
+  width: 100%;
+}
+
+@media (max-width: 992px) {
+  .daisy1 {
+    width: 200px;
+    height: 200px;
+  }
+
+  .daisy2 {
+    bottom: 130px;
+  }
+}
+
 
 /*********************/
 /* Experience        */
