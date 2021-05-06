@@ -18,6 +18,26 @@
   margin: 0 auto;
 }
 
+.hero__content a {
+  position: relative;
+  top: 24px;
+}
+
+.hero__content a button {
+  padding: 8px 16px;
+  background-color: #6c55b3;
+  border: none;
+  border-radius: 8px;
+  color: #FFFFFF;
+  font-weight: 300;
+  transition: 0.5s;
+}
+
+.hero__content a button:hover {
+  background-color: #7d6bb4;
+  transition: 0.5s;
+}
+
 @media (min-width: 992px) {
   .hero__img {
     width: 100%;

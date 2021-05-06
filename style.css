@@ -326,6 +326,7 @@
   position: absolute;
   top: 20px;
   left: -50px;
+  display: block;
 }
 
 .daisy2 {
@@ -334,6 +335,7 @@
   position: absolute;
   bottom: 80px;
   right: 0px;
+  display: block;
 }
 
 .daisy1 img,
