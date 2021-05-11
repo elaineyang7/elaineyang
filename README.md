@@ -9,6 +9,10 @@ This is my portfolio website, showing my recent work.
 ## Technologies
 * React
 * SASS
+* HTML5
+* CSS3
+* JavaScript
+* jQuery
 * Webpack
 * Babel
 
